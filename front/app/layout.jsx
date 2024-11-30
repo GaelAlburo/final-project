@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={`antialiased`}
+        style={{ margin: 0, padding: 0 }}
       >
         <ThemeProvider theme={theme}>
           {children}
