@@ -33,7 +33,7 @@ export default function Home() {
                 <Typography variant="h2" fontWeight={700} color="white" sx={{pb: 10}}>
                   Cloud Services with Cloud Bridge
                 </Typography>
-                <Button variant="outlined" size="large"
+                <Button variant="outlined" size="large" href="/services"
                   sx={{
                     px: 3,
                     py: 2,
@@ -173,7 +173,7 @@ export default function Home() {
               <Typography variant="body1" sx={{width: 480}}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
               </Typography>
-              <Button variant="outlined" size="large"
+              <Button variant="outlined" size="large" href="/services"
                   sx={{
                     backgroundColor: "rgb(63,94,251)",
                     mt: 4,
