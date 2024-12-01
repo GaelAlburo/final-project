@@ -16,8 +16,6 @@ export default function Services() {
     // State variable for the selected services based on the selected types filter
     const [selectedServices, setSelectedServices] = useState([]);
 
-    const [renderedChips, setRenderedChips] = useState(false);
-
     // Function that handles the checkbox toggle
     // It updates the selected types and services based on the selected types
     const handleToggle = (value) => () => {
@@ -41,6 +39,7 @@ export default function Services() {
         setSelectedServices(currServs);
     }
 
+    // Function that handles the deletion of a selected type through the chips component in the UI
     const handleDelete = (type) => {
         const newSelectedType = [...selectedType];
         const newChecked = [...checked];
@@ -56,6 +55,7 @@ export default function Services() {
         setSelectedServices(currServs);
     }
 
+    // Mock data for the services and types. DELETE THIS WHEN CONNECTED TO THE BACKEND
     const services = [
         {
             _id: 1,
@@ -84,6 +84,7 @@ export default function Services() {
         },
     ]
 
+    // Mock data for the types. DELETE THIS WHEN CONNECTED TO THE BACKEND
     const types = [
         "Computation",
         "Storage",
