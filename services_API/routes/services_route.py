@@ -18,6 +18,7 @@ class ServiceRoute(Blueprint):
         """Function to register the routes for the service API"""
 
         self.route("/api/v1/services", methods=["GET"])(self.get_services)
+        self.route("/api/v1/services/types", methods=["GET"])(self.get_services_types)
         self.route("/api/v1/services", methods=["POST"])(self.add_service)
         self.route("/api/v1/services/<int:service_id>", methods=["PUT"])(
             self.update_service
@@ -56,6 +57,34 @@ class ServiceRoute(Blueprint):
 
         services = self.service_service.get_all_services()
         return jsonify(services), 200
+
+    # Swagger documentation for the GET request to /api/v1/services/types
+    @swag_from(
+        {
+            "tags": ["services"],
+            "responses": {
+                200: {
+                    "description": "GET all services types",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "properties": {"type": {"type": "String"}},
+                        },
+                    },
+                }
+            },
+        }
+    )
+    def get_services_types(self):
+        """Returns all the types of services"""
+
+        services = self.service_service.get_all_services()
+        services_types = []
+        for service in services:
+            services_types.append(service.get("type"))
+        services_types = list(set(services_types))
+        return jsonify(services_types), 200
 
     def fetch_request_data(self):
         """Function to fetch the request data from the request body and validate it with the schema"""

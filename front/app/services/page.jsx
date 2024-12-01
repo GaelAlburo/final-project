@@ -2,8 +2,9 @@
 
 import { Box, Button, Checkbox, Chip, Container, List, ListItem, ListItemButton, ListItemIcon, ListItemText, ListSubheader, Paper, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import axios from "axios";
 
 export default function Services() {
 
@@ -15,6 +16,42 @@ export default function Services() {
 
     // State variable for the selected services based on the selected types filter
     const [selectedServices, setSelectedServices] = useState([]);
+
+    // State variable for the services
+    const [services, setServices] = useState([]);
+
+    // State variable for the types
+    const [types, setTypes] = useState([]);
+
+    // useEffect hook to fetch the services and types from the backend
+    useEffect(() => {
+        fetchReviews();
+        fetchTypes();
+    }, [])
+
+    // Function that fetches the services from the backend
+    const fetchReviews = async () => {
+        try{
+            const res = await axios.get("http://localhost:5000/api/v1/services");
+            setServices(res.data);
+            console.info("Data fetched: ", res.data);
+        }
+        catch (error) {
+            console.error("Error fetching data: ", error);
+        }
+    }
+
+    // Function that fetches the types of services from the backend
+    const fetchTypes = async () => {
+        try {
+            const res = await axios.get("http://localhost:5000/api/v1/services/types");
+            setTypes(res.data);
+            console.info("Types fetched: ", res.data);
+        }
+        catch (error) {
+            console.error("Error fetching data: ", error);
+        }
+    }
 
     // Function that handles the checkbox toggle
     // It updates the selected types and services based on the selected types
@@ -54,44 +91,6 @@ export default function Services() {
         setSelectedType(newSelectedType);
         setSelectedServices(currServs);
     }
-
-    // Mock data for the services and types. DELETE THIS WHEN CONNECTED TO THE BACKEND
-    const services = [
-        {
-            _id: 1,
-            name: "Cloud Migration",
-            cost: 1.98,
-            company_name: "Google",
-            description: "We help you migrate your on-premise infrastructure to the cloud.",
-            type: "Computation",
-            icon: "cloud_migration"
-        },
-        {
-            _id: 2,
-            name: "Cloud Monitoring",
-            cost: 2.98,
-            company_name: "Amazon",
-            description: "We provide monitoring services to help you keep track of your cloud infrastructure.",
-            type: "Computation",
-        },
-        {
-            _id: 3,
-            name: "Cloud Security",
-            cost: 3.98,
-            company_name: "Microsoft",
-            description: "We provide security services to help you keep your cloud infrastructure secure.",
-            type: "Security",
-        },
-    ]
-
-    // Mock data for the types. DELETE THIS WHEN CONNECTED TO THE BACKEND
-    const types = [
-        "Computation",
-        "Storage",
-        "Networking",
-        "Security",
-        "Monitoring",
-    ]
 
     return (
         <Container maxWidth="lg" disableGutters>
