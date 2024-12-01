@@ -1,1 +1,6 @@
 /services_API/venv/
+services_API/logger/__pycache__/
+services_API/models/__pycache__/
+services_API/routes/__pycache__/
+services_API/schemas/__pycache__/
+services_API/services/__pycache__/
