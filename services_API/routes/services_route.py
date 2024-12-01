@@ -69,20 +69,20 @@ class ServiceRoute(Blueprint):
             cost = request_data.get("cost")
             company_name = request_data.get("company_name")
             description = request_data.get("description")
-            type = request_data.get("type")
+            type_serv = request_data.get("type")
 
             try:
                 self.service_schema.validates_name(name)
                 self.service_schema.validates_cost(cost)
                 self.service_schema.validates_company_name(company_name)
-                self.service_schema.validates_rating(description)
-                self.service_schema.validates_type(type)
+                self.service_schema.validates_description(description)
+                self.service_schema.validates_type(type_serv)
 
             except ValidationError as e:
                 self.logger.error(f"Invalid data: {e}")
                 return jsonify({"error": f"Invalid data: {e}"}), 400
 
-            return name, cost, company_name, description, type
+            return name, cost, company_name, description, type_serv
 
         except Exception as e:
             self.logger.error(f"Error fetching the request data: {e}")
@@ -129,14 +129,14 @@ class ServiceRoute(Blueprint):
         """Adds a new service"""
 
         try:
-            name, cost, company_name, description, name = self.fetch_request_data()
+            name, cost, company_name, description, type_serv = self.fetch_request_data()
 
             new_service = {
                 "name": name,
                 "cost": cost,
                 "company_name": company_name,
                 "description": description,
-                "type": type,
+                "type": type_serv,
             }
 
             created_service = self.service_service.add_service(new_service)
@@ -193,7 +193,7 @@ class ServiceRoute(Blueprint):
         """Updates a service by its ID"""
 
         try:
-            name, cost, company_name, description, name = self.fetch_request_data()
+            name, cost, company_name, description, type_serv = self.fetch_request_data()
 
             update_service = {
                 "_id": service_id,
@@ -201,15 +201,15 @@ class ServiceRoute(Blueprint):
                 "cost": cost,
                 "company_name": company_name,
                 "description": description,
-                "type": type,
+                "type": type_serv,
             }
 
             updated_service = self.service_service.update_service(
                 service_id, update_service
             )
             if updated_service:
-                self.logger.info(f"Review updated: {updated_service}")
-                return jsonify(updated_service), 200
+                self.logger.info(f"Review updated: {update_service}")
+                return jsonify(update_service), 200
             else:
                 self.logger.error("Service not found")
                 return jsonify({"error": "Service not found"}), 404

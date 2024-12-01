@@ -133,3 +133,131 @@ with app.app_context(). See the documentation for more information.
 03:10:57 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 03:10:57] "GET /api/v1/services HTTP/1.1" 200 -
 03:12:21 AM: INFO [services_model.py:51] MongoDB connection closed
 03:12:22 AM: INFO [services_model.py:51] MongoDB connection closed
+11:42:46 AM: CRITICAL [services_model.py:43] Error connecting to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+11:44:23 AM: CRITICAL [services_model.py:43] Error connecting to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+11:44:42 AM: CRITICAL [services_model.py:43] Error connecting to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+11:45:12 AM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11:45:12 AM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+11:45:12 AM: INFO [_internal.py:97]  * Restarting with stat
+11:45:13 AM: WARNING [_internal.py:97]  * Debugger is active!
+11:45:13 AM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+11:49:39 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 11:49:39] "GET /apidocs/ HTTP/1.1" 200 -
+11:49:39 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 11:49:39] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+11:49:39 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 11:49:39] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+11:49:40 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 11:49:40] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+11:49:41 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 11:49:41] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+11:49:43 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 11:49:43] "GET /apispec_1.json HTTP/1.1" 200 -
+11:49:49 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 11:49:49] "GET /api/v1/services HTTP/1.1" 200 -
+11:50:23 AM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 11:50:23] "GET /api/v1/services HTTP/1.1" 200 -
+12:03:53 PM: ERROR [services_route.py:88] Error fetching the request data: 'ServiceSchema' object has no attribute 'validates_rating'
+12:03:53 PM: ERROR [services_route.py:147] Error adding service: not enough values to unpack (expected 5, got 2)
+12:03:53 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:03:53] "[35m[1mPOST /api/v1/services HTTP/1.1[0m" 500 -
+12:07:28 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:07:28 PM: INFO [services_model.py:51] MongoDB connection closed
+12:07:29 PM: INFO [_internal.py:97]  * Restarting with stat
+12:07:29 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:07:29 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:07:29 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:07:35 PM: ERROR [services_service.py:50] Error adding service to database: cannot encode object: <class 'type'>, of type: <class 'type'>
+12:07:35 PM: INFO [services_route.py:143] Service added: (<Response 113 bytes [200 OK]>, 500)
+12:07:35 PM: ERROR [services_route.py:147] Error adding service: Object of type Response is not JSON serializable
+12:07:35 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:07:35] "[35m[1mPOST /api/v1/services HTTP/1.1[0m" 500 -
+12:08:27 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:08:27 PM: INFO [services_model.py:51] MongoDB connection closed
+12:08:28 PM: INFO [_internal.py:97]  * Restarting with stat
+12:08:28 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:08:28 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:08:28 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:10:10 PM: INFO [services_model.py:51] MongoDB connection closed
+12:10:11 PM: INFO [services_model.py:51] MongoDB connection closed
+12:10:17 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:10:17 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+12:10:17 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+12:10:17 PM: INFO [_internal.py:97]  * Restarting with stat
+12:10:17 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:10:17 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:10:17 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:10:21 PM: ERROR [services_service.py:50] Error adding service to database: cannot encode object: <class 'type'>, of type: <class 'type'>
+12:10:21 PM: INFO [services_route.py:143] Service added: (<Response 113 bytes [200 OK]>, 500)
+12:10:21 PM: ERROR [services_route.py:147] Error adding service: Object of type Response is not JSON serializable
+12:10:21 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:10:21] "[35m[1mPOST /api/v1/services HTTP/1.1[0m" 500 -
+12:13:32 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:13:32 PM: INFO [services_model.py:51] MongoDB connection closed
+12:13:33 PM: INFO [_internal.py:97]  * Restarting with stat
+12:13:33 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:13:33 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:13:33 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:13:44 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:13:44 PM: INFO [services_model.py:51] MongoDB connection closed
+12:13:44 PM: INFO [_internal.py:97]  * Restarting with stat
+12:13:45 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:13:45 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:13:45 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:13:48 PM: ERROR [services_service.py:50] Error adding service to database: cannot encode object: <class 'type'>, of type: <class 'type'>
+12:13:48 PM: INFO [services_route.py:143] Service added: (<Response 113 bytes [200 OK]>, 500)
+12:13:48 PM: ERROR [services_route.py:147] Error adding service: Object of type Response is not JSON serializable
+12:13:48 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:13:48] "[35m[1mPOST /api/v1/services HTTP/1.1[0m" 500 -
+12:14:10 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:14:10 PM: INFO [services_model.py:51] MongoDB connection closed
+12:14:11 PM: INFO [_internal.py:97]  * Restarting with stat
+12:14:11 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:14:11 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:14:11 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:14:13 PM: ERROR [services_service.py:50] Error adding service to database: cannot encode object: <class 'type'>, of type: <class 'type'>
+12:14:13 PM: INFO [services_route.py:143] Service added: (<Response 113 bytes [200 OK]>, 500)
+12:14:13 PM: ERROR [services_route.py:147] Error adding service: Object of type Response is not JSON serializable
+12:14:13 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:14:13] "[35m[1mPOST /api/v1/services HTTP/1.1[0m" 500 -
+12:14:41 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:14:41 PM: INFO [services_model.py:51] MongoDB connection closed
+12:14:42 PM: INFO [_internal.py:97]  * Restarting with stat
+12:14:42 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:14:42 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:14:42 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:14:49 PM: INFO [services_route.py:143] Service added: {'name': 'Google AI Platform', 'cost': 0.12, 'company_name': 'Google Cloud', 'description': 'Build, deploy, and scale AI models easily.', 'type': 'AI/ML', '_id': 37}
+12:14:49 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:14:49] "[35m[1mPOST /api/v1/services HTTP/1.1[0m" 201 -
+12:15:14 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:15:14] "GET /api/v1/services HTTP/1.1" 200 -
+12:15:59 PM: ERROR [services_service.py:70] Error updating service in database: cannot encode object: <class 'type'>, of type: <class 'type'>
+12:15:59 PM: INFO [services_route.py:211] Review updated: (<Response 115 bytes [200 OK]>, 500)
+12:15:59 PM: ERROR [services_route.py:218] Error updating service: Object of type Response is not JSON serializable
+12:15:59 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:15:59] "[35m[1mPUT /api/v1/services/37 HTTP/1.1[0m" 500 -
+12:16:19 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:16:19 PM: INFO [services_model.py:51] MongoDB connection closed
+12:16:19 PM: INFO [_internal.py:97]  * Restarting with stat
+12:16:20 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:16:20 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:16:20 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:16:52 PM: INFO [services_route.py:211] Review updated: UpdateResult({'n': 1, 'nModified': 1, 'ok': 1.0, 'updatedExisting': True}, acknowledged=True)
+12:16:52 PM: ERROR [services_route.py:218] Error updating service: Object of type UpdateResult is not JSON serializable
+12:16:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:16:52] "[35m[1mPUT /api/v1/services/37 HTTP/1.1[0m" 500 -
+12:17:31 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:17:31 PM: INFO [services_model.py:51] MongoDB connection closed
+12:17:31 PM: INFO [_internal.py:97]  * Restarting with stat
+12:17:32 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:17:32 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:17:32 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:17:35 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\routes\\services_route.py', reloading
+12:17:35 PM: INFO [services_model.py:51] MongoDB connection closed
+12:17:35 PM: INFO [_internal.py:97]  * Restarting with stat
+12:17:36 PM: INFO [services_model.py:40] Connected to MongoDB successfully
+12:17:36 PM: WARNING [_internal.py:97]  * Debugger is active!
+12:17:36 PM: INFO [_internal.py:97]  * Debugger PIN: 774-689-955
+12:17:49 PM: INFO [services_route.py:211] Review updated: {'_id': 37, 'name': 'Google AI Platform', 'cost': 0.12, 'company_name': 'NOT GOOGLE', 'description': 'Build, deploy, and scale AI models easily.', 'type': 'Not a Type'}
+12:17:49 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:17:49] "PUT /api/v1/services/37 HTTP/1.1" 200 -
+12:18:13 PM: INFO [services_route.py:211] Review updated: {'_id': 37, 'name': 'Google AI Platform', 'cost': 0.12, 'company_name': 'NOT GOOGLE', 'description': 'Build, deploy, and scale AI models easily.', 'type': 'Security'}
+12:18:13 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:18:13] "PUT /api/v1/services/37 HTTP/1.1" 200 -
+12:18:24 PM: ERROR [services_route.py:82] Invalid data: Service Cost must be greater than 0
+12:18:24 PM: ERROR [services_route.py:218] Error updating service: not enough values to unpack (expected 5, got 2)
+12:18:24 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:18:24] "[35m[1mPUT /api/v1/services/37 HTTP/1.1[0m" 500 -
+12:18:41 PM: INFO [services_route.py:211] Review updated: {'_id': 37, 'name': 'Google AI Platform', 'cost': 0.2, 'company_name': 'NOT GOOGLE', 'description': 'Build, deploy, and scale AI models easily.', 'type': 'Security'}
+12:18:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:18:41] "PUT /api/v1/services/37 HTTP/1.1" 200 -
+12:18:55 PM: INFO [services_route.py:246] Service deleted: {'_id': 37, 'name': 'Google AI Platform', 'cost': 0.2, 'company_name': 'NOT GOOGLE', 'description': 'Build, deploy, and scale AI models easily.', 'type': 'Security'}
+12:18:55 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:18:55] "DELETE /api/v1/services/37 HTTP/1.1" 200 -
+12:19:05 PM: ERROR [services_route.py:249] Service not found
+12:19:05 PM: INFO [_internal.py:97] 127.0.0.1 - - [01/Dec/2024 12:19:05] "[33mDELETE /api/v1/services/37 HTTP/1.1[0m" 404 -
+12:19:21 PM: INFO [_internal.py:97]  * Detected change in 'C:\\Users\\PC\\OneDrive\\Escritorio\\Universidad\\Semestre 9\\Distribuidos\\final-project\\final-project\\services_API\\models\\services_model.py', reloading
+12:19:21 PM: INFO [services_model.py:51] MongoDB connection closed
+12:19:21 PM: INFO [_internal.py:97]  * Restarting with stat
+12:19:22 PM: CRITICAL [services_model.py:43] Error connecting to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+12:19:23 PM: INFO [services_model.py:51] MongoDB connection closed
