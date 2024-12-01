@@ -1,5 +1,6 @@
-import { ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "../styles/global-theme";
+import AppBarGlobal from "./components/appbar-global";
 
 export const metadata = {
   title: "FRONT APP CHANGE AFTER",
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
         style={{ margin: 0, padding: 0 }}
       >
         <ThemeProvider theme={theme}>
-          {children}
+          <CssBaseline />
+          <AppBarGlobal />
+            {children}
         </ThemeProvider>
       </body>
     </html>
