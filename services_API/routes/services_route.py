@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from marshmallow import ValidationError
 from flasgger import swag_from
-from logger.logger_base import Logger
+from logger.services_logger import Logger
 
 
 class ServiceRoute(Blueprint):
