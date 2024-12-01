@@ -37,7 +37,7 @@ export default function Services() {
             console.info("Data fetched: ", res.data);
         }
         catch (error) {
-            console.error("Error fetching data: ", error);
+            console.error("Error fetching services data: ", error);
         }
     }
 
@@ -49,7 +49,7 @@ export default function Services() {
             console.info("Types fetched: ", res.data);
         }
         catch (error) {
-            console.error("Error fetching data: ", error);
+            console.error("Error fetching types data: ", error);
         }
     }
 
