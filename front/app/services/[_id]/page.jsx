@@ -21,14 +21,17 @@ export default function IndivService({params}) {
     // This unwraps the params object from the URL to fix the error shown in the console
     const unwrappedParams = use(params);
 
+    // Array to render 4 list items
     const loop = [0, 1, 2, 3];
 
+    // State variable to store the service data
     const [service, setService] = useState({});
 
     useEffect(() => {
         fetchService();
     }, []);
 
+    // Function to fetch the service data from the backend
     const fetchService = async () => {
         const service_id = await unwrappedParams._id;
         try{
@@ -41,6 +44,7 @@ export default function IndivService({params}) {
         }
     }
 
+    // Function to choose the image based on the service type
     const chooseImg = () => {
         let image = "";
         if (service.type === "Storage") {
