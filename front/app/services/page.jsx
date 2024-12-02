@@ -99,7 +99,14 @@ export default function Services() {
             <Grid container sx={{mb: 8}}>
                 <Grid size={{md: 6}}>
                     <Box width={600}>
-                        <Typography variant="h2" fontWeight={700} sx={{mt: 10}}>
+                        <Typography variant="h2" fontWeight={700}
+                            sx={{
+                                mt: 10, 
+                                background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent'
+                            }}
+                        >
                             Cloud Bridge Services
                         </Typography>
                         <Typography variant="body1" sx={{mt: 5}}>
@@ -117,7 +124,7 @@ export default function Services() {
                             }}>
                             Start by Logging In
                         </Button>
-                        <Button variant="outlined" size="large"
+                        <Button variant="outlined" size="large" href="/pricing"
                             sx={{
                                 color: "rgb(63,94,251)",
                                 borderColor: "rgb(63,94,251)",
@@ -143,7 +150,7 @@ export default function Services() {
 
 
             {/* SERVICES */}
-            <Grid container >
+            <Grid container sx={{mb: 6}}>
                 <Grid size={{md: 3}}>
                     
                     {/* CHECKLIST */}
