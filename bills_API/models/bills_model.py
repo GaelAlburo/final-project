@@ -3,7 +3,7 @@ from logger.bills_logger import Logger
 from pymongo import MongoClient
 
 
-class ServicesModel:
+class BillsModel:
 
     # Model class for services API that allows to connect to MongoDB
     def __init__(self):
