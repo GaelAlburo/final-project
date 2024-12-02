@@ -5,5 +5,14 @@ services_API/routes/__pycache__/
 services_API/schemas/__pycache__/
 services_API/services/__pycache__/
 
+bills_API/venv/
+bills_API/logger/__pycache__/
+bills_API/models/__pycache__/
+bills_API/routes/__pycache__/
+bills_API/schemas/__pycache__/
+bills_API/services/__pycache__/
+bills_API/bills_api.log
+
+
 eduardossh
 eduardossh.pub
