@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid2";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
+import Link from "next/link";
 
 export default function Services() {
 
@@ -198,7 +199,9 @@ export default function Services() {
 
                                     {services.map((serv) => {
                                         return(
-                                            <Grid size={{md: 4}} key={serv._id}>
+                                            <Grid size={{md: 4}} key={serv._id} component={Link} href={`/services/${serv._id}`}
+                                                sx={{textDecoration: "none"}}
+                                            >
                                                 <Paper
                                                     sx={{
                                                         height: 250,
@@ -253,10 +256,12 @@ export default function Services() {
                                             <Grid container>
                                                 {selectedServices.filter((serv) => serv.type == type).map((serv) => {
                                                     return (
-                                                        <Grid size={{md: 4}} key={serv._id}>
+                                                        <Grid size={{md: 4}} key={serv._id} component={Link} href={`/services/${serv._id}`}
+                                                            sx={{textDecoration: "none"}}
+                                                        >
                                                             <Paper
                                                                 sx={{
-                                                                    height: 200,
+                                                                    height: 250,
                                                                     display: "flex",
                                                                     flexDirection: "column",
                                                                     justifyContent: "center",
