@@ -201,7 +201,7 @@ export default function Services() {
                                             <Grid size={{md: 4}} key={serv._id}>
                                                 <Paper
                                                     sx={{
-                                                        height: 200,
+                                                        height: 250,
                                                         display: "flex",
                                                         flexDirection: "column",
                                                         justifyContent: "center",
