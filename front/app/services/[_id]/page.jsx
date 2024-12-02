@@ -59,6 +59,9 @@ export default function IndivService({params}) {
         else if (service.type === "Networking") {
             image = "/network.svg"
         }
+        else if (service.type) {
+            image = "/computation.svg"
+        }
         else {
             image = "/default.svg"
         }
@@ -74,7 +77,14 @@ export default function IndivService({params}) {
 
                     <Grid size={{md: 6}}>
                         <Box>
-                            <Typography variant="h3" fontWeight={700} sx={{mb: 6}}>
+                            <Typography variant="h3" fontWeight={700} 
+                                sx={{
+                                    mb: 6,
+                                    background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent'
+                                }}
+                            >
                                 {service.name}
                             </Typography>
                             <Typography variant="h6">
@@ -283,25 +293,31 @@ export default function IndivService({params}) {
             </Container>
             
             {/* Login Section */}
-            <Container maxWidth="large" sx={{py: 4, mb: 8, backgroundColor: "rgba(0, 0, 0, 0.8)"}}>
+            <Container maxWidth="large"
+                sx={{
+                    py: 4, 
+                    mb: 8, 
+                    backgroundColor: "rgb(63,94,251)",
+                    background: "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)"
+                }}
+            >
                 <Container maxWidth="sm">
                     <Typography variant="h5" fontWeight={700} sx={{mb: 3}} color="white">
                         Start to use {service.name} now!
                     </Typography>
-                    <Button variant="outlined" size="large" href="/login"
+                    <Button variant="outlined" size="small" href="/login"
                         sx={{
-                            backgroundColor: "rgb(63,94,251)",
                             px: 3,
-                            py: 1,
+                            py: 2,
                             color: "white",
-                            border: "1px solid transparent",
+                            borderColor: "white",
+                            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
                             "&:hover": {
                             transform: "scale(1.05)",
                             transition: "transform 0.4s ease-in-out",
-                            boxShadow: "0 4px 10px rgba(63, 94, 251, 0.2)",
                             },
                         }}>
-                        Log In to Hire
+                        Log In To Hire
                     </Button>
                 </Container>
             </Container>
