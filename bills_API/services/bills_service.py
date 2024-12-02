@@ -1,4 +1,5 @@
 from flask import jsonify
+from datetime import datetime, timezone
 from logger.bills_logger import Logger
 
 class BillsService:
@@ -11,8 +12,8 @@ class BillsService:
     def get_all_bills(self):
         """Function to fetch all services from the database"""
         try:
-            services = list(self.db_conn.db.bills.find())
-            return services
+            bills = list(self.db_conn.db.bills.find())
+            return bills
         except Exception as e:
             self.logger.error(f"Error fetching all bills from database: {e}")
             return (
@@ -47,16 +48,18 @@ class BillsService:
         """Function to add a bill to the database"""
 
         try:
-            # Gets the highest id
-            max_id = self.db_conn.db.bills.find_one(sort=[("_id", -1)])["_id"]
-            next_id = max_id + 1
+            max_id = self.db_conn.db.bills.find_one(sort=[("_id", -1)])
+            next_id = (max_id["_id"] + 1) if max_id else 1
             new_bill["_id"] = next_id
+
+            new_bill["date"] = datetime.now(timezone.utc).isoformat()
 
             self.db_conn.db.bills.insert_one(new_bill)
             return new_bill
         except Exception as e:
             self.logger.error(f"Error adding bill to database: {e}")
             return jsonify({"error": f"Error adding bill to database: {e}"}), 500
+
 
 
     def delete_bill(self, bill_id):

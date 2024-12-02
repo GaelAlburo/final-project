@@ -7,7 +7,7 @@ class BillsRoute(Blueprint):
     """Class to handle the bills routes"""
 
     def __init__(self, bills_service, bills_schema):
-        super().__init__("bills", __name__)
+        super().__init__("bill", __name__)
         self.logger = Logger()
         self.bills_service = bills_service
         self.bills_schema = bills_schema
