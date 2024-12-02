@@ -1,6 +1,7 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "../styles/global-theme";
 import AppBarGlobal from "./components/appbar-global";
+import FooterGlobal from "./components/footer-global";
 
 export const metadata = {
   title: "FRONT APP CHANGE AFTER",
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
           <CssBaseline />
           <AppBarGlobal />
             {children}
+          <FooterGlobal />
         </ThemeProvider>
       </body>
     </html>
