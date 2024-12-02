@@ -20,6 +20,9 @@ class ServiceRoute(Blueprint):
         self.route("/api/v1/services", methods=["GET"])(self.get_services)
         self.route("/api/v1/services/types", methods=["GET"])(self.get_services_types)
         self.route("/api/v1/services", methods=["POST"])(self.add_service)
+        self.route("/api/v1/services/<int:service_id>", methods=["GET"])(
+            self.get_one_service
+        )
         self.route("/api/v1/services/<int:service_id>", methods=["PUT"])(
             self.update_service
         )
@@ -175,6 +178,47 @@ class ServiceRoute(Blueprint):
         except Exception as e:
             self.logger.error(f"Error adding service: {e}")
             return jsonify({"error": f"Error adding service: {e}"}), 500
+
+    # Swagger documentation for the GET request to /api/v1/services/<service_id>
+    @swag_from(
+        {
+            "tags": ["services"],
+            "parameters": [
+                {
+                    "name": "service_id",
+                    "in": "path",
+                    "required": True,
+                    "type": "integer",
+                }
+            ],
+            "responses": {
+                200: {
+                    "description": "Service found",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "cost": {"type": "Float"},
+                            "company_name": {"type": "string"},
+                            "description": {"type": "string"},
+                            "type": {"type": "string"},
+                        },
+                    },
+                },
+                404: {"description": "Service not found"},
+            },
+        }
+    )
+    def get_one_service(self, service_id):
+        """Returns a service by its ID"""
+
+        service = self.service_service.get_service_by_id(service_id)
+        if service:
+            self.logger.info(f"Service found: {service}")
+            return jsonify(service), 200
+        else:
+            self.logger.error("Service not found")
+            return jsonify({"error": "Service not found"}), 404
 
     # Swagger documentation for the PUT request to /api/v1/services/<service_id>
     @swag_from(
