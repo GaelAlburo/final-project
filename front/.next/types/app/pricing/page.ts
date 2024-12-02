@@ -1,4 +1,4 @@
-// File: /Users/bhs/Documents/Sistemas Distribuidos/ProyectoFinal/final-project/front/app/pricing/page.jsx
+// File: /Users/eliaseduardogonzalezsotelo/final-project/front/app/pricing/page.jsx
 import * as entry from '../../../../app/pricing/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
