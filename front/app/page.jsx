@@ -3,10 +3,31 @@ import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, 
 import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 
 export default function Home() {
   const theme = useTheme();
+
+  // State variable for the types
+  const [types, setTypes] = useState([]);
+
+  useEffect(() => {
+    fetchServicesTypes();
+  }, []);
+
+  // Function that fetches the types of services from the backend
+  const fetchServicesTypes = async () => {
+    try {
+        const res = await axios.get("http://localhost:5000/api/v1/services/types");
+        setTypes(res.data);
+        console.info("Types fetched: ", res.data);
+    }
+    catch (error) {
+        console.error("Error fetching types data: ", error);
+    }
+}
 
   return (
     <Container maxWidth="large" disableGutters>
@@ -79,10 +100,10 @@ export default function Home() {
                   width: 300,
                   height: 376,
                   "&:hover": {
-                    backgroundColor: "rgba(0,0,255,0.1)",
+                    backgroundColor: "rgba(63,94,251,0.1)",
                     transform: "scale(1.05)",
                     transition: "transform 0.4s ease-in-out",
-                    // boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+                    boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
               >
@@ -109,10 +130,10 @@ export default function Home() {
                   width: 300,
                   height: 376,
                   "&:hover": {
-                    backgroundColor: "rgba(0,0,255,0.1)",
+                    backgroundColor: "rgba(63,94,251,0.1)",
                     transform: "scale(1.05)",
                     transition: "transform 0.4s ease-in-out",
-                    // boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+                    boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
               >
@@ -139,10 +160,10 @@ export default function Home() {
                   width: 300,
                   height: 376,
                   "&:hover": {
-                    backgroundColor: "rgba(0,0,255,0.1)",
+                    backgroundColor: "rgba(63,94,251,0.1)",
                     transform: "scale(1.05)",
                     transition: "transform 0.4s ease-in-out",
-                    // boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+                    boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
               >
@@ -192,132 +213,34 @@ export default function Home() {
           </Grid>
 
           <Grid size={{md: 6}}>
-              
-            <Accordion
-              sx={{
-                boxShadow: "0 0px 20px rgba(0, 0, 0, 0)",
-                py: 2,
-                mb: 4,
-              }}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon/>}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-                <Typography variant="h6">
-                  Computation
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="body1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion
-              sx={{
-                boxShadow: "0 0px 0px rgba(0, 0, 0, 0)",
-                borderTop: "1px solid rgba(63, 94, 251, 0.2)",
-                py: 2,
-                mb: 4,
-              }}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-                sx={{
-                  'MuiAccordionSummary-root': {
-                  backgroundColor: "rgba(0, 0, 0, 0)",
-                  boxShadow: "0 0px 0px rgba(0, 0, 0, 0)",
-                  borderTop: "1px solid white",
-                  },
-                }}
-              >
-                <Typography variant="h6">
-                  Data Bases
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="body1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion
-              sx={{
-                boxShadow: "0 0px 0px rgba(0, 0, 0, 0)",
-                borderTop: "1px solid rgba(63, 94, 251, 0.2)",
-                py: 2,
-                mb: 4
-              }}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-                <Typography variant="h6">
-                  Data Analytics
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="body1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion
-              sx={{
-                boxShadow: "0 0px 0px rgba(0, 0, 0, 0)",
-                borderTop: "1px solid rgba(63, 94, 251, 0.2)",
-                py: 2,
-                mb: 4
-              }}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-                <Typography variant="h6">
-                  Security
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="body1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion
-              sx={{
-                boxShadow: "0 0px 0px rgba(0, 0, 0, 0)",
-                borderTop: "1px solid rgba(63, 94, 251, 0.2)",
-                py: 2,
-                mb: 4
-              }}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-                <Typography variant="h6">
-                  Networks
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="body1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
+            
+            {types.map((type) => {
+              return (
+                <Accordion key={type}
+                  sx={{
+                    boxShadow: "0 0px 20px rgba(0, 0, 0, 0)",
+                    borderTop: "1px solid rgba(63, 94, 251, 0.2)",
+                    py: 2,
+                    mb: 4,
+                  }}
+                >
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon/>}
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography variant="h6">
+                      {type}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography variant="body1">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              )
+            })}
 
           </Grid>
 
