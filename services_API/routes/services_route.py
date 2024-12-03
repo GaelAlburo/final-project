@@ -43,11 +43,11 @@ class ServiceRoute(Blueprint):
                         "items": {
                             "type": "object",
                             "properties": {
-                                "name": {"type": "String"},
-                                "cost": {"type": "Float"},
-                                "company_name": {"type": "String"},
-                                "description": {"type": "String"},
-                                "type": {"type": "String"},
+                                "name": {"type": "string"},
+                                "cost": {"type": "number", "format": "float"},
+                                "company_name": {"type": "string"},
+                                "description": {"type": "string"},
+                                "type": {"type": "string"},
                             },
                         },
                     },
@@ -72,7 +72,7 @@ class ServiceRoute(Blueprint):
                         "type": "array",
                         "items": {
                             "type": "string",
-                            "properties": {"type": {"type": "String"}},
+                            "properties": {"type": {"type": "string"}},
                         },
                     },
                 }
@@ -95,7 +95,7 @@ class ServiceRoute(Blueprint):
         try:
             request_data = request.json
             if not request_data:
-                return jsonify({"error": "Invalid data"}), 400
+                return 400, f"Invalid data: {e}", None, None, None, None, None
 
             name = request_data.get("name")
             cost = request_data.get("cost")
@@ -112,13 +112,13 @@ class ServiceRoute(Blueprint):
 
             except ValidationError as e:
                 self.logger.error(f"Invalid data: {e}")
-                return jsonify({"error": f"Invalid data: {e}"}), 400
+                return 400, f"Invalid user data: {e}", None, None, None, None, None
 
-            return name, cost, company_name, description, type_serv
+            return 200, None, name, cost, company_name, description, type_serv
 
         except Exception as e:
             self.logger.error(f"Error fetching the request data: {e}")
-            return jsonify({"error": f"Error fetching the request data: {e}"}), 500
+            return 500, f"Error fetching the request data", None, None, None, None, None
 
     # Swagger documentation for the POST request to /api/v1/reviews
     @swag_from(
@@ -132,11 +132,11 @@ class ServiceRoute(Blueprint):
                     "schema": {
                         "type": "object",
                         "properties": {
-                            "name": {"type": "String"},
-                            "cost": {"type": "Float"},
-                            "company_name": {"type": "String"},
-                            "description": {"type": "String"},
-                            "type": {"type": "String"},
+                            "name": {"type": "string"},
+                            "cost": {"type": "number", "format": "float"},
+                            "company_name": {"type": "string"},
+                            "description": {"type": "string"},
+                            "type": {"type": "string"},
                         },
                         "required": [
                             "name",
@@ -161,7 +161,16 @@ class ServiceRoute(Blueprint):
         """Adds a new service"""
 
         try:
-            name, cost, company_name, description, type_serv = self.fetch_request_data()
+            code, message, name, cost, company_name, description, type_serv = (
+                self.fetch_request_data()
+            )
+
+            if code != 200:
+                self.logger.error(f"Error fetching service data: {message}")
+                return (
+                    jsonify({"error": message}),
+                    code,
+                )
 
             new_service = {
                 "name": name,
@@ -171,9 +180,23 @@ class ServiceRoute(Blueprint):
                 "type": type_serv,
             }
 
-            created_service = self.service_service.add_service(new_service)
+            created_service, code = self.service_service.add_service(new_service)
+
+            if code != 201:
+                self.logger.error(f"Error creating new service: {created_service}")
+                return (
+                    jsonify(
+                        {"error": f"Error creating new service: {created_service}"}
+                    ),
+                    code,
+                )
+
             self.logger.info(f"Service added: {created_service}")
-            return jsonify(created_service), 201
+            # return jsonify(created_service), 201
+            return (
+                jsonify({"status": "success", "service_created": created_service}),
+                201,
+            )
 
         except Exception as e:
             self.logger.error(f"Error adding service: {e}")
@@ -198,7 +221,7 @@ class ServiceRoute(Blueprint):
                         "type": "object",
                         "properties": {
                             "name": {"type": "string"},
-                            "cost": {"type": "Float"},
+                            "cost": {"type": "number", "format": "float"},
                             "company_name": {"type": "string"},
                             "description": {"type": "string"},
                             "type": {"type": "string"},
@@ -238,11 +261,11 @@ class ServiceRoute(Blueprint):
                     "schema": {
                         "type": "object",
                         "properties": {
-                            "name": {"type": "String"},
-                            "cost": {"type": "Float"},
-                            "company_name": {"type": "String"},
-                            "description": {"type": "String"},
-                            "type": {"type": "String"},
+                            "name": {"type": "string"},
+                            "cost": {"type": "number", "format": "float"},
+                            "company_name": {"type": "string"},
+                            "description": {"type": "string"},
+                            "type": {"type": "string"},
                         },
                         "required": [
                             "name",
@@ -266,7 +289,13 @@ class ServiceRoute(Blueprint):
         """Updates a service by its ID"""
 
         try:
-            name, cost, company_name, description, type_serv = self.fetch_request_data()
+            code, message, name, cost, company_name, description, type_serv = (
+                self.fetch_request_data()
+            )
+
+            if code != 200:
+                self.logger.error(f"Error fetching service data: {message}")
+                return jsonify({"error": message}), code
 
             update_service = {
                 "_id": service_id,
