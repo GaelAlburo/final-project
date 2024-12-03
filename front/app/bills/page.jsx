@@ -74,7 +74,7 @@ export default function Invoices() {
           Your Invoices
         </Typography>
         <Typography variant="body1" sx={{ mt: 2 }}>
-          Review all your weekly invoices for the services you've subscribed to. 
+          Review all your weekly invoices for the services you`&#39;`ve subscribed to. 
         </Typography>
       </Box>
 
