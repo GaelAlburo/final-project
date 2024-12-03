@@ -1,4 +1,5 @@
 from marshmallow import Schema, fields, validates_schema, ValidationError
+from datetime import datetime, timezone
 
 class ServiceSchema(Schema):
     """Schema for individual services within a bill"""
@@ -12,7 +13,7 @@ class BillSchema(Schema):
     id_user = fields.Str(required=True)
     id_services = fields.List(fields.Nested(ServiceSchema), required=True)
     totalAmount = fields.Float(dump_only=True)
-    date = fields.DateTime(required=True)
+    date = fields.DateTime(dump_only=True, default=datetime.now(timezone.utc).isoformat())
 
     @validates_schema
     def calculate_amount(self, data, **kwargs):

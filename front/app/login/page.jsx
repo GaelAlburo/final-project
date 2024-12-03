@@ -1,71 +1,23 @@
 "use client";
 
-import { Box, Button, Checkbox, Chip, Container, List, ListItem, ListItemButton, TextField, ListItemText, ListSubheader, Paper, Stack, Typography } from "@mui/material";
-import Grid from "@mui/material/Grid2";
+import { Box, Button, Container, TextField, Paper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-// import { useNavigation } from '@react-navigation/native';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import Alerts from "../components/alerts";
+import { useRouter } from 'next/navigation';
 
 export default function Services() {
 
-    // const navigation = useNavigation()
-
-    // State variable for the checkbox
-    const [checked, setChecked] = useState([""]);
-
-    // State variable for the selected types
-    const [selectedType, setSelectedType] = useState(["All"]);
-
-    // State variable for the selected services based on the selected types filter
-    const [selectedServices, setSelectedServices] = useState([]);
-
-    // State variable for the services
-    const [services, setServices] = useState([]);
-
-    // State variable for the types
-    const [types, setTypes] = useState([]);
-    const [nextPage, setNextPage] = useState('/');
-
-    // useEffect hook to fetch the services and types from the backend
-    useEffect(() => {
-        //fetchReviews();
-        //fetchTypes();
-    }, [])
-
-    // Function that fetches the services from the backend
-    // const fetchReviews = async () => {
-    //     try{
-    //         const res = await axios.get("http://localhost:5000/api/v1/services");
-    //         setServices(res.data);
-    //         console.info("Data fetched: ", res.data);
-    //     }
-    //     catch (error) {
-    //         console.error("Error fetching services data: ", error);
-    //     }
-    // }
-
-    // Function that fetches the types of services from the backend
-    // const fetchTypes = async () => {
-    //     try {
-    //         const res = await axios.get("http://localhost:5000/api/v1/services/types");
-    //         setTypes(res.data);
-    //         console.info("Types fetched: ", res.data);
-    //     }
-    //     catch (error) {
-    //         console.error("Error fetching types data: ", error);
-    //     }
-    // }
-
-
+    const router = useRouter();
     const [showPassword, setShowPassword] = useState(false);
     const [showPassword2, setShowPassword2] = useState(false);
     const [open, setOpen] = useState(false);
@@ -94,11 +46,38 @@ export default function Services() {
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleClickShowPassword2 = () => setShowPassword2((show) => !show);
 
+        // useEffect hook to fetch the services and types from the backend
+        useEffect(() => {
+            //fetchReviews();
+            //fetchTypes();
+        }, [])
+    
+        // Function that fetches the services from the backend
+        // const fetchReviews = async () => {
+        //     try{
+        //         const res = await axios.get("http://localhost:5000/api/v1/services");
+        //         setServices(res.data);
+        //         console.info("Data fetched: ", res.data);
+        //     }
+        //     catch (error) {
+        //         console.error("Error fetching services data: ", error);
+        //     }
+        // }
+    
+        // Function that fetches the types of services from the backend
+        // const fetchTypes = async () => {
+        //     try {
+        //         const res = await axios.get("http://localhost:5000/api/v1/services/types");
+        //         setTypes(res.data);
+        //         console.info("Types fetched: ", res.data);
+        //     }
+        //     catch (error) {
+        //         console.error("Error fetching types data: ", error);
+        //     }
+        // }
+
+
     const handleUserInfo = (event) => {
-        console.log(event)
-        console.log(event.target)
-        console.log(event.target.name)
-        console.log(event.target.value)
         setCurrentUser({
         ...currentUser,
         [event.target.name]: event.target.value,
@@ -115,38 +94,40 @@ export default function Services() {
                 setHelperTextPhone('phone number length must be 10 digits')
             )
         }
-        console.log(currentUser)
     };
 
     const firstValidation = async () => {
+        currentUser.name !== "" &&
         currentUser.email !== "" &&
         currentUser.password !== "" &&
         currentUser.confirmPassword !== ""
           ? (
             currentUser.password === currentUser.confirmPassword ?
               (
-                setsecondaryInfo(true),
-                setNextPage('/')
+                setsecondaryInfo(true)
             )
-            : setAlertConfig({
+            : (setAlertConfig({
               severity: "error",
               message: "Passwords entered do not match",
-            }))
-          : setAlertConfig({
+            }), setOpen(true)))
+          : (setAlertConfig({
               severity: "error",
               message: "Please fill in the required fields",
-            });
+            }), setOpen(true));
       };
 
     const isAUser = async () => {
         currentUser.email !== "" &&
         currentUser.password !== "" &&
-        currentUser.confirmPassword !== ""
+        currentUser.confirmPassword !== "" &&
+        currentUser.name !== "" &&
+        currentUser.phone_number !== "" &&
+        currentUser.usage !== ""
           ? (
             currentUser.password === currentUser.confirmPassword ?
               (
                 setOpen(true),
-                setNextPage('/')
+                router.push('/admin')
             )
             : setAlertConfig({
               severity: "error",
@@ -521,7 +502,6 @@ export default function Services() {
             </Box>
 
             <TextField
-                required
                 fullWidth
                 id="city"
                 label="City"
@@ -553,7 +533,6 @@ export default function Services() {
             />
 
             <TextField
-                required
                 fullWidth
                 id="state"
                 label="State"
@@ -609,7 +588,7 @@ export default function Services() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                href={nextPage}
+                href={'/admin'}
                 sx={{
                 mt: 2,
                 mb: 4,
@@ -631,7 +610,7 @@ export default function Services() {
       </Paper>
     
       
-      {/* <Alerts open={open} setOpen={setOpen} alert={alertConfig} pos={"top"} /> */}
+      <Alerts open={open} setOpen={setOpen} alert={alertConfig} pos={"top"} />
     </Container>
   );
 }

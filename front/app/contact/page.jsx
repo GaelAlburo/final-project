@@ -23,12 +23,12 @@ import { Message, Help, Support, Close, Send } from '@mui/icons-material';
 
 const SupportPage = () => {
   const [chatOpen, setChatOpen] = useState(false);
-  const [supportType, setSupportType] = useState('ventas');
+  const [supportType, setSupportType] = useState('sales');
 
   return (
     <Box sx={{ bgcolor: '#fff', minHeight: '100vh' }}>
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        {/* Header con gradiente */}
+        {/* Header with gradient */}
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Typography variant="h2" 
             sx={{ 
@@ -38,28 +38,28 @@ const SupportPage = () => {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
-            Soporte Cloud Bridge
+            Cloud Bridge Support
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-            Estamos aquí para ayudarte. Selecciona el tipo de soporte que necesitas.
+            We're here to help. Select the type of support you need.
           </Typography>
         </Box>
 
-        {/* Opciones de Soporte */}
+        {/* Support Options */}
         <Grid container spacing={4} sx={{ mb: 6 }}>
           <Grid item xs={12} md={6}>
             <Paper 
-              onClick={() => setSupportType('ventas')}
+              onClick={() => setSupportType('sales')}
               sx={{ 
                 p: 3,
                 cursor: 'pointer',
                 height: '100%',
                 borderRadius: 4,
                 transition: 'all 0.3s ease',
-                background: supportType === 'ventas' 
+                background: supportType === 'sales' 
                   ? 'linear-gradient(135deg, #FF1B6B 0%, #FF758C 100%)'
                   : '#fff',
-                boxShadow: supportType === 'ventas'
+                boxShadow: supportType === 'sales'
                   ? '0 8px 32px rgba(255, 27, 107, 0.15)'
                   : '0 2px 12px rgba(0,0,0,0.08)',
                 '&:hover': {
@@ -71,20 +71,20 @@ const SupportPage = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <Help sx={{ 
                   fontSize: 40,
-                  color: supportType === 'ventas' ? '#fff' : '#FF1B6B'
+                  color: supportType === 'sales' ? '#fff' : '#FF1B6B'
                 }} />
                 <Box>
                   <Typography variant="h5" sx={{ 
                     fontWeight: 'bold',
-                    color: supportType === 'ventas' ? '#fff' : '#000',
+                    color: supportType === 'sales' ? '#fff' : '#000',
                     mb: 1
                   }}>
-                    Soporte de Ventas
+                    Sales Support
                   </Typography>
                   <Typography sx={{ 
-                    color: supportType === 'ventas' ? 'rgba(255,255,255,0.9)' : 'text.secondary'
+                    color: supportType === 'sales' ? 'rgba(255,255,255,0.9)' : 'text.secondary'
                   }}>
-                    Contacta con nuestro equipo de ventas para información sobre productos y servicios.
+                    Contact our sales team for information about products and services.
                   </Typography>
                 </Box>
               </Box>
@@ -93,17 +93,17 @@ const SupportPage = () => {
 
           <Grid item xs={12} md={6}>
             <Paper 
-              onClick={() => setSupportType('tecnico')}
+              onClick={() => setSupportType('technical')}
               sx={{ 
                 p: 3,
                 cursor: 'pointer',
                 height: '100%',
                 borderRadius: 4,
                 transition: 'all 0.3s ease',
-                background: supportType === 'tecnico' 
+                background: supportType === 'technical' 
                   ? 'linear-gradient(135deg, #45CAFF 0%, #45EEEE 100%)'
                   : '#fff',
-                boxShadow: supportType === 'tecnico'
+                boxShadow: supportType === 'technical'
                   ? '0 8px 32px rgba(69, 202, 255, 0.15)'
                   : '0 2px 12px rgba(0,0,0,0.08)',
                 '&:hover': {
@@ -115,20 +115,20 @@ const SupportPage = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <Support sx={{ 
                   fontSize: 40,
-                  color: supportType === 'tecnico' ? '#fff' : '#45CAFF'
+                  color: supportType === 'technical' ? '#fff' : '#45CAFF'
                 }} />
                 <Box>
                   <Typography variant="h5" sx={{ 
                     fontWeight: 'bold',
-                    color: supportType === 'tecnico' ? '#fff' : '#000',
+                    color: supportType === 'technical' ? '#fff' : '#000',
                     mb: 1
                   }}>
-                    Soporte Técnico
+                    Technical Support
                   </Typography>
                   <Typography sx={{ 
-                    color: supportType === 'tecnico' ? 'rgba(255,255,255,0.9)' : 'text.secondary'
+                    color: supportType === 'technical' ? 'rgba(255,255,255,0.9)' : 'text.secondary'
                   }}>
-                    Resuelve problemas técnicos y obtén ayuda con nuestros servicios.
+                    Solve technical issues and get help with our services.
                   </Typography>
                 </Box>
               </Box>
@@ -136,7 +136,7 @@ const SupportPage = () => {
           </Grid>
         </Grid>
 
-        {/* Formulario */}
+        {/* Form */}
         <Paper sx={{ 
           p: 4,
           borderRadius: 4,
@@ -150,7 +150,7 @@ const SupportPage = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
-            {supportType === 'ventas' ? 'Contacto de Ventas' : 'Soporte Técnico'}
+            {supportType === 'sales' ? 'Sales Contact' : 'Technical Support'}
           </Typography>
 
           <Grid container spacing={3}>
@@ -158,7 +158,7 @@ const SupportPage = () => {
               <TextField
                 fullWidth
                 required
-                label="Nombre completo"
+                label="Full Name"
                 variant="outlined"
               />
             </Grid>
@@ -174,25 +174,25 @@ const SupportPage = () => {
             <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
-                label="Teléfono"
+                label="Phone"
                 variant="outlined"
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <FormControl fullWidth required>
-                <InputLabel>Asunto</InputLabel>
-                <Select label="Asunto">
-                  {supportType === 'ventas' ? (
+                <InputLabel>Subject</InputLabel>
+                <Select label="Subject">
+                  {supportType === 'sales' ? (
                     <>
-                      <MenuItem value="info">Información de productos</MenuItem>
-                      <MenuItem value="demo">Solicitar demo</MenuItem>
-                      <MenuItem value="cotizacion">Cotización</MenuItem>
+                      <MenuItem value="info">Product Information</MenuItem>
+                      <MenuItem value="demo">Request Demo</MenuItem>
+                      <MenuItem value="quote">Get Quote</MenuItem>
                     </>
                   ) : (
                     <>
-                      <MenuItem value="problema">Reportar problema</MenuItem>
-                      <MenuItem value="consulta">Consulta técnica</MenuItem>
-                      <MenuItem value="acceso">Problemas de acceso</MenuItem>
+                      <MenuItem value="problem">Report Problem</MenuItem>
+                      <MenuItem value="query">Technical Query</MenuItem>
+                      <MenuItem value="access">Access Issues</MenuItem>
                     </>
                   )}
                 </Select>
@@ -202,7 +202,7 @@ const SupportPage = () => {
               <TextField
                 fullWidth
                 required
-                label="Mensaje"
+                label="Message"
                 multiline
                 rows={4}
                 variant="outlined"
@@ -221,13 +221,13 @@ const SupportPage = () => {
                   }
                 }}
               >
-                Enviar mensaje
+                Send Message
               </Button>
             </Grid>
           </Grid>
         </Paper>
 
-        {/* Chat Flotante */}
+        {/* Floating Chat */}
         <Fab 
           sx={{ 
             position: 'fixed', 
@@ -257,7 +257,7 @@ const SupportPage = () => {
             justifyContent: 'space-between',
             alignItems: 'center'
           }}>
-            Chat de Soporte
+            Support Chat
             <IconButton onClick={() => setChatOpen(false)} sx={{ color: 'white' }}>
               <Close />
             </IconButton>
@@ -269,7 +269,7 @@ const SupportPage = () => {
                 <TextField
                   fullWidth
                   variant="outlined"
-                  placeholder="Escriba su mensaje..."
+                  placeholder="Type your message..."
                   size="small"
                 />
                 <IconButton sx={{ 
