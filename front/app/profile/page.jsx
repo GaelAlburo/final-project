@@ -3,19 +3,13 @@
 import { Box, Button, Container, TextField, Paper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Link from "next/link";
-import IconButton from "@mui/material/IconButton";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Alerts from "../components/alerts";
 import { useRouter } from 'next/navigation';
 import { useAuth } from "../contexts/SessionContext";
-import EditIcon from '@mui/icons-material/Edit';
 
-export default function Services() {
+export default function Profile() {
 
     const router = useRouter();
-    const [showPassword, setShowPassword] = useState(false);
     const [open, setOpen] = useState(false);
     const { login, setGlobalCurrentUser, setIsAuthenticated, currentUser} = useAuth();
     const [editedUser, setCurrentUser] = useState(currentUser);
@@ -28,8 +22,6 @@ export default function Services() {
     const [cityButton, setCityButton] = useState(true)
     const [errorBool, setErrorBool] = useState(true)
     const [helperTextPhone, setHelperTextPhone] = useState('phone number length must be 10 digits')
-
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
 
     const handleUserInfo = (event) => {
         setCurrentUser({
@@ -58,7 +50,7 @@ export default function Services() {
 
     const editAUser = async () => {
         try {
-            const res = await axios.put(`http://127.0.0.1:8000/api/v1/users/${currentUser._id}`, currentUser);
+            const res = await axios.put(`http://localhost:8003/api/v1/users/${currentUser._id}`, currentUser);
             if(res.status == 200){
                 setAlertConfig({
                     severity: "success",
@@ -102,7 +94,7 @@ export default function Services() {
     const closeAccount = async () => {
       try {
         editedUser.type = currentUser.type
-        const res = await axios.delete(`http://127.0.0.1:8000/api/v1/users/${currentUser._id}`, currentUser);
+        const res = await axios.delete(`http://localhost:8003/api/v1/users/${currentUser._id}`, currentUser);
         if(res.status == 200){
             setAlertConfig({
                 severity: "success",

@@ -14,28 +14,46 @@ import {
 } from "@mui/material";
 
 import { useEffect, useState } from "react";
+import { useAuth } from "../contexts/SessionContext";
 
 export default function Invoices() {
   {/* INVOICES */}
   const [invoices, setInvoices] = useState([]);
+  const [filteredInvoices, setFilteredInvoices] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  {/* AUTH */}
+  const { isAdminUser, currentUser } = useAuth();
+
   {/* QUICK STATS */}
-  const totalServices = invoices.reduce((sum, invoice) => sum + invoice.id_services.length, 0)
-  const totalInvoices = invoices.length;
-  const totalSpent = invoices.reduce((sum, invoice) => sum + invoice.totalAmount, 0);
+  const totalServices = filteredInvoices.reduce(
+    (sum, invoice) => sum + invoice.id_services.length, 
+    0
+  );
+  const totalInvoices = filteredInvoices.length;
+  const totalSpent = filteredInvoices.reduce(
+    (sum, invoice) => sum + invoice.totalAmount, 
+    0
+  );
 
   {/* API */}
   useEffect(() => {
     const fetchInvoices = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://127.0.0.1:5000/api/v1/bills");
+        const response = await fetch("http://localhost:8002/api/v1/bills");
         if (!response.ok) {
           throw new Error(`Error fetching invoices: ${response.statusText}`);
         }
         const data = await response.json();
         setInvoices(data);
+
+        // Filter invoices based on user type
+        if (isAdminUser) {
+          setFilteredInvoices(data); // Admin sees all invoices
+        } else {
+          setFilteredInvoices(data.filter(invoice => invoice.id_user === currentUser));
+        }
         setLoading(false);
       } catch (error) {
         console.error(error);
@@ -44,11 +62,11 @@ export default function Invoices() {
     };
 
     fetchInvoices();
-  }, []);
+  }, [isAdminUser, currentUser]);
 
   const deleteInvoice = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/v1/bills/${id}`, {
+      const response = await fetch(`http://localhost:8002/api/v1/bills/${id}`, {
         method: "DELETE",
       });
 
@@ -57,6 +75,7 @@ export default function Invoices() {
       }
 
       setInvoices(invoices.filter((invoice) => invoice._id !== id));
+      setFilteredInvoices(filteredInvoices.filter((invoice) => invoice._id !== id));
     } catch (error) {
       console.error(error);
     }
@@ -68,17 +87,20 @@ export default function Invoices() {
 
   return (
     <Container maxWidth="lg" disableGutters sx={{ px: { xs: 2, sm: 4, md: 6 }, py: 4 }}>
-      {/* UP */}
+
+      {/* HEADER */}
       <Box sx={{ mb: 8 }}>
         <Typography variant="h2" fontWeight={700} sx={{ mt: 10 }}>
-          Your Invoices
+          {isAdminUser ? "System Bills" : "Your Invoices"}
         </Typography>
         <Typography variant="body1" sx={{ mt: 2 }}>
-          Review all your weekly invoices for the services you`&#39;`ve subscribed to. 
+          {isAdminUser
+            ? "Here are all the bills registered in the system. You can view and manage them."
+            : "Review all your weekly invoices for the services you are subscribed to."}
         </Typography>
       </Box>
 
-    {/* QUICK STATS */}
+      {/* QUICK STATS */}
       <Grid container spacing={4} sx={{ mb: 6 }}>
         <Grid item xs={12} md={4}>
           <Card sx={{ textAlign: "center" }}>
@@ -122,7 +144,7 @@ export default function Invoices() {
 
       {/* LIST */}
       <Grid container spacing={4}>
-        {invoices.map((invoice) => (
+        {filteredInvoices.map((invoice) => (
           <Grid item xs={12} md={6} key={invoice._id}>
             <Paper
               elevation={3}
@@ -141,6 +163,11 @@ export default function Invoices() {
               <Typography variant="body1" color="text.secondary">
                 Date: {new Date(invoice.date).toLocaleDateString()}
               </Typography>
+              {isAdminUser && (
+                <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                  <strong>User ID:</strong> {invoice.id_user}
+                </Typography>
+              )}
               <Divider sx={{ my: 2 }} />
               <Stack spacing={1}>
                 {invoice.id_services.map((service, index) => (
@@ -155,14 +182,16 @@ export default function Invoices() {
               <Typography variant="h6" fontWeight={700}>
                 Total: ${invoice.totalAmount.toFixed(2)}
               </Typography>
-              <Button
-                variant="outlined"
-                color="error"
-                sx={{ mt: 2 }}
-                onClick={() => deleteInvoice(invoice._id)}
-              >
-                Delete
-              </Button>
+              {isAdminUser && (
+                <Button
+                  variant="outlined"
+                  color="error"
+                  sx={{ mt: 2 }}
+                  onClick={() => deleteInvoice(invoice._id)}
+                >
+                  Delete
+                </Button>
+              )}
             </Paper>
           </Grid>
         ))}

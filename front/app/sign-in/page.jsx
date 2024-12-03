@@ -46,7 +46,7 @@ export default function SignIn() {
 
     const isAUser = async () => {
         try {
-            const res = await axios.post("http://127.0.0.1:5000/api/v1/is-user", currentUser);
+            const res = await axios.post("http://localhost:8003/api/v1/is-user", currentUser);
             if(res.status == 200){
                 setAlertConfig({
                     severity: "success",

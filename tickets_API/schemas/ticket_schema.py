@@ -1,54 +1,44 @@
-from marashmallow import Schema, fields, ValidationError, validates
+from marshmallow import Schema, fields, ValidationError, validates
 import datetime
+
 
 class TicketSchema(Schema):
     """Class to validate the incoming ticket data"""
 
-    name = fields.String(required=True)
-    description = fields.String(required=True)
+    text = fields.String(required=True)
+    id_user = fields.Integer(required=True)
+    name_user = fields.String(required=True)
+    date = fields.String(required=True)
     status = fields.String(required=True)
-    user_id = fields.Integer(required=True)
-    date = fields.DateTime(required=True)
 
-    @validates("name")
-    def validates_name(self, value):
-        """Function to validate the name field"""
+    @validates("text")
+    def validates_text(self, value):
+        """Function to validate the text field"""
 
         if len(value) < 5:
-            raise ValidationError("Ticket name must have at least 6 characters")
+            raise ValidationError("Ticket name must have at least 5 characters")
+        elif len(value) > 280:
+            raise ValidationError("Ticket name must have at most 280 characters")
+
+    @validates("id_user")
+    def validates_id_user(self, value):
+        """Function to validate the user_id field"""
+
+        if value <= 0:
+            raise ValidationError("user_id must be greater than 0")
+
+    @validates("name_user")
+    def validates_name_user(self, value):
+        """Function to validate the name_user field"""
+
+        if len(value) < 5:
+            raise ValidationError("User name must have at least 5 characters")
         elif len(value) > 50:
-            raise ValidationError("Ticket name must have at most 50 characters")
-
-    @validates("description")
-    def validates_description(self, value):
-        """Function to validate the description field"""
-
-        if len(value) < 10:
-            raise ValidationError("Ticket Description must have at least 10 characters")
-        elif len(value) > 100:
-            raise ValidationError("Ticket Description must have at most 100 characters")
+            raise ValidationError("User name must have at most 50 characters")
 
     @validates("status")
     def validates_status(self, value):
         """Function to validate the status field"""
 
         if value != "pending" and value != "solved":
-            raise ValidationError("Ticket Status must have the value 'pending' or 'solved'")
-    
-    @validates("user_id")
-    def validates_user_id(self, value):
-        """Function to validate the user_id field"""
-
-        if value <= 0:
-            raise ValidationError("Ticket User ID must be greater than 0")
-        elif value > 15:
-            raise ValidationError("Ticket User ID must be at most 15")
-        
-    @validates("date")
-    def validates_date(self, value):
-        """Function to validate the date field"""
-
-        if value == None:
-            raise ValidationError("Ticket Date must not be empty")
-        elif value > datetime.datetime.now():
-            raise ValidationError("Ticket Date must be in the past")
+            raise ValidationError("Ticket Status must be either 'pending' or 'solved'")

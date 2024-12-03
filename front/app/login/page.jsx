@@ -51,7 +51,7 @@ export default function Login() {
     
     const validateEmail = async () => {
         try {
-            const res = await axios.post("http://127.0.0.1:5000/api/v1/validate-email", currentUser);
+            const res = await axios.post("http://localhost:8003/api/v1/validate-email", currentUser);
             if(res.status == 200){
                 setsecondaryInfo(true)
             }
@@ -83,7 +83,7 @@ export default function Login() {
 
     const createUser = async () => {
         try {
-            const res = await axios.post("http://127.0.0.1:5000/api/v1/users", currentUser);
+            const res = await axios.post("http://localhost:8003/api/v1/users", currentUser);
             if(res.status == 200){
                 setIsAuthenticated('true')
                 setGlobalCurrentUser(currentUser)
@@ -525,7 +525,7 @@ export default function Login() {
                     name="row-radio-buttons-group"
                 > 
                     {availableCountries.map((index) =>
-                        <FormControlLabel value={index} onClick={() => handleUserInfo({
+                        <FormControlLabel key={index} value={index} onClick={() => handleUserInfo({
                             target:{
                                 name: 'country',
                                 value: index
@@ -607,7 +607,7 @@ export default function Login() {
                     name="row-radio-buttons-group"
                 > 
                     {usageTypes.map((index) =>
-                        <FormControlLabel value={index} onClick={() => handleUserInfo({
+                        <FormControlLabel key={index} value={index} onClick={() => handleUserInfo({
                             target:{
                                 name: 'usage',
                                 value: index
