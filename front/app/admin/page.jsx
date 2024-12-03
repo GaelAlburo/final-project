@@ -75,7 +75,7 @@ export default function Admin() {
     // Function that fetches the services from the API
     const fetchServices = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/v1/services");
+            const res = await axios.get("http://localhost:8000/api/v1/services");
             setServices(res.data);
             console.info("Services fetched successfully");
         }
@@ -92,7 +92,7 @@ export default function Admin() {
     // Function that fetches the tickets from the API
     const fetchTickets = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/v1/tickets");
+            const res = await axios.get("http://localhost:8001/api/v1/tickets");
             setTickets(res.data);
             console.info("Tickets fetched successfully");
         }
@@ -157,7 +157,7 @@ export default function Admin() {
     const deleteService = async (_id) => {
         console.info("Deleting service: ", _id);
         try {
-            const res = await axios.delete(`http://localhost:5000/api/v1/services/${_id}`);
+            const res = await axios.delete(`http://localhost:8000/api/v1/services/${_id}`);
             setServices(services.filter((serv) => serv._id !== _id));
 
             console.info("Service deleted successfully: ", res.data);
@@ -176,7 +176,7 @@ export default function Admin() {
     const deleteTicket = async (_id) => {
         console.info("Deleting ticket: ", _id);
         try {
-            const res = await axios.delete(`http://localhost:5000/api/v1/tickets/${_id}`);
+            const res = await axios.delete(`http://localhost:8001/api/v1/tickets/${_id}`);
             setTickets(tickets.filter((ticket) => ticket._id !== _id));
 
             console.info("Ticket deleted successfully: ", res.data);

@@ -21,7 +21,7 @@ export default function TicketDialog({open, setOpen, action, ticket, setTicket, 
         if (action === "add") {
             console.info("Adding new ticket: ", ticket);
             try{
-                const res = await axios.post("http://localhost:5000/api/v1/tickets", ticket);
+                const res = await axios.post("http://localhost:8001/api/v1/tickets", ticket);
                 setTickets([...tickets, res.data]);
                 console.info("Ticket added successfully: ", res.data);
                 setAlert({
@@ -40,7 +40,7 @@ export default function TicketDialog({open, setOpen, action, ticket, setTicket, 
         else if (action === "edit") {
             console.info("Editing ticket: ", ticket);
             try {
-                const res = await axios.put(`http://localhost:5000/api/v1/tickets/${ticket._id}`, ticket);
+                const res = await axios.put(`http://localhost:8001/api/v1/tickets/${ticket._id}`, ticket);
                 setTickets(tickets.map((t) => (t._id === ticket._id ? res.data : t)));
                 console.info("Ticket edited successfully: ", res.data);
                 setAlert({

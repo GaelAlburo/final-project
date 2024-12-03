@@ -30,7 +30,7 @@ export default function Home() {
   // Function that fetches the types of services from the backend
   const fetchServicesTypes = async () => {
     try {
-        const res = await axios.get("http://localhost:5000/api/v1/services/types");
+        const res = await axios.get("http://localhost:8000/api/v1/services/types");
         setTypes(res.data);
         console.info("Types fetched: ", res.data);
     }
