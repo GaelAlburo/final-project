@@ -13,6 +13,8 @@ bills_API/schemas/__pycache__/
 bills_API/services/__pycache__/
 bills_API/bills_api.log
 
+front/.next/
+front/.DS_Store/
 
 eduardossh
 eduardossh.pub
