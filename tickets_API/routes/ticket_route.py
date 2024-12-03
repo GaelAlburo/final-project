@@ -15,8 +15,8 @@ class TicketRoute(Blueprint):
     def register_routes(self):
         self.route("/api/v1/tickets", methods=["GET"])(self.get_tickets)
         self.route("/api/v1/tickets/<int:ticket_id>", methods=["GET"])(self.get_one_ticket)
-        self.route("/api/v1/tickets", methods=["POST"])(self.create_ticket)
-        self.route("/api/v1/tickets/status", methods=["GET"])(self.get_ticket_status)
+        self.route("/api/v1/tickets", methods=["POST"])(self.add_ticket)
+        #self.route("/api/v1/tickets/status", methods=["GET"])(self.get_ticket_status)
         self.route("/api/v1/tickets/<ticket_id>", methods=["PUT"])(self.update_ticket)
         self.route("/api/v1/tickets/<ticket_id>", methods=["DELETE"])(self.delete_ticket)
         self.route("/healthcheck", methods=["GET"])(self.healthcheck)

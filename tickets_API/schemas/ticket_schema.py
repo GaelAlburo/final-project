@@ -1,4 +1,4 @@
-from marashmallow import Schema, fields, ValidationError, validates
+from marshmallow import Schema, fields, ValidationError, validates
 import datetime
 
 class TicketSchema(Schema):
