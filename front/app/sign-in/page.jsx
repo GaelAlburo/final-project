@@ -11,7 +11,7 @@ import Alerts from "../components/alerts";
 import { useRouter } from 'next/navigation';
 import { useAuth } from "../contexts/SessionContext";
 
-export default function Services() {
+export default function SignIn() {
 
     const router = useRouter();
     const [showPassword, setShowPassword] = useState(false);
@@ -43,12 +43,6 @@ export default function Services() {
         [event.target.name]: event.target.value,
         });
     };
-
-    // useEffect hook to fetch the services and types from the backend
-    // useEffect(() => {
-    //     //fetchReviews();
-    //     //fetchTypes();
-    // }, [])
 
     const isAUser = async () => {
         try {

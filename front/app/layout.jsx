@@ -13,8 +13,6 @@ import { AuthProvider } from "./contexts/SessionContext";
 
 export default function RootLayout({ children }) {
 
-  const [loggedIn, setloggedIn] = useState(false)
-
   return (
     <html lang="en">
       <head>
@@ -26,14 +24,14 @@ export default function RootLayout({ children }) {
         className={`antialiased`}
         style={{ margin: 0, padding: 0 }}
       >
+        <AuthProvider>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <AuthProvider>
           <AppBarGlobal />
             {children}
           <FooterGlobal />
-          </AuthProvider>
         </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );
