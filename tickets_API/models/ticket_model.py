@@ -1,5 +1,5 @@
 import os
-from logger.tickets_logger import Logger
+from logger.ticket_logger import Logger
 from pymongo import MongoClient
 
 class TicketsModel:
