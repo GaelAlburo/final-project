@@ -8,8 +8,8 @@ import Image from "next/image";
 import { DataGrid } from "@mui/x-data-grid";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import AddIcon from "@mui/icons-material/Add";
 import ServiceDialog from "../components/service-dialog";
+import Alerts from "../components/alerts";
 
 export default function Admin() {
 
@@ -31,6 +31,15 @@ export default function Admin() {
 
     // State variable to control the visibility of the ServiceDialog component
     const [openDialog, setOpenDialog] = useState(false);
+
+    // State variable to control the visibility of the Alerts component
+    const [openAlert, setOpenAlert] = useState(false);
+
+    // State variable to store the alert message and severity
+    const [alert, setAlert] = useState({
+        severity: "",
+        message: ""
+    })
 
     useEffect(() => {
         fetchServices();
@@ -75,15 +84,21 @@ export default function Admin() {
 
     // Function that deletes a service from the database
     const deleteService = async (_id) => {
+        console.info("Deleting service: ", _id);
         try {
-            console.info("Deleting service: ", _id);
             const res = await axios.delete(`http://localhost:5000/api/v1/services/${_id}`);
             setServices(services.filter((serv) => serv._id !== _id));
+
             console.info("Service deleted successfully: ", res.data);
+            setAlert({
+                severity: "success",
+                message: "Service deleted successfully"
+            });
         }
         catch (error) {
             console.error("Error deleting service: ", error);
         }
+        setOpenAlert(true);
     }
 
     // Columns for the DataGrid component. We define an edit and delete button for each row
@@ -250,6 +265,17 @@ export default function Admin() {
                 setServ = {setServ}
                 services = {services}
                 setServices = {setServices}
+                openAlert = {openAlert}
+                setOpenAlert = {setOpenAlert}
+                alert = {alert}
+                setAlert = {setAlert}
+            />
+
+            <Alerts 
+                open = {openAlert}
+                setOpen = {setOpenAlert}
+                alert = {alert}
+                pos = "bottom"
             />
 
         </Container>
