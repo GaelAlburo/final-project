@@ -11,7 +11,7 @@ import Alerts from "../components/alerts";
 import { useRouter } from 'next/navigation';
 import { useAuth } from "../contexts/SessionContext";
 
-export default function Services() {
+export default function SignIn() {
 
     const router = useRouter();
     const [showPassword, setShowPassword] = useState(false);
@@ -32,7 +32,7 @@ export default function Services() {
         severity: "",
         message: "",
     });
-    const { isAdminUser, isAuthenticated, setGlobalCurrentUser, setIsAuthenticated } =
+    const { login, setGlobalCurrentUser, setIsAuthenticated } =
     useAuth();
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -44,12 +44,6 @@ export default function Services() {
         });
     };
 
-    // useEffect hook to fetch the services and types from the backend
-    // useEffect(() => {
-    //     //fetchReviews();
-    //     //fetchTypes();
-    // }, [])
-
     const isAUser = async () => {
         try {
             const res = await axios.post("http://localhost:8003/api/v1/is-user", currentUser);
@@ -60,6 +54,7 @@ export default function Services() {
                   }), 
                   setOpen(true),
                   setIsAuthenticated('true')
+                  login('true', 'true')
                   setGlobalCurrentUser(res.data.user_info)
                   router.push('/admin')
             }else{
