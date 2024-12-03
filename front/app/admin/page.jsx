@@ -17,8 +17,7 @@ import { useAuth } from "../contexts/SessionContext";
 export default function Admin() {
 
     const router = useRouter();
-    const { isAdminUser, isAuthenticated, currentUser } =
-    useAuth();
+    const { isAdminUser, isAuthenticated, currentUser } = useAuth();
 
     // State variable to store the services fetched from the API
     const [services, setServices] = useState([]);
@@ -69,6 +68,7 @@ export default function Admin() {
             router.push('/')
         } else {
             fetchServices();
+            fetchTickets();
         }
     }, []);
 
@@ -137,11 +137,10 @@ export default function Admin() {
             console.info("Adding new ticket");
             setTicket({
                 _id: null,
-                user_id: "",
-                status: "",
-                description: "",
-                name: "",
-                date: ""
+                text: "",
+                id_user: "",
+                date: "",
+                status: "pending"
             });
         }
         else if (action === "edit") {
@@ -223,11 +222,9 @@ export default function Admin() {
     // Ticket columns for the DataGrid component. We define an edit and delete button for each row
     const ticketColumns = [
         { field: "_id", headerName: "ID", width: 30 },
-        { field: "name", headerName: "Name", flex: 1.5 },
-        { field: "user_id", headerName: "User ID", flex: 1 },
+        { field: "id_user", headerName: "User ID", flex: 1 },
         { field: "status", headerName: "Status", flex: 1 },
         { field: "date", headerName: "Date", flex: 1 },
-        { field: "description", headerName: "Description", flex: 1 },
         {
             field: "action",
             headerName: "Actions",
@@ -235,17 +232,17 @@ export default function Admin() {
             renderCell: (params) => (
                 <Box>
                     <IconButton
-                        sx={{color: "rgb(63,94,251)"}}
+                        sx={{color: "rgb(63,94,251)", display: params.row.status == "pending" ? "block" : "none"}}
                         onClick={() => handleTicket({ action: "edit", ticket: params.row })}
                     >
                         <EditIcon />
                     </IconButton>
-                    <IconButton
+                    {/* <IconButton
                         color="error"
                         onClick={() => deleteTicket(params.row._id)}
                     >
                         <DeleteIcon />
-                    </IconButton>
+                    </IconButton> */}
                 </Box>
             ),
         },

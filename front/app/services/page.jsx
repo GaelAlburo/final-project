@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import Link from "next/link";
+import { useAuth } from "../contexts/SessionContext";
 
 export default function Services() {
 
@@ -23,6 +24,23 @@ export default function Services() {
 
     // State variable for the types
     const [types, setTypes] = useState([]);
+
+    // Auth context
+    const {idAdminUser, isAuthenticated, currentUser} = useAuth();
+
+    // State variable for the button configuration
+    const [configButton1, setConfigButton1] = useState({
+        label: "Start by Logging In",
+        href: "/login",
+    })
+
+    // If the user is authenticated, we change the button configuration
+    if (isAuthenticated) {
+        setConfigButton1({
+            label: "View my Services",
+            href: "/bills",
+        })
+    }
 
     // useEffect hook to fetch the services and types from the backend
     useEffect(() => {
@@ -113,7 +131,7 @@ export default function Services() {
                             We provide a range of services to help you get the most out of your cloud infrastructure.
                             To hire our services, you just need to log in to your account or create a new one.
                         </Typography>
-                        <Button variant="contained" size="large"
+                        <Button variant="contained" size="large" href={configButton1.href}
                             sx={{
                                 backgroundColor: "rgb(63,94,251)",
                                 "&:hover": {
@@ -122,7 +140,7 @@ export default function Services() {
                                 },
                                 mt: 4
                             }}>
-                            Start by Logging In
+                            {configButton1.label}
                         </Button>
                         <Button variant="outlined" size="large" href="/pricing"
                             sx={{

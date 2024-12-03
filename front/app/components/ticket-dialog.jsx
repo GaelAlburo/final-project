@@ -1,12 +1,16 @@
 import axios from "axios";
 import Alerts from "./alerts";
-import { TextField, Dialog, DialogActions, DialogContent, DialogTitle, Button } from "@mui/material";
+import { useState } from "react";
+import { TextField, Dialog, DialogActions, DialogContent, DialogTitle, Button, Typography } from "@mui/material";
 
 export default function TicketDialog({open, setOpen, action, ticket, setTicket, tickets, setTickets, openAlert, setOpenAlert, alert, setAlert}) {
     // Function to close the dialog
     const handleCloseDialog = () => {
         setOpen(false);
     }
+
+    // State that stores the response from the admin to the ticket
+    const [response, setResponse] = useState("");
 
     // Funtion that updates the ticket state when the user types in the inputs
     const handleChange = (e) => {
@@ -16,11 +20,18 @@ export default function TicketDialog({open, setOpen, action, ticket, setTicket, 
         });
     }
 
+    // Function that updates the response state when the user types in the response input
+    const handleResponseChange = (e) => {
+        setResponse(e.target.value);
+    }
+
     // Function that saves the ticket in the database, handles both add and edit actions
     const saveTicket = async () => {
         if (action === "add") {
             console.info("Adding new ticket: ", ticket);
             try{
+                ticket.id_user = tickets.length + 1;
+                ticket.date = new Date().toUTCString();
                 const res = await axios.post("http://localhost:8001/api/v1/tickets", ticket);
                 setTickets([...tickets, res.data]);
                 console.info("Ticket added successfully: ", res.data);
@@ -40,16 +51,18 @@ export default function TicketDialog({open, setOpen, action, ticket, setTicket, 
         else if (action === "edit") {
             console.info("Editing ticket: ", ticket);
             try {
+                ticket.status = "solved";
                 const res = await axios.put(`http://localhost:8001/api/v1/tickets/${ticket._id}`, ticket);
-                setTickets(tickets.map((t) => (t._id === ticket._id ? res.data : t)));
+                setTickets(tickets.map((t) => (t._id === ticket._id ? ticket : t)));
                 console.info("Ticket edited successfully: ", res.data);
                 setAlert({
                     severity: "success",
-                    message: "Ticket edited successfully!"
+                    message: "Ticket solved successfully!"
                 })
+                setResponse("");
             }
             catch (error) {
-                console.error("Error editing ticket: ", error);
+                console.error("Error solving ticket: ", error);
                 setAlert({
                     severity: "error",
                     message: error.response.data.error
@@ -71,61 +84,60 @@ export default function TicketDialog({open, setOpen, action, ticket, setTicket, 
         <Dialog open={open} onClose={handleCloseDialog}>
             <DialogTitle>{action === "add" ? "Add Ticket" : "Edit Ticket"}</DialogTitle>
             <DialogContent>
-                <TextField
-                    margin="dense"
-                    name="name"
-                    label="Name"
-                    fullWidth
-                    value={ticket.name}
-                    onChange={handleChange}
-                    placeholder="Enter the ticket name"
-                    required={true}
-                    color="info"
-                />
-                <TextField
-                    margin="dense"
-                    name="description"
-                    label="Description"
-                    fullWidth
-                    value={ticket.description}
-                    onChange={handleChange}
-                    placeholder="Enter the ticket description"
-                    required={true}
-                    color="info"   
-                />
-                <TextField
-                    margin="dense"
-                    name="status"
-                    label="Status"
-                    fullWidth
-                    value={ticket.status}
-                    onChange={handleChange}
-                    placeholder="Enter the ticket status"
-                    required={true}
-                    color="info"
-                />
-                <TextField
-                    margin="dense"
-                    name="date"
-                    label="Date"
-                    fullWidth
-                    value={ticket.date}
-                    onChange={handleChange}
-                    placeholder="Enter the ticket date"
-                    required={true}
-                    color="info"
-                />
-                <TextField
-                    margin="dense"
-                    name="user_id"
-                    label="User ID"
-                    fullWidth
-                    value={ticket.user_id}
-                    onChange={handleChange}
-                    placeholder="Enter the ticket user ID"
-                    required={true}
-                    color="info"
-                />
+                {action === "edit" ? (
+                    <>
+                        <Typography variant="body2">
+                            Ticket Submitted by {ticket.name_user}
+                        </Typography>
+
+                        <TextField
+                            margin="dense"
+                            name="text"
+                            label="Text"
+                            fullWidth
+                            value={ticket.text}
+                            disabled
+                            multiline
+                            color="info"
+                        />
+                        <TextField
+                            margin="dense"
+                            name="description"
+                            label="Description"
+                            fullWidth
+                            value={response}
+                            onChange={handleResponseChange}
+                            multiline
+                            placeholder="Respond the Ticket"
+                            required={true}
+                            color="info"   
+                        />
+                    </>
+                ) : (
+                    <>
+                        <TextField
+                            margin="dense"
+                            name="name_user"
+                            label="User name"
+                            fullWidth
+                            placeholder="User name"
+                            value={ticket.name_user}
+                            onChange={handleChange}
+                            color="info"
+                        />
+                        <TextField
+                            margin="dense"
+                            name="text"
+                            label="Text"
+                            fullWidth
+                            placeholder="Text"
+                            value={ticket.text}
+                            onChange={handleChange}
+                            required={true}
+                            color="info"   
+                        />
+                    </>
+                )}
             </DialogContent>
             <DialogActions>
             <Button color="primary" onClick={handleCloseDialog}
@@ -148,7 +160,7 @@ export default function TicketDialog({open, setOpen, action, ticket, setTicket, 
                         },
                     }}
                 >
-                    {action === "add" ? "Add" : "Edit"}
+                    {action === "add" ? "Add" : "Answer"}
                 </Button>
             </DialogActions>
      </Dialog>

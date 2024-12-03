@@ -14,6 +14,8 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import axios from "axios";
 import { use, useEffect, useState } from "react";
 import Image from "next/image";
+import { useAuth } from "@/app/contexts/SessionContext";
+
 
 export default function IndivService({params}) {
     const theme = useTheme();
@@ -26,6 +28,23 @@ export default function IndivService({params}) {
 
     // State variable to store the service data
     const [service, setService] = useState({});
+
+    // Auth context
+    const {idAdminUser, isAuthenticated, currentUser} = useAuth();
+
+    // State variable for the button configuration
+    const [configButton1, setConfigButton1] = useState({
+        label: "Log In to Hire",
+        href: "/login",
+    })
+
+    // If the user is authenticated, we change the button configuration
+    if (isAuthenticated) {
+        setConfigButton1({
+            label: "Hire Service",
+            href: "/bills",
+        })
+    }
 
     useEffect(() => {
         fetchService();
@@ -91,7 +110,7 @@ export default function IndivService({params}) {
                                 {service.description}
                             </Typography>
 
-                            <Button variant="outlined" size="large" href="/login"
+                            <Button variant="outlined" size="large" href={configButton1.href}
                                 sx={{
                                     backgroundColor: "rgb(63,94,251)",
                                     mt: 4,
@@ -105,7 +124,7 @@ export default function IndivService({params}) {
                                     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
                                     },
                                 }}>
-                                Log In to Hire
+                                {configButton1.label}
                             </Button>
                         </Box>
                         <Box sx={{mt: 4}}>
@@ -305,7 +324,7 @@ export default function IndivService({params}) {
                     <Typography variant="h5" fontWeight={700} sx={{mb: 3}} color="white">
                         Start to use {service.name} now!
                     </Typography>
-                    <Button variant="outlined" size="small" href="/login"
+                    <Button variant="outlined" size="small" href={configButton1.href}
                         sx={{
                             px: 3,
                             py: 2,
@@ -317,7 +336,7 @@ export default function IndivService({params}) {
                             transition: "transform 0.4s ease-in-out",
                             },
                         }}>
-                        Log In To Hire
+                        {configButton1.label}
                     </Button>
                 </Container>
             </Container>
