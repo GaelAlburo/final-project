@@ -925,3 +925,49 @@
 2024-12-03 00:30:36: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:30:36] "POST /api/v1/is-user HTTP/1.1" 200 -
 2024-12-03 00:46:04: INFO [users_model.py:58] MongoDB connection closed
 2024-12-03 00:46:05: INFO [users_model.py:58] MongoDB connection closed
+2024-12-03 01:28:42: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-03 01:28:42: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-03 01:28:42: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-03 01:28:42: INFO [_internal.py:97]  * Restarting with stat
+2024-12-03 01:28:42: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-03 01:28:42: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-03 01:28:42: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-03 01:29:39: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:29:39] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:29:39: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 01:29:39: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:29:39] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:31:06: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:31:06] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:31:06: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 01:31:06: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:31:06] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:32:14: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:32:14] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:32:14: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 01:32:14: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:32:14] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:32:47: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:32:47] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-03 01:32:47: INFO [users_routes.py:203] Validate user email: servando@test.com
+2024-12-03 01:32:47: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:32:47] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-03 01:32:59: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:32:59] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-03 01:32:59: INFO [users_routes.py:310] New User created: {'email': 'servando@test.com', 'password': 'Password123', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5234234232', 'country': 'México', 'city': 'sada', 'state': 'asdasda', 'hired_services': [], 'fav_services': [], '_id': 6}
+2024-12-03 01:32:59: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:32:59] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 201 -
+2024-12-03 01:34:06: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:34:06] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-03 01:34:06: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:34:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-03 01:34:26: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:34:26] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:34:26: INFO [users_routes.py:177] Login user: {'_id': 6, 'email': 'servando@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5234234232', 'country': 'México', 'city': 'sada', 'state': 'asdasda', 'hired_services': [], 'fav_services': []}
+2024-12-03 01:34:26: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:34:26] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:34:41: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:34:41] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:34:41: INFO [users_routes.py:177] Login user: {'_id': 6, 'email': 'servando@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5234234232', 'country': 'México', 'city': 'sada', 'state': 'asdasda', 'hired_services': [], 'fav_services': []}
+2024-12-03 01:34:41: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:34:41] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:37:18: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:37:18] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:37:18: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 01:37:18: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:37:18] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:40:36: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:40:36] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:40:36: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 01:40:36: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:40:36] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:41:14: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:41:14] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:41:14: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 01:41:14: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:41:14] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:44:46: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:44:46] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:44:46: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 01:44:46: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:44:46] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:46:54: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:46:54] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 01:46:54: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 01:46:54: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 01:46:54] "POST /api/v1/is-user HTTP/1.1" 200 -
