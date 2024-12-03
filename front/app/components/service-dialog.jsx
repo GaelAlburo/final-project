@@ -22,7 +22,7 @@ export default function ServiceDialog({open, setOpen, action, serv, setServ, ser
             console.info("Adding new service: ", serv);
             try{
                 serv.cost = parseFloat(serv.cost);
-                const res = await axios.post("http://localhost:5000/api/v1/services", serv);
+                const res = await axios.post("http://localhost:8000/api/v1/services", serv);
                 setServices([...services, res.data]);
                 console.info("Service added successfully: ", res.data);
                 setAlert({
@@ -42,7 +42,7 @@ export default function ServiceDialog({open, setOpen, action, serv, setServ, ser
             console.info("Editing service: ", serv);
             try {
                 serv.cost = parseFloat(serv.cost);
-                const res = await axios.put(`http://localhost:5000/api/v1/services/${serv._id}`, serv);
+                const res = await axios.put(`http://localhost:8000/api/v1/services/${serv._id}`, serv);
                 setServices(services.map((s) => (s._id === serv._id ? res.data : s)));
                 console.info("Service edited successfully: ", res.data);
                 setAlert({
