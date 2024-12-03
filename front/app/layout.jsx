@@ -1,14 +1,19 @@
+"use client";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "../styles/global-theme";
 import AppBarGlobal from "./components/appbar-global";
 import FooterGlobal from "./components/footer-global";
+import { useState } from "react";
 
-export const metadata = {
-  title: "FRONT APP CHANGE AFTER",
-  description: "Front End App CHANGE AFTER",
-};
+// export const metadata = {
+//   title: "FRONT APP CHANGE AFTER",
+//   description: "Front End App CHANGE AFTER",
+// };
 
 export default function RootLayout({ children }) {
+
+  const [loggedIn, setloggedIn] = useState(false)
+
   return (
     <html lang="en">
       <head>
@@ -22,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <AppBarGlobal />
+          <AppBarGlobal loggedIn={loggedIn} setloggedIn={setloggedIn}/>
             {children}
           <FooterGlobal />
         </ThemeProvider>

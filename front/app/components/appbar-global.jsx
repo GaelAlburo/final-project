@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 import { useTheme } from "@emotion/react";
 
-export default function AppBarGlobal() {
+export default function AppBarGlobal(loggedIn, setloggedIn) {
     const theme = useTheme();
 
     // Navigation items
@@ -23,6 +23,17 @@ export default function AppBarGlobal() {
         { label: "Profile", href: "/profile" },
         { label: "Settings", href: "/settings" },
         { label: "Logout", href: "/logout" },
+    ];
+
+    const AccountOptions = [
+      {
+        label: "Sign In",
+        href: "/sign-in",
+      },
+      {
+        label: "Login",
+        href: "/login",
+      },
     ];
 
     // State to handle the opening and closing of the menu when small screen size
@@ -47,8 +58,9 @@ export default function AppBarGlobal() {
     }
 
     // Function to handle the closing of the user menu
-    const handleCloseUserMenu = () => {
+    const handleCloseUserMenu = (value) => {
       setAnchorElUser(null);
+      console.log(value)
     }
 
 
@@ -181,9 +193,9 @@ export default function AppBarGlobal() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => {
+                {AccountOptions.map((setting) => {
                   return (
-                    <MenuItem key={setting.label} onClick={handleCloseUserMenu}>
+                    <MenuItem key={setting.label} onClick={() => handleCloseUserMenu(setting.label)} >
                       <Typography sx={{textAlign: "center", color: "black", textDecoration: "none"}} component={Link} href={setting.href}>
                         {setting.label}
                       </Typography>
