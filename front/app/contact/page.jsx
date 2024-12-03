@@ -1,34 +1,92 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
   Container,
   Typography,
-  TextField,
-  Button,
   Paper,
   Grid,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Fab,
-  Dialog,
-  DialogTitle,
-  DialogContent,
+  Card,
+  CardContent,
   IconButton,
+  Tooltip,
 } from '@mui/material';
-import { Message, Help, Support, Close, Send } from '@mui/icons-material';
+import {
+  Email,
+  LocationOn,
+  Phone,
+  WhatsApp,
+  LinkedIn,
+  Twitter,
+} from '@mui/icons-material';
+
+const ContactOption = ({ icon, title, content, onClick }) => (
+  <Card 
+    sx={{ 
+      height: '100%',
+      cursor: 'pointer',
+      transition: 'all 0.3s ease',
+      '&:hover': {
+        transform: 'translateY(-4px)',
+        boxShadow: '0 8px 24px rgba(0,0,0,0.15)'
+      }
+    }}
+    onClick={onClick}
+  >
+    <CardContent sx={{ 
+      display: 'flex', 
+      flexDirection: 'column',
+      alignItems: 'center',
+      textAlign: 'center',
+      p: 3
+    }}>
+      {icon}
+      <Typography variant="h6" sx={{ mt: 2, mb: 1, fontWeight: 'bold' }}>
+        {title}
+      </Typography>
+      <Typography color="text.secondary">
+        {content}
+      </Typography>
+    </CardContent>
+  </Card>
+);
+
+const SocialButton = ({ icon, tooltip, onClick }) => (
+  <Tooltip title={tooltip}>
+    <IconButton 
+      onClick={onClick}
+      sx={{ 
+        bgcolor: 'background.paper',
+        boxShadow: 1,
+        '&:hover': {
+          bgcolor: 'background.paper',
+          transform: 'scale(1.1)'
+        }
+      }}
+    >
+      {icon}
+    </IconButton>
+  </Tooltip>
+);
 
 const SupportPage = () => {
-  const [chatOpen, setChatOpen] = useState(false);
-  const [supportType, setSupportType] = useState('sales');
+  const handleCopyEmail = (email) => {
+    navigator.clipboard.writeText(email);
+  };
+
+  const handleCopyPhone = (phone) => {
+    navigator.clipboard.writeText(phone);
+  };
+
+  const openMap = () => {
+    window.open('https://www.google.com/maps/place/Facultad+de+Ingeniería+UNAM/@19.3313883,-99.1872813,17z', '_blank');
+  };
 
   return (
     <Box sx={{ bgcolor: '#fff', minHeight: '100vh' }}>
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        {/* Header with gradient */}
+        {/* Header */}
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Typography variant="h2" 
             sx={{ 
@@ -38,253 +96,122 @@ const SupportPage = () => {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
-            Cloud Bridge Support
+            Contact Us
           </Typography>
-          <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-            We're here to help. Select the type of support you need.
+          <Typography variant="h6" sx={{ color: 'text.secondary' }}>
+            We're here to help. Choose your preferred method of contact.
           </Typography>
         </Box>
 
-        {/* Support Options */}
+        {/* Contact Options */}
         <Grid container spacing={4} sx={{ mb: 6 }}>
-          <Grid item xs={12} md={6}>
-            <Paper 
-              onClick={() => setSupportType('sales')}
-              sx={{ 
-                p: 3,
-                cursor: 'pointer',
-                height: '100%',
-                borderRadius: 4,
-                transition: 'all 0.3s ease',
-                background: supportType === 'sales' 
-                  ? 'linear-gradient(135deg, #FF1B6B 0%, #FF758C 100%)'
-                  : '#fff',
-                boxShadow: supportType === 'sales'
-                  ? '0 8px 32px rgba(255, 27, 107, 0.15)'
-                  : '0 2px 12px rgba(0,0,0,0.08)',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  boxShadow: '0 12px 40px rgba(255, 27, 107, 0.2)'
-                }
-              }}
-            >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                <Help sx={{ 
-                  fontSize: 40,
-                  color: supportType === 'sales' ? '#fff' : '#FF1B6B'
-                }} />
-                <Box>
-                  <Typography variant="h5" sx={{ 
-                    fontWeight: 'bold',
-                    color: supportType === 'sales' ? '#fff' : '#000',
-                    mb: 1
-                  }}>
-                    Sales Support
-                  </Typography>
-                  <Typography sx={{ 
-                    color: supportType === 'sales' ? 'rgba(255,255,255,0.9)' : 'text.secondary'
-                  }}>
-                    Contact our sales team for information about products and services.
-                  </Typography>
-                </Box>
-              </Box>
-            </Paper>
+          <Grid item xs={12} md={4}>
+            <ContactOption
+              icon={<Email sx={{ fontSize: 40, color: '#FF1B6B' }} />}
+              title="Email"
+              content="contact@fi.unam.mx"
+              onClick={() => handleCopyEmail('contact@fi.unam.mx')}
+            />
           </Grid>
-
-          <Grid item xs={12} md={6}>
-            <Paper 
-              onClick={() => setSupportType('technical')}
-              sx={{ 
-                p: 3,
-                cursor: 'pointer',
-                height: '100%',
-                borderRadius: 4,
-                transition: 'all 0.3s ease',
-                background: supportType === 'technical' 
-                  ? 'linear-gradient(135deg, #45CAFF 0%, #45EEEE 100%)'
-                  : '#fff',
-                boxShadow: supportType === 'technical'
-                  ? '0 8px 32px rgba(69, 202, 255, 0.15)'
-                  : '0 2px 12px rgba(0,0,0,0.08)',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  boxShadow: '0 12px 40px rgba(69, 202, 255, 0.2)'
-                }
-              }}
-            >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                <Support sx={{ 
-                  fontSize: 40,
-                  color: supportType === 'technical' ? '#fff' : '#45CAFF'
-                }} />
-                <Box>
-                  <Typography variant="h5" sx={{ 
-                    fontWeight: 'bold',
-                    color: supportType === 'technical' ? '#fff' : '#000',
-                    mb: 1
-                  }}>
-                    Technical Support
-                  </Typography>
-                  <Typography sx={{ 
-                    color: supportType === 'technical' ? 'rgba(255,255,255,0.9)' : 'text.secondary'
-                  }}>
-                    Solve technical issues and get help with our services.
-                  </Typography>
-                </Box>
-              </Box>
-            </Paper>
+          <Grid item xs={12} md={4}>
+            <ContactOption
+              icon={<Phone sx={{ fontSize: 40, color: '#45CAFF' }} />}
+              title="Phone"
+              content="+52 (55) 5622-0866"
+              onClick={() => handleCopyPhone('+52 (55) 5622-0866')}
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <ContactOption
+              icon={<WhatsApp sx={{ fontSize: 40, color: '#25D366' }} />}
+              title="WhatsApp"
+              content="Send us a message"
+              onClick={() => window.open('https://wa.me/525556220866', '_blank')}
+            />
           </Grid>
         </Grid>
 
-        {/* Form */}
-        <Paper sx={{ 
-          p: 4,
-          borderRadius: 4,
-          background: '#fff',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
-        }}>
-          <Typography variant="h4" sx={{ 
-            mb: 4,
-            fontWeight: 'bold',
-            background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            {supportType === 'sales' ? 'Sales Contact' : 'Technical Support'}
-          </Typography>
-
-          <Grid container spacing={3}>
+        {/* Location Card */}
+        <Paper 
+          sx={{ 
+            p: 4,
+            borderRadius: 4,
+            background: '#fff',
+            boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
+            mb: 6,
+            overflow: 'hidden'
+          }}
+        >
+          <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
-              <TextField
-                fullWidth
-                required
-                label="Full Name"
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TextField
-                fullWidth
-                required
-                label="Email"
-                type="email"
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TextField
-                fullWidth
-                label="Phone"
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <FormControl fullWidth required>
-                <InputLabel>Subject</InputLabel>
-                <Select label="Subject">
-                  {supportType === 'sales' ? (
-                    <>
-                      <MenuItem value="info">Product Information</MenuItem>
-                      <MenuItem value="demo">Request Demo</MenuItem>
-                      <MenuItem value="quote">Get Quote</MenuItem>
-                    </>
-                  ) : (
-                    <>
-                      <MenuItem value="problem">Report Problem</MenuItem>
-                      <MenuItem value="query">Technical Query</MenuItem>
-                      <MenuItem value="access">Access Issues</MenuItem>
-                    </>
-                  )}
-                </Select>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                required
-                label="Message"
-                multiline
-                rows={4}
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Button
-                variant="contained"
-                size="large"
-                sx={{
-                  px: 4,
-                  py: 1.5,
-                  background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
-                  '&:hover': {
-                    background: 'linear-gradient(90deg, #FF1B6B 20%, #45CAFF 100%)',
-                  }
-                }}
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                <LocationOn sx={{ fontSize: 40, color: '#FF1B6B' }} />
+                <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+                  Visit Us
+                </Typography>
+              </Box>
+              <Typography variant="body1" paragraph>
+                UNAM School of Engineering
+              </Typography>
+              <Typography variant="body1" paragraph>
+                University Avenue 3000, University City
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Coyoacán, 04510 Mexico City, CDMX
+              </Typography>
+              <Typography 
+                variant="body1" 
+                color="primary" 
+                sx={{ cursor: 'pointer' }}
+                onClick={openMap}
               >
-                Send Message
-              </Button>
+                View on Google Maps
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box sx={{ width: '100%', height: '400px', position: 'relative' }}>
+                <Box
+                  component="iframe"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.0468743231837!2d-99.18728132573!3d19.331388287091488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce00015be0a713%3A0x3fc11681a8244370!2sFacultad%20de%20Ingenier%C3%ADa%20UNAM!5e0!3m2!1ses!2smx!4v1709619129043!5m2!1ses!2smx"
+                  sx={{
+                    border: 0,
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: 2,
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                  }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </Box>
             </Grid>
           </Grid>
         </Paper>
 
-        {/* Floating Chat */}
-        <Fab 
-          sx={{ 
-            position: 'fixed', 
-            bottom: 32, 
-            right: 32,
-            background: 'linear-gradient(135deg, #FF1B6B 0%, #45CAFF 100%)',
-            '&:hover': {
-              background: 'linear-gradient(135deg, #FF1B6B 20%, #45CAFF 100%)',
-            }
-          }}
-          onClick={() => setChatOpen(true)}
-        >
-          <Message />
-        </Fab>
-
-        {/* Chat Dialog */}
-        <Dialog 
-          open={chatOpen} 
-          onClose={() => setChatOpen(false)}
-          maxWidth="sm"
-          fullWidth
-        >
-          <DialogTitle sx={{ 
-            background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
-            color: 'white',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center'
-          }}>
-            Support Chat
-            <IconButton onClick={() => setChatOpen(false)} sx={{ color: 'white' }}>
-              <Close />
-            </IconButton>
-          </DialogTitle>
-          <DialogContent sx={{ mt: 2 }}>
-            <Box sx={{ height: '400px', display: 'flex', flexDirection: 'column' }}>
-              <Box sx={{ flexGrow: 1, mb: 2, bgcolor: '#f8f9fa', borderRadius: 2, p: 2 }} />
-              <Box sx={{ display: 'flex', gap: 1 }}>
-                <TextField
-                  fullWidth
-                  variant="outlined"
-                  placeholder="Type your message..."
-                  size="small"
-                />
-                <IconButton sx={{ 
-                  background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
-                  color: 'white',
-                  '&:hover': {
-                    background: 'linear-gradient(90deg, #FF1B6B 20%, #45CAFF 100%)',
-                  }
-                }}>
-                  <Send />
-                </IconButton>
-              </Box>
-            </Box>
-          </DialogContent>
-        </Dialog>
+        {/* Social Media */}
+        <Box sx={{ textAlign: 'center' }}>
+          <Typography variant="h6" sx={{ mb: 3, fontWeight: 'bold' }}>
+            Follow Us on Social Media
+          </Typography>
+          <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
+            <SocialButton 
+              icon={<LinkedIn sx={{ color: '#0077B5' }} />}
+              tooltip="LinkedIn"
+              onClick={() => window.open('https://www.linkedin.com/school/facultad-de-ingenieria-unam/', '_blank')}
+            />
+            <SocialButton 
+              icon={<Twitter sx={{ color: '#1DA1F2' }} />}
+              tooltip="Twitter"
+              onClick={() => window.open('https://twitter.com/fiunam_mx', '_blank')}
+            />
+            <SocialButton 
+              icon={<Email sx={{ color: '#FF1B6B' }} />}
+              tooltip="Email"
+              onClick={() => handleCopyEmail('contact@fi.unam.mx')}
+            />
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
