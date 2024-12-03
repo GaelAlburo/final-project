@@ -1,7 +1,8 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from "@mui/material";
 import axios from "axios";
+import Alerts from "./alerts";
 
-export default function ServiceDialog({open, setOpen, action, serv, setServ, services, setServices}) {
+export default function ServiceDialog({open, setOpen, action, serv, setServ, services, setServices, openAlert, setOpenAlert, alert, setAlert}) {
     // Function to close the dialog
     const handleCloseDialog = () => {
         setOpen(false);
@@ -24,11 +25,17 @@ export default function ServiceDialog({open, setOpen, action, serv, setServ, ser
                 const res = await axios.post("http://localhost:5000/api/v1/services", serv);
                 setServices([...services, res.data]);
                 console.info("Service added successfully: ", res.data);
-                //ALERT
+                setAlert({
+                    severity: "success",
+                    message: "Service added successfully!"
+                })
             }
             catch (error) {
                 console.error("Error adding service: ", error);
-                //ALERT
+                setAlert({
+                    severity: "error",
+                    message: error.response.data.error
+                })
             }
         }
         else if (action === "edit") {
@@ -38,18 +45,27 @@ export default function ServiceDialog({open, setOpen, action, serv, setServ, ser
                 const res = await axios.put(`http://localhost:5000/api/v1/services/${serv._id}`, serv);
                 setServices(services.map((s) => (s._id === serv._id ? res.data : s)));
                 console.info("Service edited successfully: ", res.data);
-                //ALERT
+                setAlert({
+                    severity: "success",
+                    message: "Service edited successfully!"
+                })
             }
             catch (error) {
                 console.error("Error editing service: ", error);
-                //ALERT
+                setAlert({
+                    severity: "error",
+                    message: error.response.data.error
+                })
             }
         }
         else {
             console.error("Invalid action: ", action);
-            //ALERT
+            setAlert({
+                severity: "error",
+                message: "Invalid action!"
+            })
         }
-        //setopenAlert(true);
+        setOpenAlert(true);
         handleCloseDialog();
     }
 

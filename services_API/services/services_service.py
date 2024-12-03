@@ -45,7 +45,7 @@ class ServicesService:
             new_service["_id"] = next_id
 
             self.db_conn.db.services.insert_one(new_service)
-            return new_service
+            return new_service, 201
         except Exception as e:
             self.logger.error(f"Error adding service to database: {e}")
             return jsonify({"error": f"Error adding service to database: {e}"}), 500
