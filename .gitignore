@@ -13,6 +13,14 @@ bills_API/schemas/__pycache__/
 bills_API/services/__pycache__/
 bills_API/bills_api.log
 
+users_API/venv/
+users_API/logger/__pycache__/
+users_API/models/__pycache__/
+users_API/routes/__pycache__/
+users_API/schemas/__pycache__/
+users_API/services/__pycache__/
+users_API/users_api.log
+
 front/.next/
 front/.DS_Store/
 
@@ -20,3 +28,4 @@ eduardossh
 eduardossh.pub
 
 front/node_modules/
+front/.next

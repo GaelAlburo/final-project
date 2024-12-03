@@ -6,8 +6,9 @@ import FaceIcon from '@mui/icons-material/Face';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 import { useTheme } from "@emotion/react";
+import { useAuth } from "../contexts/SessionContext";
 
-export default function AppBarGlobal(loggedIn, setloggedIn) {
+export default function AppBarGlobal() {
     const theme = useTheme();
 
     // Navigation items
@@ -21,20 +22,16 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
     // Options for the user menu
     const settings = [
         { label: "Profile", href: "/profile" },
-        { label: "Settings", href: "/settings" },
-        { label: "Logout", href: "/logout" },
+        { label: "Logout", href: "/" },
     ];
 
     const AccountOptions = [
-      {
-        label: "Sign In",
-        href: "/sign-in",
-      },
-      {
-        label: "Login",
-        href: "/login",
-      },
+      { label: "Sign In", href: "/sign-in" },
+      { label: "Login", href: "/login" }
     ];
+
+    const { isAdminUser, isAuthenticated, logout, setIsAuthenticated } =
+    useAuth();
 
     // State to handle the opening and closing of the menu when small screen size
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -60,10 +57,10 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
     // Function to handle the closing of the user menu
     const handleCloseUserMenu = (value) => {
       setAnchorElUser(null);
-      console.log(value)
+      if(value == "Logout"){
+        setIsAuthenticated('false')
+      }
     }
-
-
       return (
         <AppBar position="sticky"
           sx={{backgroundColor: "rgba(255,255,255, 0.2)", backdropFilter: "blur(50px)", borderBottom: "1px solid rgba(0,0,0,0.8)"}}
@@ -193,7 +190,10 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {AccountOptions.map((setting) => {
+                {
+                isAuthenticated === 'true' ?
+                (
+                  settings.map((setting) => {
                   return (
                     <MenuItem key={setting.label} onClick={() => handleCloseUserMenu(setting.label)} >
                       <Typography sx={{textAlign: "center", color: "black", textDecoration: "none"}} component={Link} href={setting.href}>
@@ -201,7 +201,19 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
                       </Typography>
                     </MenuItem>
                   )
-                })}
+                }))
+                :
+                (
+                  AccountOptions.map((setting) => {
+                  return (
+                    <MenuItem key={setting.label} onClick={() => handleCloseUserMenu(setting.label)} >
+                      <Typography sx={{textAlign: "center", color: "black", textDecoration: "none"}} component={Link} href={setting.href}>
+                        {setting.label}
+                      </Typography>
+                    </MenuItem>
+                  )
+                }))
+                }
               </Menu>
             </Box>
 

@@ -1,12 +1,7 @@
 {
-  "/faq/page": "app/faq/page.js",
-  "/work/page": "app/work/page.js",
-  "/terms/page": "app/terms/page.js",
-  "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/pricing/page": "app/pricing/page.js",
-  "/services/page": "app/services/page.js",
-  "/cookie/page": "app/cookie/page.js",
-  "/privacy/page": "app/privacy/page.js",
-  "/page": "app/page.js"
+  "/admin/page": "app/admin/page.js",
+  "/sign-in/page": "app/sign-in/page.js",
+  "/page": "app/page.js",
+  "/login/page": "app/login/page.js",
+  "/about/page": "app/about/page.js"
 }

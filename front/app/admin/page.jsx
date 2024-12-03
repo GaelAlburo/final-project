@@ -9,9 +9,15 @@ import { DataGrid } from "@mui/x-data-grid";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ServiceDialog from "../components/service-dialog";
+import {useRouter} from 'next/navigation';
 import Alerts from "../components/alerts";
+import { useAuth } from "../contexts/SessionContext";
 
 export default function Admin() {
+
+    const router = useRouter();
+    const { isAdminUser, isAuthenticated, currentUser } =
+    useAuth();
 
     // State variable to store the services fetched from the API
     const [services, setServices] = useState([]);
@@ -42,7 +48,11 @@ export default function Admin() {
     })
 
     useEffect(() => {
-        fetchServices();
+        if (isAuthenticated === false) {
+            router.push('/')
+        } else {
+            fetchServices();
+        }
     }, []);
 
     // Function that fetches the services from the API
