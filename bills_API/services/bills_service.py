@@ -38,7 +38,7 @@ class BillsService:
         """Function to fetch a bills by user_id"""
 
         try:
-            bills = list(self.db_conn.db.bills.find({"user_id": user_id}))
+            bills = list(self.db_conn.db.bills.find({"id_user": user_id}))
             return bills
         except Exception as e:
             self.logger.error(f"Error fetching bills for user {user_id}: {e}")

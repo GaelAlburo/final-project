@@ -2,10 +2,10 @@ from flask import Flask
 from flask_cors import CORS
 from flasgger import Swagger
 
-from models.bills_model import BillsModel
-from services.bills_service import BillsService
-from schemas.bills_schema import BillSchema
-from routes.bills_route import BillsRoute
+from models.ticket_model import TicketsModel
+from services.ticket_service import TicketService
+from schemas.ticket_schema import TicketSchema
+from routes.ticket_route import TicketRoute
 
 app = Flask(__name__)
 CORS(app)
@@ -14,20 +14,20 @@ CORS(app)
 swagger = Swagger(app)
 
 # Model
-db_conn = BillsModel()
+db_conn = TicketsModel()
 db_conn.connect_to_database()
 
 # Service
-bills_service = BillsService(db_conn)
+ticket_service = TicketService(db_conn)
 
 # Schema
-bills_schema = BillSchema()
+ticket_schema = TicketSchema()
 
 # Routes
-bills_routes = BillsRoute(bills_service, bills_schema)
+ticket_routes = TicketRoute(ticket_service, ticket_schema)
 
 # Register the blueprint to make the routes available in the app
-app.register_blueprint(bills_routes)
+app.register_blueprint(ticket_routes)
 
 if __name__ == "__main__":
     try:
