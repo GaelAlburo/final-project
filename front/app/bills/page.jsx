@@ -41,7 +41,7 @@ export default function Invoices() {
     const fetchInvoices = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://127.0.0.1:8001/api/v1/bills");
+        const response = await fetch("http://localhost:8001/api/v1/bills");
         if (!response.ok) {
           throw new Error(`Error fetching invoices: ${response.statusText}`);
         }
@@ -66,7 +66,7 @@ export default function Invoices() {
 
   const deleteInvoice = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8001/api/v1/bills/${id}`, {
+      const response = await fetch(`http://localhost:8001/api/v1/bills/${id}`, {
         method: "DELETE",
       });
 
