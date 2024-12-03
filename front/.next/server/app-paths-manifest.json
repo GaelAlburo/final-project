@@ -1,7 +1,12 @@
 {
+  "/faq/page": "app/faq/page.js",
+  "/work/page": "app/work/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/pricing/page": "app/pricing/page.js",
   "/services/page": "app/services/page.js",
   "/cookie/page": "app/cookie/page.js",
-  "/about/page": "app/about/page.js",
-  "/pricing/page": "app/pricing/page.js",
-  "/faq/page": "app/faq/page.js"
+  "/privacy/page": "app/privacy/page.js",
+  "/page": "app/page.js"
 }
