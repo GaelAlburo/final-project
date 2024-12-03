@@ -192,11 +192,7 @@ class ServiceRoute(Blueprint):
                 )
 
             self.logger.info(f"Service added: {created_service}")
-            # return jsonify(created_service), 201
-            return (
-                jsonify({"status": "success", "service_created": created_service}),
-                201,
-            )
+            return jsonify(created_service), 201
 
         except Exception as e:
             self.logger.error(f"Error adding service: {e}")
