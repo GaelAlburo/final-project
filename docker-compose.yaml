@@ -19,6 +19,18 @@ services:
       MONGODB_HOST: mongodb
     depends_on:
         - mongodb
+  bills_api:
+    build: ./bills_API
+    image: bills_api:v1.0.0
+    container_name: bills_api
+    ports:
+      - "8001:8000"
+    environment:
+      MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGODB_HOST: mongodb
+    depends_on:
+        - mongodb
   frontend:
     build: ./front
     image: cloud-ui:v1.0.0
@@ -27,3 +39,4 @@ services:
       - "3000:3000"
     depends_on:
         - services_api
+        - bills_api
