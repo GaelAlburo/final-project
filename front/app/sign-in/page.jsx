@@ -32,7 +32,7 @@ export default function Services() {
         severity: "",
         message: "",
     });
-    const { isAdminUser, isAuthenticated, setGlobalCurrentUser, setIsAuthenticated } =
+    const { login, setGlobalCurrentUser, setIsAuthenticated } =
     useAuth();
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -60,6 +60,7 @@ export default function Services() {
                   }), 
                   setOpen(true),
                   setIsAuthenticated('true')
+                  login('true', 'true')
                   setGlobalCurrentUser(res.data.user_info)
                   router.push('/admin')
             }else{

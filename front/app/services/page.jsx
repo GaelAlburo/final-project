@@ -6,8 +6,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import Link from "next/link";
+import { useAuth } from "../contexts/SessionContext";
 
 export default function Services() {
+
+    const { isAdminUser, isAuthenticated, currentUser } =
+    useAuth();
 
     // State variable for the checkbox
     const [checked, setChecked] = useState([""]);
@@ -23,6 +27,14 @@ export default function Services() {
 
     // State variable for the types
     const [types, setTypes] = useState([]);
+
+    const [configButton1, setConfigButton1] = useState({label:'Start by Logging In', href: '/sign-in'})
+    const [configButton2, setConfigButton2] = useState({label: 'Information about Pricing', href:'pricing'})
+
+    if(isAuthenticated == 'true'){
+        setConfigButton1({label: 'Contratar nuevo servicio', href: "/"})
+        setConfigButton2({label: 'Ver mis servicios', href:"admin"})
+    }
 
     // useEffect hook to fetch the services and types from the backend
     useEffect(() => {
@@ -113,7 +125,7 @@ export default function Services() {
                             We provide a range of services to help you get the most out of your cloud infrastructure.
                             To hire our services, you just need to log in to your account or create a new one.
                         </Typography>
-                        <Button variant="contained" size="large"
+                        <Button variant="contained" size="large" href={configButton1.href}
                             sx={{
                                 backgroundColor: "rgb(63,94,251)",
                                 "&:hover": {
@@ -122,9 +134,9 @@ export default function Services() {
                                 },
                                 mt: 4
                             }}>
-                            Start by Logging In
+                            {configButton1.label}
                         </Button>
-                        <Button variant="outlined" size="large" href="/pricing"
+                        <Button variant="outlined" size="large" href={configButton2.href}
                             sx={{
                                 color: "rgb(63,94,251)",
                                 borderColor: "rgb(63,94,251)",
@@ -136,7 +148,7 @@ export default function Services() {
                                 mt: 4,
                                 ml: 4
                             }}>
-                            Information about Pricing
+                            {configButton2.label}
                         </Button>
                         
                     </Box>
