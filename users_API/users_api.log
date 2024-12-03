@@ -1,0 +1,927 @@
+2024-12-02 19:54:43: CRITICAL [users_model.py:20] MongoDB environment variables are required
+2024-12-02 19:55:19: CRITICAL [users_model.py:20] MongoDB environment variables are required
+2024-12-02 19:55:33: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 19:55:33: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 19:55:33: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 19:55:33: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 19:55:34: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 19:55:34: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 19:55:34: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 19:55:48: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 19:55:48] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 20:01:21: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 20:01:21: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 20:03:32: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 20:03:32: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 20:03:32: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 20:03:32: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 20:03:32: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 20:03:32: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 20:03:32: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:20:30: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:20:30: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:20:33: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:20:34: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 21:20:34: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 21:20:34: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:20:34: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:20:34: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:20:34: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:20:45: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/app.py', reloading
+2024-12-02 21:20:45: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:20:45: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:20:46: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:21:05: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:21:05: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 21:21:05: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 21:21:05: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:21:05: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:21:05: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:21:05: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:22:39: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:22:39: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:23:24: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:23:24: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 21:23:24: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 21:23:24: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:23:24: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:23:24: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:23:24: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:24:01: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:01] "[33mGET / HTTP/1.1[0m" 404 -
+2024-12-02 21:24:02: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-02 21:24:07: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:07] "GET /apidocs/ HTTP/1.1" 200 -
+2024-12-02 21:24:07: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:07] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2024-12-02 21:24:07: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:07] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2024-12-02 21:24:07: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:07] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2024-12-02 21:24:07: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:07] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2024-12-02 21:24:08: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:08] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-12-02 21:24:15: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:15] "[33mGET /apidocs/healthcheck HTTP/1.1[0m" 404 -
+2024-12-02 21:24:27: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:27] "[33mGET /apidocs/healthcheck HTTP/1.1[0m" 404 -
+2024-12-02 21:24:28: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:28] "[33mGET /apidocs/healthcheck HTTP/1.1[0m" 404 -
+2024-12-02 21:24:30: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:30] "[33mGET /apidocs/healthcheck HTTP/1.1[0m" 404 -
+2024-12-02 21:24:47: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:24:47] "GET /healthcheck HTTP/1.1" 200 -
+2024-12-02 21:25:48: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:25:48] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:26:37: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:26:37] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:31:16: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:31:16] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:31:16: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:31:16: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:31:16: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:31:16] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:32:50: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:32:50: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:32:50: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:32:50: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:32:50: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:32:50: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:32:54: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:32:54: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:32:55: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:32:55: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:32:55: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:32:55: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:33:39: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:33:39: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:33:39: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:33:40: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:33:40: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:33:40: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:33:48: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:33:48: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:33:48: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:33:48: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:33:48: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:33:48: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:33:49: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:33:49: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:33:50: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:33:50: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:33:50: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:33:50: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:33:53: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:33:53: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:33:54: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:33:54: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:33:54: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:33:54: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:00: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:00: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:00: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:01: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:01: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:01: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:04: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:04: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:04: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:04: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:04: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:04: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:06: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:06: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:07: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:07: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:07: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:07: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:19: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:19: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:20: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:20: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:20: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:20: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:24: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:24: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:24: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:25: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:25: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:25: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:28: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:28: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:28: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:28: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:28: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:28: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:32: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:32: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:33: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:33: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:33: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:33: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:38: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:38: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:39: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:39: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:39: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:39: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:45: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:45: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:45: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:46: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:46: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:46: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:34:52: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:34:52: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:34:52: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:34:52: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:34:52: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:34:52: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:35:09: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:35:09: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:35:09: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:35:09: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:35:09: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:35:09: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:35:24: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:35:24] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:35:24: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:35:24: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:35:24: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:35:24] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:35:59: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:35:59: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:36:00: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:36:00: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:36:00: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:36:00: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:37:22: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:37:22] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:37:22: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:37:22: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:37:22: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:37:22] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:37:34: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:37:34] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:37:34: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:37:34: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:37:34: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:37:34] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:37:57: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:37:57] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:37:57: ERROR [logger_base.py:29] Invalid user data: User password must have at least 8 characters
+2024-12-02 21:37:57: ERROR [logger_base.py:29] Error creating new user: Invalid user data: User password must have at least 8 characters
+2024-12-02 21:37:57: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:37:57] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:40:15: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:40:15] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:40:15: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:40:15: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:40:15: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:40:15] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:40:29: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:40:29] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:40:29: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:40:29: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:40:29: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:40:29] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:41:53: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:41:53] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:41:53: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:41:53: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:41:53: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:41:53] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:42:26: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:42:26] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:42:26: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:42:26: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:42:26: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:42:26] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:43:01: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:43:01] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:43:01: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:43:01: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:43:01: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:43:01] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:44:19: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:44:19: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:44:20: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:44:20: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:44:20: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:44:20: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:44:22: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:44:22: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:44:23: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:44:23: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:44:23: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:44:23: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:44:35: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:44:35: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:44:35: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:44:36: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:44:36: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:44:36: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:44:43: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:44:43: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:44:43: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:44:43: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:44:43: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:44:43: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:44:44: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:44:44: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:44:45: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:44:45: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:44:45: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:44:45: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:44:52: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:44:52: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:44:53: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:44:53: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:44:53: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:44:53: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:45:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:00] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:45:00: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:45:00: ERROR [logger_base.py:29] Error creating new user: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 21:45:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:00] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:45:16: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:16] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:45:16: ERROR [logger_base.py:29] Invalid user data: User password must have at least 8 characters
+2024-12-02 21:45:16: ERROR [logger_base.py:29] Error creating new user: Invalid user data: User password must have at least 8 characters
+2024-12-02 21:45:16: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:16] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:45:32: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:32] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:45:32: ERROR [logger_base.py:29] Invalid user data: Password should have at least one numeral
+2024-12-02 21:45:32: ERROR [logger_base.py:29] Error creating new user: Invalid user data: Password should have at least one numeral
+2024-12-02 21:45:32: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:32] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:45:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:40] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:45:40: ERROR [logger_base.py:29] Invalid user data: Password should have at least one uppercase letter
+2024-12-02 21:45:40: ERROR [logger_base.py:29] Error creating new user: Invalid user data: Password should have at least one uppercase letter
+2024-12-02 21:45:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:40] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 400 -
+2024-12-02 21:45:47: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:47] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:45:47: INFO [users_routes.py:296] New User created: {'email': 'a@ema.com', 'password': 'aaaaaaaa1A', 'type': '', 'status': 'active', '_id': 1}
+2024-12-02 21:45:47: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:47] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 201 -
+2024-12-02 21:45:52: ERROR [logger_base.py:29] Error adding new user to database: Email is already registered
+2024-12-02 21:45:52: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:45:52] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 500 -
+2024-12-02 21:46:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:46:00] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:46:00: ERROR [logger_base.py:29] Error adding new user to database: Email is already registered
+2024-12-02 21:46:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:46:00] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 500 -
+2024-12-02 21:47:25: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 21:47:25: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:47:25: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:47:25: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 21:48:41: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:48:41: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 21:48:41: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 21:48:41: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 21:48:41: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 21:48:41: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 21:48:41: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 21:49:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:49:17] "GET /healthcheck HTTP/1.1" 200 -
+2024-12-02 21:49:21: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:49:21] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:51:42: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:51:42] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:53:42: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:53:42] "GET /healthcheck HTTP/1.1" 200 -
+2024-12-02 21:56:03: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:56:03] "GET /healthcheck HTTP/1.1" 200 -
+2024-12-02 21:56:59: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:56:59] "GET /healthcheck HTTP/1.1" 200 -
+2024-12-02 21:57:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:57:17] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 21:59:58: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 21:59:58] "GET /healthcheck HTTP/1.1" 200 -
+2024-12-02 22:01:07: INFO [users_routes.py:293] New User created: {'email': 'pablo9@test.com', 'password': 'passWord123', 'type': 'admin', 'status': 'active', '_id': 2}
+2024-12-02 22:01:07: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:01:07] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 201 -
+2024-12-02 22:01:42: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:01:42: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:01:42: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:01:42: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:01:42: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:01:42: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:01:47: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:01:47: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:01:48: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:01:48: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:01:48: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:01:48: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:01:51: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:01:51: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:01:52: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:01:52: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:01:52: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:01:52: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:01:58: INFO [users_routes.py:197] Validate user email: pablo9@test.com
+2024-12-02 22:01:58: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:01:58] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:02:02: INFO [users_routes.py:197] Validate user email: pablo9@test.com
+2024-12-02 22:02:02: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:02:02] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:03:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:03:18] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:03:18: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:03:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:03:18] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:03:22: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:03:22: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:03:22] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:03:25: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:03:25] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:03:25: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:03:25: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:03:25] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:04:28: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:04:28] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:04:28: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:04:28: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:04:28] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:05:23: INFO [users_routes.py:197] Validate user email: pablo9@test.com
+2024-12-02 22:05:23: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:05:23] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:05:46: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:05:46: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:05:46: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:05:47: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:05:47: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:05:47: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:05:48: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:05:48: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:05:48: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:05:48: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:05:48: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:05:48: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:05:51: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:05:51: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:05:52: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:05:52: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:05:52: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:05:52: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:05:54: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:05:54: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:05:55: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:05:55: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:05:55: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:05:55: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:05:58: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:05:58] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:05:58: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:05:58: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:05:58] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:06:17: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:06:17: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:06:17: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:06:18: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:07:38: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:07:38: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 22:07:38: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 22:07:38: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:07:38: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:07:38: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:07:38: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:07:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:07:40] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:07:40: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:07:40: INFO [users_routes.py:207] Validate user email Error: None, message: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:07:40: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:07:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:07:40] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:08:17: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:08:17: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:08:17: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:08:17: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:08:17: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:08:17: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:08:33: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:08:33: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:08:33: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:08:33: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:08:43: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:08:43: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 22:08:43: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 22:08:43: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:08:44: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:08:44: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:08:44: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:08:45: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:08:45] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:08:45: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:08:45: INFO [users_routes.py:207] Validate user email Error: None, message: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:08:45: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:08:45: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:08:45] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:10:34: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:10:34: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:10:34: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:10:34: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:10:34: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:10:34: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:10:37: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:10:37: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:10:38: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:10:38: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:10:38: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:10:38: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:10:39: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:10:39: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:10:39: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:10:40: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:10:40: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:10:40: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:10:41: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:10:41: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:10:41: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:10:41: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:11:30: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:11:30: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 22:11:30: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 22:11:30: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:11:30: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:11:30: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:11:30: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:11:33: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:11:33] "[33mOPTIONS /api/v1/validate-email HTTP/1.1[0m" 404 -
+2024-12-02 22:11:48: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:11:48: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:11:48: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:11:49: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:11:49: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:11:49: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:11:51: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:11:51: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:11:51: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:11:51: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:11:51: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:11:51: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:11:56: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:11:56: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:11:56: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:11:56: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:11:56: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:11:56: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:11:57: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:11:57] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:11:57: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:11:57: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:11:57] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:11:59: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:11:59: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:11:59] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:12:17: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:12:17: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:12:17: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:12:17: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:12:39: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:12:39: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 22:12:39: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 22:12:39: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:12:39: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:12:39: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:12:39: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:12:41: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:12:41] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:12:41: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:12:41: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:12:41: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:12:41] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:13:14: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:13:14: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:13:14: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:13:14: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:13:15: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:13:15: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:13:16: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:13:16] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:13:16: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:13:16: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:13:16: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:13:16: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:13:16] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:13:17: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:13:17: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:13:17: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:13:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:13:17] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:13:18: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:13:18: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:13:18: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:13:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:13:18] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:13:19: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:13:19: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:13:19: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:13:19: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:13:19] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:13:19: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:13:19: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:13:19: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:13:19: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:13:19] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:13:20: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:13:20: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:13:20: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:13:20: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:13:20] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:13:48: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:13:48: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:13:49: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:13:49: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:13:49: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:13:49: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:13:55: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:13:55: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:13:55: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:13:56: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:13:56: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:13:56: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:13:59: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:13:59: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:13:59: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:13:59: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:13:59: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:13:59: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:14:02: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:14:02] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:14:02: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:14:02: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:14:02: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:14:02: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:14:02] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:14:03: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:14:03: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:14:03: ERROR [logger_base.py:29] Validation email: Object of type set is not JSON serializable
+2024-12-02 22:14:03: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:14:03] "[35m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 500 -
+2024-12-02 22:14:13: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:14:13: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:14:13: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:14:13: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:14:16: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:14:16: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 22:14:16: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 22:14:16: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:14:16: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:14:16: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:14:16: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:14:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:14:18] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:14:18: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:14:18: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:14:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:14:18] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:14:19: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:14:19: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:14:19: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:14:19] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:14:20: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:14:20: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:14:20: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:14:20] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:05: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:15:05: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:15:06: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:15:06: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:15:06: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:15:06: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:15:08: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:15:08: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:15:09: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:15:09: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:15:14: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:15:14: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 22:15:14: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 22:15:14: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:15:14: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:15:14: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:15:14: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:15:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:17] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:15:17: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:17: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:15:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:17] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:19: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:19: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:15:19: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:19] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:19: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:19: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:15:19: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:19] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:20: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:20: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:15:20: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:20] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:21: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:21: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:15:21: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:21] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:21: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:21: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:15:21: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:21] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:21: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:21: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:15:21: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:21] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:21: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:21: ERROR [logger_base.py:29] Error: Email already exist
+2024-12-02 22:15:21: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:21] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:15:40: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:15:40: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:15:40: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:15:40: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:15:40: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:15:40: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:15:43: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:15:43: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:15:44: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:15:44: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:15:44: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:15:44: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:15:46: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:15:46: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:15:46: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:15:47: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:15:47: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:15:47: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:15:49: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:49] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:15:49: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:49: ERROR [logger_base.py:29] Error: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:15:49: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:15:49] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:16:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:16:40] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:16:40: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:16:40: ERROR [logger_base.py:29] Error: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:16:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:16:40] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:16:44: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:16:44: ERROR [logger_base.py:29] Error: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:16:44: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:16:44] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:17:26: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:17:26: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:17:27: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:17:27: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:17:27: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:17:27: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:17:27: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:17:27] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:17:27: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:17:27: ERROR [logger_base.py:29] Error: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:17:27: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:17:27] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:17:38: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:17:38] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:17:38: ERROR [logger_base.py:29] Invalid user data: User password must have at least 8 characters
+2024-12-02 22:17:38: ERROR [logger_base.py:29] Error: Invalid user data: User password must have at least 8 characters
+2024-12-02 22:17:38: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:17:38] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:17:48: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:17:48] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:17:48: INFO [users_routes.py:197] Validate user email: ar@test.com
+2024-12-02 22:17:48: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:17:48] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:22:15: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:22:15: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:22:15: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:22:16: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:22:16: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:22:16: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:22:52: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:22:52: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:22:53: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:22:53: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:22:53: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:22:53: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:28:11: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:28:11] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:28:11: ERROR [logger_base.py:29] Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:28:11: ERROR [logger_base.py:29] Error: Invalid user data: The email address is not valid. User email must have email format (user_name@domain)
+2024-12-02 22:28:11: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:28:11] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:28:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:28:18] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:28:18: ERROR [logger_base.py:29] Invalid user data: User password must have at least 8 characters
+2024-12-02 22:28:18: ERROR [logger_base.py:29] Error: Invalid user data: User password must have at least 8 characters
+2024-12-02 22:28:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:28:18] "[31m[1mPOST /api/v1/validate-email HTTP/1.1[0m" 400 -
+2024-12-02 22:28:28: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:28:28] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:28:28: INFO [users_routes.py:197] Validate user email: a@imal.com
+2024-12-02 22:28:28: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:28:28] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:30:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:30:17] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:30:17: INFO [users_routes.py:197] Validate user email: asas@email.com
+2024-12-02 22:30:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:30:17] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:31:34: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:31:34] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:31:34: INFO [users_routes.py:197] Validate user email: a@imalsad.com
+2024-12-02 22:31:34: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:31:34] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:32:12: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:32:12] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 22:33:09: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:33:09] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:33:09: INFO [users_routes.py:197] Validate user email: as@asdasda.com
+2024-12-02 22:33:09: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:33:09] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:33:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:33:18] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 22:33:18: INFO [users_routes.py:297] New User created: {'email': 'as@asdasda.com', 'password': 'asdASAS1231', 'type': '', 'status': 'active', '_id': 3}
+2024-12-02 22:33:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:33:18] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 201 -
+2024-12-02 22:36:54: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:36:54: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:36:55: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:36:55: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:36:55: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:36:55: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:36:57: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:36:57: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:36:58: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:36:58: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:36:58: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:36:58: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:37:05: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:37:05: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:37:05: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:37:06: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:37:06: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:37:06: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:37:30: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:37:30: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:37:30: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:37:31: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:37:31: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:37:31: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:37:43: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:37:43: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:37:43: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:37:43: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:37:43: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:37:43: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:37:46: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:37:46: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:37:47: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:37:47: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:37:47: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:37:47: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:38:12: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:38:12: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:38:12: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:38:12: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:40:17: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:40:17: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 22:40:17: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 22:40:17: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:40:17: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:40:17: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:40:17: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:40:43: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:40:43] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:40:43: INFO [users_routes.py:197] Validate user email: some@email.com
+2024-12-02 22:40:43: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:40:43] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 22:40:53: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:40:53] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 22:40:53: INFO [users_routes.py:304] New User created: {'email': 'some@email.com', 'password': 'asASD1234', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5534321311', 'country': 'México', 'city': 'asdsa', 'state': 'sdaasdas', '_id': 4}
+2024-12-02 22:40:53: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:40:53] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 201 -
+2024-12-02 22:41:01: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 22:41:01] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 22:59:31: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:59:31: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:59:31: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:59:37: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:59:37: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:59:37: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 22:59:40: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 22:59:40: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 22:59:40: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 22:59:41: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 22:59:41: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 22:59:41: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:03:00: ERROR [logger_base.py:29] Error adding new user to database: Email is already registered
+2024-12-02 23:03:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:03:00] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 500 -
+2024-12-02 23:03:20: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:03:20] "[33mPOST /api/v1/is-user HTTP/1.1[0m" 404 -
+2024-12-02 23:03:30: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:03:30: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:03:31: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:03:31: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:03:31: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:03:31: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:03:31: INFO [users_routes.py:177] Login user: {'_id': 2, 'email': 'pablo9@test.com', 'password': '6ea1634442bf3a853f350c0d5612742c99646d8ca922ea942382ba152b51f077', 'type': 'admin', 'status': 'active'}
+2024-12-02 23:03:31: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:03:31] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:03:36: INFO [users_routes.py:177] Login user: {'_id': 2, 'email': 'pablo9@test.com', 'password': '6ea1634442bf3a853f350c0d5612742c99646d8ca922ea942382ba152b51f077', 'type': 'admin', 'status': 'active'}
+2024-12-02 23:03:36: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:03:36] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:06:11: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:06:11: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:06:11: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:06:12: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:06:12: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:06:12: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:06:16: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:06:16: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:06:16: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:06:16: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:06:16: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:06:16: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:06:25: INFO [users_routes.py:177] Login user: {'_id': 2, 'email': 'pablo9@test.com', 'password': '6ea1634442bf3a853f350c0d5612742c99646d8ca922ea942382ba152b51f077', 'type': 'admin', 'status': 'active'}
+2024-12-02 23:06:25: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:06:25] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:06:48: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:06:48: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:06:48: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:06:49: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:08:27: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:08:27: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 23:08:27: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 23:08:27: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:08:28: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:08:28: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:08:28: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:08:29: INFO [users_routes.py:177] Login user: {'_id': 2, 'email': 'pablo9@test.com', 'password': '6ea1634442bf3a853f350c0d5612742c99646d8ca922ea942382ba152b51f077', 'type': 'admin', 'status': 'active'}
+2024-12-02 23:08:29: ERROR [logger_base.py:29] Error creating new user: 'usage'
+2024-12-02 23:08:29: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:08:29] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 500 -
+2024-12-02 23:08:45: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:08:45: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:08:45: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:08:45: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:08:45: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:08:45: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:09:02: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:09:02] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 23:09:14: ERROR [logger_base.py:29] Error: Please verify the data entered (email and password)
+2024-12-02 23:09:14: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:09:14] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 500 -
+2024-12-02 23:09:19: ERROR [logger_base.py:29] Invalid user data: Password should have at least one uppercase letter
+2024-12-02 23:09:19: ERROR [logger_base.py:29] Error: Invalid user data: Password should have at least one uppercase letter
+2024-12-02 23:09:19: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:09:19] "[31m[1mPOST /api/v1/is-user HTTP/1.1[0m" 400 -
+2024-12-02 23:10:48: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:10:48] "OPTIONS /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 23:10:48: INFO [users_routes.py:203] Validate user email: pablo@test.com
+2024-12-02 23:10:48: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:10:48] "POST /api/v1/validate-email HTTP/1.1" 200 -
+2024-12-02 23:11:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:11:00] "OPTIONS /api/v1/users HTTP/1.1" 200 -
+2024-12-02 23:11:00: INFO [users_routes.py:310] New User created: {'email': 'pablo@test.com', 'password': 'Password123', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd', '_id': 5}
+2024-12-02 23:11:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:11:00] "[35m[1mPOST /api/v1/users HTTP/1.1[0m" 201 -
+2024-12-02 23:11:26: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:11:26] "GET /api/v1/users HTTP/1.1" 200 -
+2024-12-02 23:11:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:11:40] "[33mOPTIONS /api/v1/user HTTP/1.1[0m" 404 -
+2024-12-02 23:11:59: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:11:59] "[33mOPTIONS /api/v1/user HTTP/1.1[0m" 404 -
+2024-12-02 23:12:08: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:08] "[33mOPTIONS /api/v1/user HTTP/1.1[0m" 404 -
+2024-12-02 23:12:27: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:27] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:12:27: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:12:27: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:27] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:12:30: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:12:30: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:30] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:12:31: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:12:31: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:31] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:12:31: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:12:31: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:31] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:12:32: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:12:32: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:32] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:12:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:40] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:12:40: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:12:40: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:40] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:12:43: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:12:43: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:12:43] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 201 -
+2024-12-02 23:13:02: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:13:02: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:13:02: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:13:02: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:13:02: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:13:02: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:13:04: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:13:04] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:13:04: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:13:04: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:13:04] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:13:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:13:17] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:13:17: ERROR [logger_base.py:29] Error: Please verify the data entered (email and password)
+2024-12-02 23:13:17: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:13:17] "[35m[1mPOST /api/v1/is-user HTTP/1.1[0m" 500 -
+2024-12-02 23:13:47: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:13:47: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:13:47: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:13:47: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:13:47: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:13:47: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:13:53: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:13:53: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:13:53: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:13:53: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:13:53: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:13:53: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:14:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:14:00] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:14:00: ERROR [logger_base.py:29] Error: Please verify the data entered (email and password)
+2024-12-02 23:14:00: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:14:00] "[31m[1mPOST /api/v1/is-user HTTP/1.1[0m" 400 -
+2024-12-02 23:14:06: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:14:06] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:14:06: ERROR [logger_base.py:29] Invalid user data: Password should have at least one numeral
+2024-12-02 23:14:06: ERROR [logger_base.py:29] Error: Invalid user data: Password should have at least one numeral
+2024-12-02 23:14:06: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:14:06] "[31m[1mPOST /api/v1/is-user HTTP/1.1[0m" 400 -
+2024-12-02 23:14:13: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:14:13] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:14:13: ERROR [logger_base.py:29] Error: No user with the entered data was found.
+2024-12-02 23:14:13: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:14:13] "[31m[1mPOST /api/v1/is-user HTTP/1.1[0m" 400 -
+2024-12-02 23:14:18: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:14:18: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:14:18] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:42:37: INFO [_internal.py:97]  * Detected change in '/Users/pabloreyes/Documents/DS_UNAM/proyects/final-project/users_API/routes/users_routes.py', reloading
+2024-12-02 23:42:37: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:42:37: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:42:38: INFO [users_model.py:58] MongoDB connection closed
+2024-12-02 23:43:52: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:43:52: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-02 23:43:52: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-12-02 23:43:52: INFO [_internal.py:97]  * Restarting with stat
+2024-12-02 23:43:52: INFO [users_model.py:48] Connected to MongoDB successfully
+2024-12-02 23:43:52: WARNING [_internal.py:97]  * Debugger is active!
+2024-12-02 23:43:52: INFO [_internal.py:97]  * Debugger PIN: 764-448-173
+2024-12-02 23:55:05: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:55:05] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:55:05: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:55:05: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:55:05] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:57:19: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:57:19] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:57:19: ERROR [logger_base.py:29] Invalid user data: Password should have at least one uppercase letter
+2024-12-02 23:57:19: ERROR [logger_base.py:29] Error: Invalid user data: Password should have at least one uppercase letter
+2024-12-02 23:57:19: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:57:19] "[31m[1mPOST /api/v1/is-user HTTP/1.1[0m" 400 -
+2024-12-02 23:58:14: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:58:14] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:58:14: ERROR [logger_base.py:29] Invalid user data: Password should have at least one uppercase letter
+2024-12-02 23:58:14: ERROR [logger_base.py:29] Error: Invalid user data: Password should have at least one uppercase letter
+2024-12-02 23:58:14: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:58:14] "[31m[1mPOST /api/v1/is-user HTTP/1.1[0m" 400 -
+2024-12-02 23:58:24: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:58:24] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:58:24: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:58:24: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:58:24] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:59:23: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:59:23] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-02 23:59:23: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-02 23:59:23: INFO [_internal.py:97] 127.0.0.1 - - [02/Dec/2024 23:59:23] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:01:52: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:01:52] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:01:52: ERROR [logger_base.py:29] Error: Please verify the data entered (email and password)
+2024-12-03 00:01:52: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:01:52] "[31m[1mPOST /api/v1/is-user HTTP/1.1[0m" 400 -
+2024-12-03 00:01:57: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:01:57: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:01:57] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:02:19: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:02:19] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:02:19: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:02:19: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:02:19] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:04:46: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:04:46] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:04:46: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:04:46: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:04:46] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:06:42: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:06:42] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:06:42: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:06:42: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:06:42] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:10:31: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:10:31] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:10:31: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:10:31: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:10:31] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:10:49: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:10:49] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:10:49: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:10:49: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:10:49] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:11:28: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:11:28] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:11:28: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:11:28: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:11:28] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:12:01: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:12:01] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:12:01: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:12:01: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:12:01] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:20:51: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:20:51] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:20:51: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:20:51: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:20:51] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:21:44: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:21:44] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:21:44: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:21:44: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:21:44] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:22:55: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:22:55] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:22:55: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:22:55: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:22:55] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:30:36: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:30:36] "OPTIONS /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:30:36: INFO [users_routes.py:177] Login user: {'_id': 5, 'email': 'pablo@test.com', 'password': '008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601', 'type': '', 'usage': 'Personal', 'status': 'active', 'phone_number': '5545454545', 'country': 'México', 'city': 'asdadsa', 'state': 'asdasd'}
+2024-12-03 00:30:36: INFO [_internal.py:97] 127.0.0.1 - - [03/Dec/2024 00:30:36] "POST /api/v1/is-user HTTP/1.1" 200 -
+2024-12-03 00:46:04: INFO [users_model.py:58] MongoDB connection closed
+2024-12-03 00:46:05: INFO [users_model.py:58] MongoDB connection closed

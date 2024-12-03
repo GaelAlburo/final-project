@@ -10,8 +10,12 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import ServiceDialog from "../components/service-dialog";
+import localStorage from "../storage/local-storage";
+import {useRouter} from 'next/navigation';
 
 export default function Admin() {
+
+    const router = useRouter();
 
     // State variable to store the services fetched from the API
     const [services, setServices] = useState([]);
@@ -33,8 +37,15 @@ export default function Admin() {
     const [openDialog, setOpenDialog] = useState(false);
 
     useEffect(() => {
-        fetchServices();
+        if (localStorage.getUserLogged() === 'false') {
+            router.push('/')
+        } else {
+            fetchServices();
+        }
     }, []);
+    // useEffect(() => {
+    //     fetchServices();
+    // }, []);
 
     // Function that fetches the services from the API
     const fetchServices = async () => {

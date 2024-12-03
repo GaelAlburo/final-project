@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Button, Container, TextField, Paper, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
@@ -14,6 +14,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Alerts from "../components/alerts";
 import { useRouter } from 'next/navigation';
+import localStorage from "../storage/local-storage";
 
 export default function Services() {
 
@@ -45,37 +46,75 @@ export default function Services() {
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleClickShowPassword2 = () => setShowPassword2((show) => !show);
-
-        // useEffect hook to fetch the services and types from the backend
-        useEffect(() => {
-            //fetchReviews();
-            //fetchTypes();
-        }, [])
     
-        // Function that fetches the services from the backend
-        // const fetchReviews = async () => {
-        //     try{
-        //         const res = await axios.get("http://localhost:5000/api/v1/services");
-        //         setServices(res.data);
-        //         console.info("Data fetched: ", res.data);
-        //     }
-        //     catch (error) {
-        //         console.error("Error fetching services data: ", error);
-        //     }
-        // }
-    
-        // Function that fetches the types of services from the backend
-        // const fetchTypes = async () => {
-        //     try {
-        //         const res = await axios.get("http://localhost:5000/api/v1/services/types");
-        //         setTypes(res.data);
-        //         console.info("Types fetched: ", res.data);
-        //     }
-        //     catch (error) {
-        //         console.error("Error fetching types data: ", error);
-        //     }
-        // }
+    const validateEmail = async () => {
+        try {
+            const res = await axios.post("http://127.0.0.1:5000/api/v1/validate-email", currentUser);
+            if(res.status == 200){
+                setsecondaryInfo(true)
+            }
+        }
+        catch (error) {
+            try {
+                if(error.response.status == 400){
+                    setAlertConfig({
+                        severity: "error",
+                        message: error.response.data.Error,
+                    })
+                    setOpen(true)
+                }else{
+                    setAlertConfig({
+                        severity: "error",
+                        message: "Server error",
+                    })
+                    setOpen(true)
+                }
+            } catch (error) {
+                setAlertConfig({
+                    severity: "error",
+                    message: "Server error",
+                })
+                setOpen(true)
+            }
+        }
+    }
 
+    const createUser = async () => {
+        try {
+            const res = await axios.post("http://127.0.0.1:5000/api/v1/users", currentUser);
+            if(res.status == 200){
+                localStorage.setUserInfo(currentUser)
+                localStorage.setUserLogged('true')
+                router.push('/admin')
+            }else{
+                localStorage.setUserLogged('false')
+            }
+        }
+        catch (error) {
+            localStorage.setUserLogged('false')
+            try {
+                if(error.response.status == 400){
+                    setAlertConfig({
+                        severity: "error",
+                        message: error.response.data.Error,
+                    })
+                    setOpen(true)
+                }else{
+                    setAlertConfig({
+                        severity: "error",
+                        message: "Server error",
+                    })
+                    setOpen(true)
+                }
+            } catch (error) {
+                setAlertConfig({
+                    severity: "error",
+                    message: "Server error",
+                })
+                setOpen(true)
+            }
+        }
+    }
 
     const handleUserInfo = (event) => {
         setCurrentUser({
@@ -103,8 +142,8 @@ export default function Services() {
         currentUser.confirmPassword !== ""
           ? (
             currentUser.password === currentUser.confirmPassword ?
-              (
-                setsecondaryInfo(true)
+            (
+                await validateEmail()
             )
             : (setAlertConfig({
               severity: "error",
@@ -114,7 +153,7 @@ export default function Services() {
               severity: "error",
               message: "Please fill in the required fields",
             }), setOpen(true));
-      };
+    };
 
     const isAUser = async () => {
         currentUser.email !== "" &&
@@ -124,15 +163,9 @@ export default function Services() {
         currentUser.phone_number !== "" &&
         currentUser.usage !== ""
           ? (
-            currentUser.password === currentUser.confirmPassword ?
-              (
-                setOpen(true),
-                router.push('/admin')
+                await createUser(),
+                setOpen(true)
             )
-            : setAlertConfig({
-              severity: "error",
-              message: "Passwords entered do not match",
-            }))
           : setAlertConfig({
               severity: "error",
               message: "Please fill in the required fields",

@@ -9,6 +9,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Alerts from "../components/alerts";
 import { useRouter } from 'next/navigation';
+import localStorage from "../storage/local-storage";
 
 export default function Services() {
 
@@ -47,42 +48,53 @@ export default function Services() {
     //     //fetchTypes();
     // }, [])
 
-    // Function that fetches the services from the backend
-    // const fetchReviews = async () => {
-    //     try{
-    //         const res = await axios.get("http://localhost:5000/api/v1/services");
-    //         setServices(res.data);
-    //         console.info("Data fetched: ", res.data);
-    //     }
-    //     catch (error) {
-    //         console.error("Error fetching services data: ", error);
-    //     }
-    // }
-
-    // Function that fetches the types of services from the backend
-    // const fetchTypes = async () => {
-    //     try {
-    //         const res = await axios.get("http://localhost:5000/api/v1/services/types");
-    //         setTypes(res.data);
-    //         console.info("Types fetched: ", res.data);
-    //     }
-    //     catch (error) {
-    //         console.error("Error fetching types data: ", error);
-    //     }
-    // }
-
+    const isAUser = async () => {
+        try {
+            const res = await axios.post("http://127.0.0.1:5000/api/v1/is-user", currentUser);
+            if(res.status == 200){
+                setAlertConfig({
+                    severity: "success",
+                    message: "Welcome",
+                  }), 
+                  setOpen(true),
+                  localStorage.setUserInfo(currentUser)
+                  localStorage.setUserLogged('true')
+                  router.push('/admin')
+            }else{
+                localStorage.setUserLogged('false')
+            }
+        }
+        catch (error) {
+            localStorage.setUserLogged('false')
+            try {
+                if(error.response.status == 400){
+                    setAlertConfig({
+                        severity: "error",
+                        message: error.response.data.Error,
+                    })
+                    setOpen(true)
+                }else{
+                    setAlertConfig({
+                        severity: "error",
+                        message: "Server error",
+                    })
+                    setOpen(true)
+                }
+            } catch (error) {
+                setAlertConfig({
+                    severity: "error",
+                    message: "Server error",
+                })
+                setOpen(true)
+            }
+        }
+    }
 
     const firstValidation = async () => {
         currentUser.email !== "" &&
         currentUser.password !== ""
-          ? (
-            setAlertConfig({
-                severity: "success",
-                message: "Welcome",
-              }), 
-              setOpen(true),
-              router.push('/admin')
-            )
+          ? 
+            await isAUser()
           : (setAlertConfig({
               severity: "error",
               message: "Please fill in the required fields",

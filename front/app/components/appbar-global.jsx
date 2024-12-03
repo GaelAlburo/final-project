@@ -6,6 +6,7 @@ import FaceIcon from '@mui/icons-material/Face';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 import { useTheme } from "@emotion/react";
+import localStorage from "../storage/local-storage";
 
 export default function AppBarGlobal(loggedIn, setloggedIn) {
     const theme = useTheme();
@@ -21,20 +22,15 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
     // Options for the user menu
     const settings = [
         { label: "Profile", href: "/profile" },
-        { label: "Settings", href: "/settings" },
-        { label: "Logout", href: "/logout" },
+        { label: "Logout", href: "/" },
     ];
 
     const AccountOptions = [
-      {
-        label: "Sign In",
-        href: "/sign-in",
-      },
-      {
-        label: "Login",
-        href: "/login",
-      },
+      { label: "Sign In", href: "/sign-in" },
+      { label: "Login", href: "/login" }
     ];
+
+    const [isLogged, setIsLogged] = useState(localStorage.getUserLogged())
 
     // State to handle the opening and closing of the menu when small screen size
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -60,7 +56,12 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
     // Function to handle the closing of the user menu
     const handleCloseUserMenu = (value) => {
       setAnchorElUser(null);
-      console.log(value)
+      if(value == "Logout"){
+        setIsLogged('false')
+        localStorage.clear()
+        localStorage.setUserLogged('false')
+        setIsLogged('false')
+      }
     }
 
 
@@ -193,7 +194,11 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {AccountOptions.map((setting) => {
+                <>{console.log(isLogged)}</>
+                {
+                isLogged === 'true' ?
+                (
+                  settings.map((setting) => {
                   return (
                     <MenuItem key={setting.label} onClick={() => handleCloseUserMenu(setting.label)} >
                       <Typography sx={{textAlign: "center", color: "black", textDecoration: "none"}} component={Link} href={setting.href}>
@@ -201,7 +206,19 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
                       </Typography>
                     </MenuItem>
                   )
-                })}
+                }))
+                :
+                (
+                  AccountOptions.map((setting) => {
+                  return (
+                    <MenuItem key={setting.label} onClick={() => handleCloseUserMenu(setting.label)} >
+                      <Typography sx={{textAlign: "center", color: "black", textDecoration: "none"}} component={Link} href={setting.href}>
+                        {setting.label}
+                      </Typography>
+                    </MenuItem>
+                  )
+                }))
+                }
               </Menu>
             </Box>
 
