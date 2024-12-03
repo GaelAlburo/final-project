@@ -2,6 +2,7 @@ import os
 from logger.ticket_logger import Logger
 from pymongo import MongoClient
 
+
 class TicketsModel:
     """Model class for tickets API that allows to connect to MongoDB"""
 
@@ -17,20 +18,10 @@ class TicketsModel:
         mongodb_pass = os.environ.get("MONGODB_PASS")
         mongodb_host = os.environ.get("MONGODB_HOST")
 
-        if not mongodb_user:
+        if not mongodb_user or not mongodb_pass or not mongodb_host:
             self.logger.critical("MongoDB environment variables are required")
             raise ValueError(
-                "Set environment variable: MONGODB_USER"
-            )
-        if not mongodb_pass:
-            self.logger.critical("MongoDB environment variables are required")
-            raise ValueError(
-                "Set environment variable: MONGODB_PASS"
-            )
-        if not mongodb_host:
-            self.logger.critical("MongoDB environment variables are required")
-            raise ValueError(
-                "Set environment variable: MONGODB_HOST"
+                "Set environment variables: MONGODB_USER, MONGODB_PASS, MONGODB_HOST"
             )
 
         try:
@@ -51,7 +42,7 @@ class TicketsModel:
         except Exception as e:
             self.logger.critical(f"Error connecting to MongoDB: {e}")
             raise
-    
+
     def close_connection(self):
         """Function to close the connection to MongoDB"""
         if self.client:
