@@ -20,6 +20,7 @@ export default function ServiceDialog({open, setOpen, action, serv, setServ, ser
         if (action === "add") {
             console.info("Adding new service: ", serv);
             try{
+                serv.cost = parseFloat(serv.cost);
                 const res = await axios.post("http://localhost:5000/api/v1/services", serv);
                 setServices([...services, res.data]);
                 console.info("Service added successfully: ", res.data);
@@ -101,6 +102,18 @@ export default function ServiceDialog({open, setOpen, action, serv, setServ, ser
                     value={serv.cost}
                     onChange={handleChange}
                     placeholder="Service cost"
+                    required={true}
+                    color="info"
+                />
+
+                <TextField 
+                    margin="dense"
+                    name="type"
+                    label="Type"
+                    fullWidth
+                    value={serv.type}
+                    onChange={handleChange}
+                    placeholder="Service type"
                     required={true}
                     color="info"
                 />
