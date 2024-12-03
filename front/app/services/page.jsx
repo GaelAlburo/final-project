@@ -28,6 +28,21 @@ export default function Services() {
     // State variable for the types
     const [types, setTypes] = useState([]);
 
+    // Auth context
+    const {idAdminUser, isAuthenticated, currentUser} = useAuth();
+
+    // State variable for the button configuration
+    const [configButton1, setConfigButton1] = useState({
+        label: "Start by Logging In",
+        href: "/login",
+    })
+
+    // If the user is authenticated, we change the button configuration
+    if (isAuthenticated) {
+        setConfigButton1({
+            label: "View my Services",
+            href: "/bills",
+        })
     const [configButton1, setConfigButton1] = useState({label:'Start by Logging In', href: '/sign-in'})
     const [configButton2, setConfigButton2] = useState({label: 'Information about Pricing', href:'pricing'})
 
