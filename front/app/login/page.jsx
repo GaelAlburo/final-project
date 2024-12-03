@@ -14,7 +14,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Alerts from "../components/alerts";
 import { useRouter } from 'next/navigation';
-import localStorage from "../storage/local-storage";
+import { useAuth } from "../contexts/SessionContext";
 
 export default function Services() {
 
@@ -43,6 +43,8 @@ export default function Services() {
     const [helperTextPhone, setHelperTextPhone] = useState('phone number length must be 10 digits')
     const usageTypes = ["Personal", "Business"]
     const availableCountries = ["México", "EUA", "Canadá"]
+    const { setGlobalCurrentUser, isAuthenticated, setIsAuthenticated } =
+    useAuth();
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleClickShowPassword2 = () => setShowPassword2((show) => !show);
@@ -83,15 +85,15 @@ export default function Services() {
         try {
             const res = await axios.post("http://127.0.0.1:5000/api/v1/users", currentUser);
             if(res.status == 200){
-                localStorage.setUserInfo(currentUser)
-                localStorage.setUserLogged('true')
+                setIsAuthenticated('true')
+                setGlobalCurrentUser(currentUser)
                 router.push('/admin')
             }else{
-                localStorage.setUserLogged('false')
+                setIsAuthenticated('false')
             }
         }
         catch (error) {
-            localStorage.setUserLogged('false')
+            setIsAuthenticated('false')
             try {
                 if(error.response.status == 400){
                     setAlertConfig({

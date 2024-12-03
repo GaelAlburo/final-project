@@ -6,9 +6,9 @@ import FaceIcon from '@mui/icons-material/Face';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 import { useTheme } from "@emotion/react";
-import localStorage from "../storage/local-storage";
+import { useAuth } from "../contexts/SessionContext";
 
-export default function AppBarGlobal(loggedIn, setloggedIn) {
+export default function AppBarGlobal() {
     const theme = useTheme();
 
     // Navigation items
@@ -30,7 +30,8 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
       { label: "Login", href: "/login" }
     ];
 
-    const [isLogged, setIsLogged] = useState(localStorage.getUserLogged())
+    const { isAdminUser, isAuthenticated, logout, setIsAuthenticated } =
+    useAuth();
 
     // State to handle the opening and closing of the menu when small screen size
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -57,14 +58,9 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
     const handleCloseUserMenu = (value) => {
       setAnchorElUser(null);
       if(value == "Logout"){
-        setIsLogged('false')
-        localStorage.clear()
-        localStorage.setUserLogged('false')
-        setIsLogged('false')
+        setIsAuthenticated('false')
       }
     }
-
-
       return (
         <AppBar position="sticky"
           sx={{backgroundColor: "rgba(255,255,255, 0.2)", backdropFilter: "blur(50px)", borderBottom: "1px solid rgba(0,0,0,0.8)"}}
@@ -194,9 +190,8 @@ export default function AppBarGlobal(loggedIn, setloggedIn) {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                <>{console.log(isLogged)}</>
                 {
-                isLogged === 'true' ?
+                isAuthenticated === 'true' ?
                 (
                   settings.map((setting) => {
                   return (

@@ -4,6 +4,7 @@ import { theme } from "../styles/global-theme";
 import AppBarGlobal from "./components/appbar-global";
 import FooterGlobal from "./components/footer-global";
 import { useState } from "react";
+import { AuthProvider } from "./contexts/SessionContext";
 
 // export const metadata = {
 //   title: "FRONT APP CHANGE AFTER",
@@ -27,9 +28,11 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <AppBarGlobal loggedIn={loggedIn} setloggedIn={setloggedIn}/>
+          <AuthProvider>
+          <AppBarGlobal />
             {children}
           <FooterGlobal />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

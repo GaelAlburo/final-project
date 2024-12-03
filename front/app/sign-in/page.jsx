@@ -9,7 +9,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Alerts from "../components/alerts";
 import { useRouter } from 'next/navigation';
-import localStorage from "../storage/local-storage";
+import { useAuth } from "../contexts/SessionContext";
 
 export default function Services() {
 
@@ -32,6 +32,8 @@ export default function Services() {
         severity: "",
         message: "",
     });
+    const { isAdminUser, isAuthenticated, setGlobalCurrentUser, setIsAuthenticated } =
+    useAuth();
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -57,15 +59,15 @@ export default function Services() {
                     message: "Welcome",
                   }), 
                   setOpen(true),
-                  localStorage.setUserInfo(currentUser)
-                  localStorage.setUserLogged('true')
+                  setIsAuthenticated('true')
+                  setGlobalCurrentUser(res.data.user_info)
                   router.push('/admin')
             }else{
-                localStorage.setUserLogged('false')
+                setIsAuthenticated('false')
             }
         }
         catch (error) {
-            localStorage.setUserLogged('false')
+            setIsAuthenticated('false')
             try {
                 if(error.response.status == 400){
                     setAlertConfig({
