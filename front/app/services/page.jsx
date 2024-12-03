@@ -10,9 +10,6 @@ import { useAuth } from "../contexts/SessionContext";
 
 export default function Services() {
 
-    const { isAdminUser, isAuthenticated, currentUser } =
-    useAuth();
-
     // State variable for the checkbox
     const [checked, setChecked] = useState([""]);
 
@@ -43,12 +40,10 @@ export default function Services() {
             label: "View my Services",
             href: "/bills",
         })
-    const [configButton1, setConfigButton1] = useState({label:'Start by Logging In', href: '/sign-in'})
-    const [configButton2, setConfigButton2] = useState({label: 'Information about Pricing', href:'pricing'})
+    }
 
     if(isAuthenticated == 'true'){
-        setConfigButton1({label: 'Contratar nuevo servicio', href: "/"})
-        setConfigButton2({label: 'Ver mis servicios', href:"admin"})
+        setConfigButton1({label: 'Hire Service', href: "/"})
     }
 
     // useEffect hook to fetch the services and types from the backend
@@ -151,7 +146,7 @@ export default function Services() {
                             }}>
                             {configButton1.label}
                         </Button>
-                        <Button variant="outlined" size="large" href={configButton2.href}
+                        <Button variant="outlined" size="large" href="/pricing"
                             sx={{
                                 color: "rgb(63,94,251)",
                                 borderColor: "rgb(63,94,251)",
@@ -163,7 +158,7 @@ export default function Services() {
                                 mt: 4,
                                 ml: 4
                             }}>
-                            {configButton2.label}
+                            Information About Pricing
                         </Button>
                         
                     </Box>
@@ -334,5 +329,5 @@ export default function Services() {
                 </Grid>
             </Grid>
         </Container>
-    )
+    );
 }
