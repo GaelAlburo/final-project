@@ -54,12 +54,18 @@ export default function Admin() {
         }
         catch (error) {
             console.error("Error fetching services: ", error);
+            setAlert({
+                severity: "error",
+                message: "Error fetching services"
+            })
         }
+        setOpenAlert(true);
     }
 
     // Function that handles the actions to be performed on the services (add, edit)
     const handleService = ({ action, service }) => {
         setAction(action);
+        setOpenDialog(true);
         if (action === "add") {
             console.info("Adding new service");
             setServ({
@@ -78,8 +84,6 @@ export default function Admin() {
         else {
             console.error("Invalid action: ", action);
         }
-        setOpenDialog(true);
-
     }
 
     // Function that deletes a service from the database
@@ -209,7 +213,7 @@ export default function Admin() {
                                 Add Service
                             </Button>
                         </Box>
-                        
+                        {console.log(services)}
                         <Paper elevation={3}>
                             <DataGrid 
                                 columns={columns}
