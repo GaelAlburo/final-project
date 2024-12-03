@@ -3,14 +3,14 @@ from datetime import datetime, timezone
 
 class ServiceSchema(Schema):
     """Schema for individual services within a bill"""
-    id_service = fields.Str(required=True)
+    id_service = fields.Int(required=True)
     name = fields.Str(required=True)
     amount = fields.Float(required=True)
 
 class BillSchema(Schema):
     """Schema for a bill"""
-    id = fields.Str(dump_only=True)
-    id_user = fields.Str(required=True)
+    id = fields.Int(dump_only=True)
+    id_user = fields.Int(required=True)
     id_services = fields.List(fields.Nested(ServiceSchema), required=True)
     totalAmount = fields.Float(dump_only=True)
     date = fields.DateTime(dump_only=True, default=datetime.now(timezone.utc).isoformat())

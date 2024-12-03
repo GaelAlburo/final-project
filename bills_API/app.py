@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Swagger
-#swagger = Swagger(app)
+swagger = Swagger(app)
 
 # Model
 db_conn = BillsModel()
