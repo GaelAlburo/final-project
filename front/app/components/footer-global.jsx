@@ -15,7 +15,7 @@ export default function FooterGlobal() {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={6}>
+        <Grid container spaxfcing={6}>
           <Grid item md={8}>
             <Grid container spacing={4}>
               <Grid item md={4}>
@@ -70,7 +70,7 @@ export default function FooterGlobal() {
                 <Typography
                 component={Link}
                 color="inherit"
-                href="#"
+                href="faq"
                 variant="body2"
                 sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
                   FAQ
