@@ -247,11 +247,11 @@ const AboutUs = () => {
                 </Typography>
                 
                 <Typography variant="body1" sx={{ 
-                  color: '#666',
+                  color: "#666",
                   mb: 4,
                   lineHeight: 1.7
                 }}>
-                  Successfully migrated a Fortune 500 company's infrastructure to the cloud, 
+                  Successfully migrated a Fortune 500 company`&#39;`s infrastructure to the cloud, 
                   reducing operational costs by 60% and improving performance by 200%.
                 </Typography>
 
@@ -332,7 +332,7 @@ const AboutUs = () => {
             maxWidth: '600px',
             mx: 'auto'
           }}>
-            Let's discuss how we can help optimize and secure your cloud environment.
+            Let`&#39;`s discuss how we can help optimize and secure your cloud environment.
           </Typography>
           <Button
             variant="contained"

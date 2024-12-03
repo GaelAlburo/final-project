@@ -3,6 +3,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, 
 import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Alerts from "./components/alerts";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -12,6 +13,15 @@ export default function Home() {
 
   // State variable for the types
   const [types, setTypes] = useState([]);
+
+  // State variable to control the visibility of the Alerts component
+  const [openAlert, setOpenAlert] = useState(false);
+
+  // State variable to store the alert message and severity
+  const [alert, setAlert] = useState({
+      severity: "",
+      message: ""
+  })
 
   useEffect(() => {
     fetchServicesTypes();
@@ -26,6 +36,10 @@ export default function Home() {
     }
     catch (error) {
         console.error("Error fetching types data: ", error);
+        setAlert({
+            severity: "error",
+            message: "Error fetching types data"
+        });
     }
 }
 
@@ -246,6 +260,13 @@ export default function Home() {
 
         </Grid>
       </Container>
+
+      <Alerts 
+        open = {openAlert}
+        setOpen = {setOpenAlert}
+        alert = {alert}
+        pos = "bottom"
+      />
     </Container>
   );
 }

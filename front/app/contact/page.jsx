@@ -99,7 +99,7 @@ const SupportPage = () => {
             Contact Us
           </Typography>
           <Typography variant="h6" sx={{ color: 'text.secondary' }}>
-            We're here to help. Choose your preferred method of contact.
+            We`&#39;`re here to help. Choose your preferred method of contact.
           </Typography>
         </Box>
 

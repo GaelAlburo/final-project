@@ -33,7 +33,7 @@ export default function Services() {
     // Function that fetches the services from the backend
     const fetchReviews = async () => {
         try{
-            const res = await axios.get("http://localhost:5000/api/v1/services");
+            const res = await axios.get("http://localhost:8000/api/v1/services");
             setServices(res.data);
             console.info("Data fetched: ", res.data);
         }
@@ -45,7 +45,7 @@ export default function Services() {
     // Function that fetches the types of services from the backend
     const fetchTypes = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/v1/services/types");
+            const res = await axios.get("http://localhost:8000/api/v1/services/types");
             setTypes(res.data);
             console.info("Types fetched: ", res.data);
         }
