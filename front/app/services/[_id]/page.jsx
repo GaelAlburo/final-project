@@ -35,7 +35,7 @@ export default function IndivService({params}) {
     const fetchService = async () => {
         const service_id = await unwrappedParams._id;
         try{
-            const res  = await axios.get(`http://localhost:5000/api/v1/services/${service_id}`);
+            const res  = await axios.get(`http://localhost:8000/api/v1/services/${service_id}`);
             setService(res.data);
             console.info("Service fetched: ", res.data);
         }
@@ -198,7 +198,7 @@ export default function IndivService({params}) {
                                 <Typography variant="h6">Enhanced Performance</Typography>
                             </Box>
                             <Typography variant="body1">
-                            Optimize your operations with {service.name}. Whether you're running applications, managing data, or delivering content, this service ensures top-tier performance every time
+                            Optimize your operations with {service.name}. Whether you`&#39;`re running applications, managing data, or delivering content, this service ensures top-tier performance every time
                             </Typography>
                         </Grid>
 

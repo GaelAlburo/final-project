@@ -1,0 +1,29 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    volumes:
+      - /opt/mongodb_test:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+  services_api:
+    build: ./services_API
+    image: services_api:v1.0.0
+    container_name: services_api
+    ports:
+      - "8000:8000"
+    environment:
+      MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGODB_HOST: mongodb
+    depends_on:
+        - mongodb
+  frontend:
+    build: ./front
+    image: cloud-ui:v1.0.0
+    container_name: cloud_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+        - services_api

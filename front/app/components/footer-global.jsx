@@ -2,6 +2,7 @@ import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Link from "next/link";
 
 export default function FooterGlobal() {
   return (
@@ -14,34 +15,64 @@ export default function FooterGlobal() {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={6}>
+        <Grid container spaxfcing={6}>
           <Grid item md={8}>
             <Grid container spacing={4}>
               <Grid item md={4}>
                 <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
                   Cloud Bridge
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
-                  About Us
+                <Typography
+                component={Link}
+                color="inherit"
+                href="/about"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                  About us
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
+                <Typography
+                component={Link}
+                color="inherit"
+                href="/contact"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
                   Contact Us
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
-                  Work With Us
+                <Typography
+                component={Link}
+                color="inherit"
+                href="/work"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                  Work with us
                 </Typography>
               </Grid>
               <Grid item md={4}>
                 <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
                   Solutions
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
+                <Typography
+                component={Link}
+                color="inherit"
+                href="/services"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
                   Services
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
+                <Typography
+                component={Link}
+                color="inherit"
+                href="/pricing"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
                   Pricing
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
+                <Typography
+                component={Link}
+                color="inherit"
+                href="faq"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
                   FAQ
                 </Typography>
               </Grid>
@@ -49,14 +80,29 @@ export default function FooterGlobal() {
                 <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
                   Legal
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
+                <Typography
+                component={Link}
+                color="inherit"
+                href="/terms"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
                   Terms of Service
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
-                  Privacy Policy
-                </Typography>
-                <Typography variant="body2" sx={{ mb: 2 }}>
+                <Typography
+                component={Link}
+                color="inherit"
+                href="/cookie"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
                   Cookie Policy
+                </Typography>
+                <Typography
+                component={Link}
+                color="inherit"
+                href="/privacy"
+                variant="body2"
+                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                  Privacy Policy
                 </Typography>
               </Grid>
             </Grid>
