@@ -62,17 +62,18 @@ export default function AppBarGlobal() {
       }
     }
       return (
-        <Box position={"relative"}> {/* Box with relative position to make the appbar not take space */}
-          {/* Fixed position makes it stay at the rop of the screen */}
+        <Box position={"relative"} sx={{justifyContent: "flex-start", border: "1px solid green"}}> {/* Box with relative position to make the appbar not take space */}
           <AppBar position="fixed"
             sx={{
               backgroundColor: "rgba(255,255,255, 0.2)", 
               backdropFilter: "blur(50px)", 
-              borderBottom: "1px solid rgba(0,0,0,0.8)"
+              borderBottom: "1px solid rgba(0,0,0,0.8)",
+              width: "100vw",
+              display: "flex",
+              justifyContent: "flex-start"
             }}
           >
             <Toolbar>
-
               {/* Logo on big screens */}
               <CloudIcon sx={{ display: { xs: "none", md: "flex" }, mr: 2, color: "black" }} />
               <Typography
