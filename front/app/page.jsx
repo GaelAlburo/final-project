@@ -44,7 +44,7 @@ export default function Home() {
 }
 
   return (
-    <Container maxWidth="large" disableGutters sx={{width: "100vw"}}>
+    <Container maxWidth="large" disableGutters>
         
       {/* Hero */}
       <Container maxWidth="large"
@@ -56,13 +56,12 @@ export default function Home() {
             backgroundColor: "rgb(63,94,251)",
             background: "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
             height: {
-              xs: 800,
+              xs: 700,
               sm: 700,
             },
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            maxWidth: "100vw",
           }}>
         <Container maxWidth="lg" disableGutters>
 
@@ -71,7 +70,10 @@ export default function Home() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              mt: 6
+              mt: {
+                xs: 16,
+                sm: 0
+              }
             }}
           >
 
@@ -123,7 +125,7 @@ export default function Home() {
                 justifyContent: "center",
                 alignItems: "center",
                 mt: {
-                  xs: 8,
+                  xs: 2,
                   sm: 0
                 }
               }}
@@ -132,11 +134,11 @@ export default function Home() {
                 sx={{
                   position: "relative",
                   width: {
-                    xs: 350,
+                    xs: 400,
                     sm: "auto"
                   },
                   height: {
-                    xs: 350,
+                    xs: 400,
                     sm: "auto"
                   }
                 }}
@@ -158,7 +160,14 @@ export default function Home() {
           maxWidth: "100vw",
         }}
       >
-        <Container maxWidth="lg" sx={{py: 10}} disableGutters> 
+        <Container maxWidth="lg" disableGutters 
+          sx={{
+            py: {
+              xs: 6,
+              sm: 10
+            }
+          }}
+        > 
           <Grid container>
             
             <Grid size={{xs: 12, sm: 4}}
@@ -166,6 +175,10 @@ export default function Home() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                mb: {
+                  xs: 4,
+                  sm: 0
+                }
               }}
             >
               <Paper elevation={3}
@@ -196,6 +209,10 @@ export default function Home() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                mb: {
+                  xs: 4,
+                  sm: 0
+                }
               }}
             >
               <Paper elevation={3}
@@ -320,8 +337,6 @@ export default function Home() {
 
           <Grid size={{xs: 12, md: 6}}
             sx={{
-              border: "1px solid red",
-              
               display: {
                 xs: "flex",
                 md: "inline"
