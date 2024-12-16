@@ -30,7 +30,7 @@ export default function Home() {
   // Function that fetches the types of services from the backend
   const fetchServicesTypes = async () => {
     try {
-        const res = await axios.get("http://localhost:8000/api/v1/services/types");
+        const res = await axios.get("http://localhost:5000/api/v1/services/types");
         setTypes(res.data);
         console.info("Types fetched: ", res.data);
     }
@@ -44,14 +44,25 @@ export default function Home() {
 }
 
   return (
-    <Container maxWidth="large" disableGutters>
+    <Container maxWidth="large" disableGutters sx={{width: "100vw"}}>
         
       {/* Hero */}
-      <Container maxWidth="large" 
+      <Container maxWidth="large"
         sx={{
-            borderBottomLeftRadius: "15%",
+            borderBottomLeftRadius: {
+              xs: "0",
+              sm: "15%"
+            },
             backgroundColor: "rgb(63,94,251)",
             background: "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
+            height: {
+              xs: 800,
+              sm: 700,
+            },
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            maxWidth: "100vw",
           }}>
         <Container maxWidth="lg" disableGutters>
 
@@ -60,12 +71,29 @@ export default function Home() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              mt: 6
             }}
           >
 
             <Grid size={{xs: 12, sm: 6}}>
-              <Box>
-                <Typography variant="h2" fontWeight={700} color="white" sx={{pb: 10}}>
+              <Box 
+                sx={{
+                    textAlign: {
+                      xs: "center",
+                      sm: "left"
+                    },
+                  }}
+                >
+                <Typography fontWeight={700} color="white"
+                  sx={{
+                    fontSize: {
+                      xs: "2.5rem",
+                      sm: "2.8rem",
+                      md: "3.5rem"
+                    },
+                    mb: 4
+                  }}
+                >
                   Cloud Services with Cloud Bridge
                 </Typography>
                 <Button variant="outlined" size="large" href="/services"
@@ -86,9 +114,34 @@ export default function Home() {
               </Box>
             </Grid>
 
-            <Grid size={{xs: 12, sm: 6}}>
-              <Box>
-                <Image src="/cloud-services.svg" width={700} height={700} alt="cloud-service" />
+            <Grid size={{xs: 12, sm: 6}}
+              sx={{
+                display: {
+                  xs: "flex",
+                  sm: "inline"
+                },
+                justifyContent: "center",
+                alignItems: "center",
+                mt: {
+                  xs: 8,
+                  sm: 0
+                }
+              }}
+            >
+              <Box
+                sx={{
+                  position: "relative",
+                  width: {
+                    xs: 350,
+                    sm: "auto"
+                  },
+                  height: {
+                    xs: 350,
+                    sm: "auto"
+                  }
+                }}
+              >
+                <Image src="/cloud-services.svg" alt="cloud-service" width={750} height={750} layout="responsive" objectFit="cover"/>
               </Box>
             </Grid>
 
@@ -98,7 +151,13 @@ export default function Home() {
       </Container>
       
       {/* Services */}
-      <Container maxWidth="large" sx={{mt: 10, backgroundColor: "rgba(0, 0, 0, 0.015)"}}>
+      <Container maxWidth="large" 
+        sx={{
+          mt: 10, 
+          backgroundColor: "rgba(0, 0, 0, 0.015)",
+          maxWidth: "100vw",
+        }}
+      >
         <Container maxWidth="lg" sx={{py: 10}} disableGutters> 
           <Grid container>
             
@@ -198,35 +257,80 @@ export default function Home() {
       </Container>
 
       {/* Description of Services */}
-      <Container maxWidth="lg" sx={{my: 15}} disableGutters>
+      <Container maxWidth="lg" disableGutters
+        sx={{
+          my: {
+            xs: 8,
+            md: 15
+          },
+        }}
+      >
         <Grid container>
 
-          <Grid size={{md: 6}}>
-              <Typography variant="h4" gutterBottom fontWeight={700} sx={{mb: 6}} lineHeight={1.5}>
-                Develop products with different services from Cloud Bridge
-              </Typography>
-              <Typography variant="body1" sx={{width: 480}}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
-              </Typography>
-              <Button variant="outlined" size="large" href="/services"
-                  sx={{
-                    backgroundColor: "rgb(63,94,251)",
-                    mt: 4,
-                    px: 3,
-                    py: 1.5,
-                    color: "white",
-                    borderColor: "white",
-                    "&:hover": {
-                      transform: "scale(1.05)",
-                      transition: "transform 0.4s ease-in-out",
-                      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-                    },
-                  }}>
-                  Our Services
+          <Grid size={{xs: 12, md: 6}}
+            sx={{
+              display: {
+                xs: "flex",
+                md: "inline"
+              },
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+              <Box 
+                sx={{
+                  textAlign: {
+                    xs: "center",
+                    md: "left"
+                  },
+                  width: {
+                    xs: "80%",
+                    md: "100%"
+                  },
+                  mb: {
+                    xs: 8,
+                    md: 0
+                  }
+                }}
+              >
+                <Typography variant="h4" gutterBottom fontWeight={700} sx={{mb: 6}} lineHeight={1.5}>
+                  Develop products with different services from Cloud Bridge
+                </Typography>
+                <Typography variant="body1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum consequuntur doloribus quam. Unde cum eius, quos quas consequuntur nobis suscipit repudiandae provident tenetur sint nisi laudantium harum.
+                </Typography>
+                <Button variant="outlined" size="large" href="/services"
+                    sx={{
+                      backgroundColor: "rgb(63,94,251)",
+                      mt: 6,
+                      px: 3,
+                      py: 1.5,
+                      color: "white",
+                      borderColor: "white",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                        transition: "transform 0.4s ease-in-out",
+                        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+                      },
+                    }}>
+                    Our Services
                 </Button>
+              </Box>
           </Grid>
 
-          <Grid size={{md: 6}}>
+          <Grid size={{xs: 12, md: 6}}
+            sx={{
+              border: "1px solid red",
+              
+              display: {
+                xs: "flex",
+                md: "inline"
+              },
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             
             {types.map((type) => {
               return (
