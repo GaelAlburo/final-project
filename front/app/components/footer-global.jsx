@@ -1,8 +1,9 @@
-import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
+import { Box, Container, IconButton, Typography } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
+import Grid from "@mui/material/Grid2";
 
 export default function FooterGlobal() {
   return (
@@ -15,11 +16,27 @@ export default function FooterGlobal() {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spaxfcing={6}>
-          <Grid item md={8}>
-            <Grid container spacing={4}>
-              <Grid item md={4}>
-                <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+
+        <Grid container>
+
+          <Grid size={{xs: 12, sm: 6}}>
+
+            <Grid container spacing={{xs: 1, sm: 4}}>
+              <Grid size={{xs: 12, sm: 4}}
+                sx={{
+                  textAlign: {
+                    xs: 'center',
+                    sm: 'left'
+                  },
+                }}
+              >
+                <Typography variant="h6" fontWeight={700}
+                  sx={{ 
+                    mb: {
+                      xs: 1,
+                      sm: 2
+                    }
+                  }}>
                   Cloud Bridge
                 </Typography>
                 <Typography
@@ -27,7 +44,15 @@ export default function FooterGlobal() {
                 color="inherit"
                 href="/about"
                 variant="body2"
-                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                sx={{ 
+                  mb: {
+                    xs: 1,
+                    sm: 3
+                  }, 
+                  textDecoration: "none", 
+                  display: "block", 
+                  '&:hover': { color: '#FF1B6B' }
+                }}>
                   About us
                 </Typography>
                 <Typography
@@ -35,7 +60,15 @@ export default function FooterGlobal() {
                 color="inherit"
                 href="/contact"
                 variant="body2"
-                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                sx={{ 
+                  mb: {
+                    xs: 1,
+                    sm: 3
+                  }, 
+                  textDecoration: "none", 
+                  display: "block", 
+                  '&:hover': { color: '#FF1B6B' }
+                }}>
                   Contact Us
                 </Typography>
                 <Typography
@@ -43,12 +76,35 @@ export default function FooterGlobal() {
                 color="inherit"
                 href="/work"
                 variant="body2"
-                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                sx={{ 
+                  mb: {
+                    xs: 1,
+                    sm: 3
+                  }, 
+                  textDecoration: "none", 
+                  display: "block", 
+                  '&:hover': { color: '#FF1B6B' }
+                }}>
                   Work with us
                 </Typography>
               </Grid>
-              <Grid item md={4}>
-                <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+
+              <Grid size={{xs: 12, sm: 4}}
+                sx={{
+                  textAlign: {
+                    xs: 'center',
+                    sm: 'left'
+                  }
+                }}
+              >
+                <Typography variant="h6" fontWeight={700} 
+                  sx={{ 
+                    mb: {
+                      xs: 1,
+                      sm: 2
+                    },
+                  }}
+                >
                   Solutions
                 </Typography>
                 <Typography
@@ -56,7 +112,15 @@ export default function FooterGlobal() {
                 color="inherit"
                 href="/services"
                 variant="body2"
-                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                sx={{ 
+                  mb: {
+                    xs: 1,
+                    sm: 3
+                  }, 
+                  textDecoration: "none", 
+                  display: "block", 
+                  '&:hover': { color: '#FF1B6B' }
+                }}>
                   Services
                 </Typography>
                 <Typography
@@ -64,7 +128,15 @@ export default function FooterGlobal() {
                 color="inherit"
                 href="/pricing"
                 variant="body2"
-                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                sx={{ 
+                  mb: {
+                    xs: 1,
+                    sm: 3
+                  }, 
+                  textDecoration: "none", 
+                  display: "block", 
+                  '&:hover': { color: '#FF1B6B' }
+                }}>
                   Pricing
                 </Typography>
                 <Typography
@@ -72,12 +144,35 @@ export default function FooterGlobal() {
                 color="inherit"
                 href="faq"
                 variant="body2"
-                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                sx={{ 
+                  mb: {
+                    xs: 1,
+                    sm: 3
+                  }, 
+                  textDecoration: "none", 
+                  display: "block", 
+                  '&:hover': { color: '#FF1B6B' }
+                }}>
                   FAQ
                 </Typography>
               </Grid>
-              <Grid item md={4}>
-                <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+
+              <Grid size={{xs: 12, sm: 4}}
+                sx={{
+                  textAlign: {
+                    xs: 'center',
+                    sm: 'left'
+                  }
+                }}
+              >
+                <Typography variant="h6" fontWeight={700}
+                  sx={{ 
+                    mb: {
+                      xs: 1,
+                      sm: 2
+                    }
+                  }}
+                >
                   Legal
                 </Typography>
                 <Typography
@@ -85,7 +180,15 @@ export default function FooterGlobal() {
                 color="inherit"
                 href="/terms"
                 variant="body2"
-                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                sx={{ 
+                  mb: {
+                    xs: 1,
+                    sm: 3
+                  }, 
+                  textDecoration: "none", 
+                  display: "block", 
+                  '&:hover': { color: '#FF1B6B' }
+                }}>
                   Terms of Service
                 </Typography>
                 <Typography
@@ -93,7 +196,15 @@ export default function FooterGlobal() {
                 color="inherit"
                 href="/cookie"
                 variant="body2"
-                sx={{ mb: 3, textDecoration: "none", display: "block", '&:hover': { color: '#FF1B6B' }}}>
+                sx={{ 
+                  mb: {
+                    xs: 1,
+                    sm: 3
+                  }, 
+                  textDecoration: "none", 
+                  display: "block", 
+                  '&:hover': { color: '#FF1B6B' }
+                }}>
                   Cookie Policy
                 </Typography>
                 <Typography
@@ -107,13 +218,20 @@ export default function FooterGlobal() {
               </Grid>
             </Grid>
           </Grid>
+
+
           <Grid
-            item
-            md={4}
+            size={{xs: 12, sm: 6}}
             sx={{
-              display: "flex",
+              display: {
+                xs: "flex",
+                sm: "block"
+              },
               flexDirection: "column",
-              alignItems: "end",
+              alignItems: {
+                xs: "center",
+                sm: "end"
+              },
               justifyContent: "center"
             }}
           >
@@ -121,9 +239,16 @@ export default function FooterGlobal() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "end",
+                alignItems: {
+                  xs: "center",
+                  sm: "end"
+                },
                 textAlign: "center",
-                mr: 4
+                mr: {
+                  xs: 0,
+                  sm: 4
+                },
+                mt: 2
               }}
             >
               <Typography
@@ -138,7 +263,14 @@ export default function FooterGlobal() {
               >
                 Follow Us
               </Typography>
-              <Box sx={{ mt: 2 }}>
+              <Box 
+                sx={{ 
+                  mt: 2,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
                 <IconButton
                   sx={{
                     p: 0,
