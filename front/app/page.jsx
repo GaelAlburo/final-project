@@ -282,7 +282,7 @@ export default function Home() {
           },
         }}
       >
-        <Grid container>
+        <Grid container sx={{mx: 4}}>
 
           <Grid size={{xs: 12, md: 6}}
             sx={{
@@ -300,9 +300,14 @@ export default function Home() {
                     xs: "center",
                     md: "left"
                   },
+                  maxWidth: {
+                    xs: 500,
+                    md: 400,
+                    lg: 500
+                  },
                   width: {
                     xs: "80%",
-                    md: "100%"
+                    sm: "100%"
                   },
                   mb: {
                     xs: 8,
