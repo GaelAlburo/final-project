@@ -168,16 +168,16 @@ export default function Home() {
             }
           }}
         > 
-          <Grid container>
+          <Grid container spacing={1}>
             
-            <Grid size={{xs: 12, sm: 4}}
+            <Grid size={{xs: 12, md: 4}}
               sx={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 mb: {
                   xs: 4,
-                  sm: 0
+                  md: 0
                 }
               }}
             >
@@ -204,14 +204,14 @@ export default function Home() {
               </Paper>
             </Grid>
 
-            <Grid size={{xs: 12, sm: 4}}
+            <Grid size={{xs: 12, md: 4}}
               sx={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 mb: {
                   xs: 4,
-                  sm: 0
+                  md: 0
                 }
               }}
             >
@@ -238,7 +238,7 @@ export default function Home() {
               </Paper>
             </Grid>
 
-            <Grid size={{xs: 12, sm: 4}}
+            <Grid size={{xs: 12, md: 4}}
               sx={{
                 display: "flex",
                 justifyContent: "center",
