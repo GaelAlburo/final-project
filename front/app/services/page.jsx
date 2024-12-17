@@ -55,7 +55,7 @@ export default function Services() {
     // Function that fetches the services from the backend
     const fetchReviews = async () => {
         try{
-            const res = await axios.get("http://localhost:8000/api/v1/services");
+            const res = await axios.get("http://localhost:5000/api/v1/services");
             setServices(res.data);
             console.info("Data fetched: ", res.data);
         }
@@ -67,7 +67,7 @@ export default function Services() {
     // Function that fetches the types of services from the backend
     const fetchTypes = async () => {
         try {
-            const res = await axios.get("http://localhost:8000/api/v1/services/types");
+            const res = await axios.get("http://localhost:5000/api/v1/services/types");
             setTypes(res.data);
             console.info("Types fetched: ", res.data);
         }
@@ -118,9 +118,27 @@ export default function Services() {
     return (
         <Container maxWidth="lg" disableGutters>
             {/* HERO */}
-            <Grid container sx={{mb: 8}}>
-                <Grid size={{md: 6}}>
-                    <Box width={600}>
+            <Grid container spacing={2}
+                sx={{
+                    mt: 4,
+                    mb: 8,
+                    mx: 2,
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
+            >
+
+                <Grid size={{xs: 12, md: 7}}
+                    sx={{
+                        textAlign: {
+                            xs: "center",
+                            md: "left"
+                        }
+                    }}
+                >
+                    <Box>
                         <Typography variant="h2" fontWeight={700}
                             sx={{
                                 mt: 10, 
@@ -135,51 +153,155 @@ export default function Services() {
                             We provide a range of services to help you get the most out of your cloud infrastructure.
                             To hire our services, you just need to log in to your account or create a new one.
                         </Typography>
-                        <Button variant="contained" size="large" href={configButton1.href}
+                        
+                        <Box
                             sx={{
-                                backgroundColor: "rgb(63,94,251)",
-                                "&:hover": {
-                                    transform: "scale(1.05)",
-                                    transition: "transform 0.4s ease-in-out",
+                                display: {
+                                    xs: "flex",
+                                    sm: "inline"
                                 },
-                                mt: 4
-                            }}>
-                            {configButton1.label}
-                        </Button>
-                        <Button variant="outlined" size="large" href="/pricing"
-                            sx={{
-                                color: "rgb(63,94,251)",
-                                borderColor: "rgb(63,94,251)",
-                                "&:hover": {
-                                    transform: "scale(1.05)",
-                                    transition: "transform 0.4s ease-in-out",
-                                    backgroundColor: "rgba(63, 94, 251, 0.1)"
-                                },
-                                mt: 4,
-                                ml: 4
-                            }}>
-                            Information About Pricing
-                        </Button>
+                                flexDirection: "column",
+                                justifyContent: "center",
+                                alignItems: "center",
+                            }}
+                        >
+                            <Button variant="contained" size="large" href={configButton1.href}
+                                sx={{
+                                    backgroundColor: "rgb(63,94,251)",
+                                    "&:hover": {
+                                        transform: "scale(1.05)",
+                                        transition: "transform 0.4s ease-in-out",
+                                    },
+                                    mt: {
+                                        xs: 2,
+                                        sm: 4
+                                    }
+                                }}>
+                                {configButton1.label}
+                            </Button>
+                            <Button variant="outlined" size="large" href="/pricing"
+                                sx={{
+                                    color: "rgb(63,94,251)",
+                                    borderColor: "rgb(63,94,251)",
+                                    "&:hover": {
+                                        transform: "scale(1.05)",
+                                        transition: "transform 0.4s ease-in-out",
+                                        backgroundColor: "rgba(63, 94, 251, 0.1)"
+                                    },
+                                    mt: {
+                                        xs: 2,
+                                        sm: 4
+                                    },
+                                    ml: {
+                                        xs: 0,
+                                        sm: 4
+                                    }
+                                }}>
+                                Information About Pricing
+                            </Button>
+                        </Box>
                         
                     </Box>
                 </Grid>
-                <Grid size={{md: 6}}>
-                    <Box sx={{mr: 1, height: 400}}>
-                        <Image src="/services.svg" width={600} height={600} alt="services" />
+
+                <Grid size={{xs: 12, md: 5}}
+                    sx={{
+                        display: {
+                            xs: "flex",
+                            md: "inline"
+                        },
+                        justifyContent: "center",
+                        alignContent: "center",
+                    }}
+                >
+                    <Box
+                        sx={{
+                            position: "relative",
+                            width: {
+                                xs: 400,
+                                md: "auto"
+                            },
+                            height: {
+                                xs: 300,
+                                md: "auto"
+                            },
+                            pt: 4,
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}>
+                        <Image src="/services.svg" alt="cloud-service" width={600} height={600} layout="responsive" objectFit="cover"/>
                     </Box>
                 </Grid>
             </Grid>
 
 
             {/* SERVICES */}
-            <Grid container sx={{mb: 6}}>
-                <Grid size={{md: 3}}>
+            <Grid container spacing={2}
+                sx={{
+                    mb: 6, 
+                    mx: 2
+                }}
+            >
+                <Grid size={{xs: 12, md: 3}}
+                    sx={{
+                        display: {
+                            xs: "flex",
+                            md: "inline"
+                        },
+                        flexDirection: "column",
+                        justifyContent: "center",	
+                        alignItems: "center",
+                        mb: {
+                            xs: 4,
+                            md: 0
+                        }
+                    }}
+                >
                     
                     {/* CHECKLIST */}
-                    <Paper elevation={3} sx={{width: 250}}>
-                        <List sx={{ width: '100%', my: 4 , pt: 2}}
+                    <Paper elevation={3} 
+                        sx={{
+                            maxWidth: {
+                                md: 250
+                            },
+                            width: {
+                                xs: "80%",
+                                md: "auto"
+                            },
+                            p: 0
+                        }}
+                    >
+                        <List 
+                            sx={{ 
+                                width: '100%', 
+                                my: {
+                                    xs: 0,
+                                    md: 4
+                                },
+                                pt: 2, 
+                                display: {
+                                    xs: "flex",
+                                    md: "block"
+                                },
+                                flexWrap: "wrap",
+                                justifyContent: "center",
+                                alignContent: "center",
+                                
+                            }}
                             subheader={
-                                <ListSubheader sx={{mb: 2, pb: 1, borderBottom: "1px solid rgba(0, 0, 0, 0.1)"}}>
+                                <ListSubheader
+                                    sx={{
+                                        mb: 2,
+                                        pb: 1, 
+                                        borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+                                        width: "100%",
+                                        textAlign: {
+                                            xs: "center",
+                                            md: "left"
+                                        }
+                                    }}
+                                >
                                     <Typography variant="h6" fontWeight={700}>
                                         Filter By Type:
                                     </Typography>
@@ -191,6 +313,12 @@ export default function Services() {
                                     <ListItem
                                         key={type}
                                         disablePadding
+                                        sx={{
+                                            width: {
+                                                xs: 200,
+                                                md: "auto"
+                                            }
+                                        }}
                                     >
                                         <ListItemButton role="undefined" onClick={handleToggle(type)}>
                                             <ListItemIcon>
@@ -217,18 +345,27 @@ export default function Services() {
                 </Grid>
                 
                 {/* SERVICE LIST */}
-                <Grid size={{md: 9}}>
+                <Grid size={{xs: 12, md: 9}}>
                     
                     {selectedType.length == 1
                         /* If only one type is selected means there is no filter selected, so we show all services */
                         ? 
                             <Box>
-                                <Typography variant="h4" fontWeight={700} ml={2} mt={4}>{selectedType} Services</Typography>
+                                <Typography variant="h4" fontWeight={700} ml={2} my={4}
+                                    sx={{
+                                        textAlign: {
+                                            xs: "center",
+                                            md: "left"
+                                        }
+                                    }}
+                                >
+                                    {selectedType} Services
+                                </Typography>
                                 <Grid container>
 
                                     {services.map((serv) => {
                                         return(
-                                            <Grid size={{md: 4}} key={serv._id} component={Link} href={`/services/${serv._id}`}
+                                            <Grid size={{xs: 12, sm: 6, lg: 4}} key={serv._id} component={Link} href={`/services/${serv._id}`}
                                                 sx={{textDecoration: "none"}}
                                             >
                                                 <Paper
@@ -239,7 +376,6 @@ export default function Services() {
                                                         justifyContent: "center",
                                                         padding: 2,
                                                         m: 2,
-                                                        my: 4,
                                                         "&:hover": {
                                                             transform: "scale(1.05)",
                                                             transition: "transform 0.4s ease-in-out",
@@ -268,7 +404,21 @@ export default function Services() {
                         /* If more than one type is selected, we show the services of the selected types */
                         : 
                             <Box>
-                                <Stack direction="row" spacing={1}>
+                                <Stack direction="row" spacing={1}
+                                    sx={{
+                                        flexWrap: "wrap",
+                                        justifyContent: {
+                                            xs: "center",
+                                            md: "flex-start"
+                                        },
+                                        alignItems: "center",
+                                        gap: 1,
+                                        ml: {
+                                            xs: 0,
+                                            md: 2
+                                        }
+                                    }}
+                                >
                                     {selectedType.map((type) => {
                                         if (type == "All") return;
                                         return (
@@ -281,11 +431,11 @@ export default function Services() {
                                 {selectedType.map((type) => {
                                     return(
                                         <Box key={type}>
-                                            {type != "All" && <Typography variant="h4" fontWeight={700} ml={2} mt={4}>{type} Services</Typography>}
+                                            {type != "All" && <Typography variant="h4" fontWeight={700} ml={2} my={4}>{type} Services</Typography>}
                                             <Grid container>
                                                 {selectedServices.filter((serv) => serv.type == type).map((serv) => {
                                                     return (
-                                                        <Grid size={{md: 4}} key={serv._id} component={Link} href={`/services/${serv._id}`}
+                                                        <Grid size={{xs: 12, sm: 6, lg: 4}} key={serv._id} component={Link} href={`/services/${serv._id}`}
                                                             sx={{textDecoration: "none"}}
                                                         >
                                                             <Paper
@@ -296,7 +446,6 @@ export default function Services() {
                                                                     justifyContent: "center",
                                                                     padding: 2,
                                                                     m: 2,
-                                                                    my: 4,
                                                                     "&:hover": {
                                                                         transform: "scale(1.05)",
                                                                         transition: "transform 0.4s ease-in-out",
