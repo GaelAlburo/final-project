@@ -59,6 +59,7 @@ const ContactSection = () => (
   <Paper sx={{ 
     p: 4, 
     mt: 8,
+    mb: 2,
     borderRadius: 4, 
     background: 'linear-gradient(135deg, rgba(255,27,107,0.03) 0%, rgba(69,202,255,0.03) 100%)',
     boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
@@ -214,7 +215,18 @@ const WorkWithUsPage = () => {
         </Box>
 
         {/* Benefits Section */}
-        <Paper sx={{ p: 4, mb: 6, borderRadius: 4, boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
+        <Paper 
+          sx={{ 
+            p: 4, 
+            mb: 6, 
+            borderRadius: 4, 
+            boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
+            textAlign: {
+              xs: 'center',
+              md: 'left'
+            }
+          }}
+        >
           <Typography variant="h4" sx={{ mb: 3, fontWeight: 'bold' }}>
             Why Join Us?
           </Typography>
