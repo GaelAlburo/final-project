@@ -54,7 +54,7 @@ export default function IndivService({params}) {
     const fetchService = async () => {
         const service_id = await unwrappedParams._id;
         try{
-            const res  = await axios.get(`http://localhost:8000/api/v1/services/${service_id}`);
+            const res  = await axios.get(`http://localhost:5000/api/v1/services/${service_id}`);
             setService(res.data);
             console.info("Service fetched: ", res.data);
         }
@@ -84,111 +84,158 @@ export default function IndivService({params}) {
         else {
             image = "/default.svg"
         }
-        return <Image src={image} width={470} height={470} alt={image} />
+        return <Image src={image} width={400} height={400} alt={image} layout="responsive" objectFit="cover"/>
     }
 
     return (
         <Container maxWidth="large" disableGutters>
 
             {/* Hero Section */}
-            <Container maxWidth="lg" sx={{mt: 8, mb: 4}}>
-                <Grid container>
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
+            >
+                <Container maxWidth="lg" sx={{mt: 16, mb: 4, mx: 2}}>
+                    <Grid container>
 
-                    <Grid size={{md: 6}}>
-                        <Box>
-                            <Typography variant="h3" fontWeight={700} 
+                        <Grid size={{xs: 12, md: 6}}>
+                            <Box>
+                                <Typography variant="h3" fontWeight={700} 
+                                    sx={{
+                                        mb: {
+                                            xs: 2,
+                                            md: 6
+                                        },
+                                        background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
+                                        WebkitBackgroundClip: 'text',
+                                        WebkitTextFillColor: 'transparent'
+                                    }}
+                                >
+                                    {service.name}
+                                </Typography>
+                                <Typography variant="h6">
+                                    {service.description}
+                                </Typography>
+
+                                <Button variant="outlined" size="large" href={configButton1.href}
+                                    sx={{
+                                        backgroundColor: "rgb(63,94,251)",
+                                        mt: {
+                                            xs: 2,
+                                            md: 4
+                                        },
+                                        px: 3,
+                                        py: 1.5,
+                                        color: "white",
+                                        border: "1px solid transparent",
+                                        "&:hover": {
+                                        transform: "scale(1.05)",
+                                        transition: "transform 0.4s ease-in-out",
+                                        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+                                        },
+                                    }}>
+                                    {configButton1.label}
+                                </Button>
+                            </Box>
+                            <Box 
                                 sx={{
-                                    mb: 6,
-                                    background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
-                                    WebkitBackgroundClip: 'text',
-                                    WebkitTextFillColor: 'transparent'
+                                    mt: {
+                                        xs: 2,
+                                        md: 4
+                                    }
                                 }}
                             >
-                                {service.name}
-                            </Typography>
-                            <Typography variant="h6">
-                                {service.description}
-                            </Typography>
+                                {loop.map((i) => (
+                                    <List dense={true} key={i}>
+                                        <ListItem>
+                                            <ListItemIcon>
+                                                <CheckIcon color="success"/>
+                                            </ListItemIcon>
+                                            <ListItemText
+                                                primary="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+                                            />
+                                        </ListItem>
+                                    </List>
+                                ) )}
+                            </Box>
+                        </Grid>
 
-                            <Button variant="outlined" size="large" href={configButton1.href}
+                        <Grid size={{xs: 12, md: 6}} 
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                                alignContent: "center",
+                            }}
+                        >
+                            <Box
                                 sx={{
-                                    backgroundColor: "rgb(63,94,251)",
-                                    mt: 4,
-                                    px: 3,
-                                    py: 1.5,
-                                    color: "white",
-                                    border: "1px solid transparent",
-                                    "&:hover": {
-                                    transform: "scale(1.05)",
-                                    transition: "transform 0.4s ease-in-out",
-                                    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-                                    },
-                                }}>
-                                {configButton1.label}
-                            </Button>
-                        </Box>
-                        <Box sx={{mt: 4}}>
-                            {loop.map((i) => (
-                                <List dense={true} key={i}>
-                                    <ListItem>
-                                        <ListItemIcon>
-                                            <CheckIcon color="success"/>
-                                        </ListItemIcon>
-                                        <ListItemText
-                                            primary="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-                                        />
-                                    </ListItem>
-                                </List>
-                            ) )}
-                        </Box>
-                    </Grid>
+                                    width: "auto",
+                                    height: "auto",
+                                    maxHeight: 500,
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignContent: "center",
+                                    display: {
+                                        xs: "none",
+                                        md: "inline-flex"
+                                    }
+                                  }}
+                            >
+                                {chooseImg()}
+                            </Box>
+                        </Grid>
 
-                    <Grid size={{md: 6}} sx={{pl: 10}}>
-                        {chooseImg()}
                     </Grid>
-
-                </Grid>
-            </Container>
+                </Container>
+            </Box>
 
             <Divider sx={{mb: 4}}/>
             
             {/* Pricing Section */}
-            <Container maxWidth="lg" sx={{my: 8}}>
+            <Container maxWidth="lg" sx={{my: 8, mx: 2}}>
                 <Typography variant="h4" fontWeight={700} sx={{mb: 6}}>
                     Pricing
                 </Typography>
 
-                <Typography variant="h5" sx={{mb: 4}}>
+                <Typography variant="h6" sx={{mb: 4}}>
                     Price: <strong>${service.cost}/use</strong>
                 </Typography>
 
-                <Typography variant="h6" sx={{mb: 2}}>
+                <Typography variant="body1" sx={{mb: 2}}>
                     Unlock the potential of {service.name}, designed to empower your business with:
                 </Typography>
 
                 <List>
                     <ListItem>
                         <ListItemIcon>
-                            <CircleIcon sx={{color: "black"}} fontSize="small"/>
+                            <CircleIcon sx={{color: "black"}} fontSize="3rem"/>
                         </ListItemIcon>
                         <ListItemText
-                            primary={<Typography variant="h6"><strong>Scalable Solutions:</strong> Adjust resources as your needs grow.</Typography>}
+                            primary={
+                                <Typography variant="body1">
+                                    <strong>Scalable Solutions:</strong> Adjust resources as your needs grow.
+                                </Typography>
+                            }
                         />
                     </ListItem>
                     <ListItem>
                         <ListItemIcon>
-                            <CircleIcon sx={{color: "black"}} fontSize="small"/>
+                            <CircleIcon sx={{color: "black"}} fontSize="3rem"/>
                         </ListItemIcon>
                         <ListItemText
-                            primary={<Typography variant="h6"><strong>High Performance:</strong> Optimized for speed and reliability.</Typography>}
+                            primary={<Typography variant="body1"><strong>High Performance:</strong> Optimized for speed and reliability.</Typography>}
                         />
                     </ListItem>
                     <ListItem>
                         <ListItemIcon>
-                            <CircleIcon sx={{color: "black"}} fontSize="small"/>
+                            <CircleIcon sx={{color: "black"}} fontSize="3rem"/>
                         </ListItemIcon>
                         <ListItemText
-                            primary={<Typography variant="h6"><strong>Secure Infrastructure:</strong> Built with robust security protocols.</Typography>}
+                            primary={<Typography variant="body1"><strong>Secure Infrastructure:</strong> Built with robust security protocols.</Typography>}
                         />
                     </ListItem>
                 </List>
@@ -198,13 +245,26 @@ export default function IndivService({params}) {
             <Container maxWidth="large" sx={{my: 8, py: 8, backgroundColor: "rgba(0, 0, 0, 0.015)"}}>
                 <Container maxWidth="lg">
 
-                    <Typography variant="h4" fontWeight={700} sx={{mb: 8}} textAlign="center">
+                    <Typography variant="h4" fontWeight={700} textAlign="center"
+                        sx={{
+                            mb: {
+                                xs: 4,
+                                sm: 8
+                            }
+                        }}
+                    >
                         Use Cases
                     </Typography>
 
-                    <Grid container textAlign="center" spacing={10}>
+                    <Grid container textAlign="center"
+                        spacing={{
+                            xs: 6,
+                            sm: 8,
+                            md: 10
+                        }}
+                    >
 
-                        <Grid size={{md: 4}}>
+                        <Grid size={{xs: 12, sm: 6, md: 4}}>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -221,7 +281,7 @@ export default function IndivService({params}) {
                             </Typography>
                         </Grid>
 
-                        <Grid size={{md: 4}}>
+                        <Grid size={{xs: 12, sm: 6, md: 4}}>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -238,7 +298,7 @@ export default function IndivService({params}) {
                             </Typography>
                         </Grid>
 
-                        <Grid size={{md: 4}}>
+                        <Grid size={{xs: 12, sm: 6, md: 4}}>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -255,7 +315,7 @@ export default function IndivService({params}) {
                             </Typography>
                         </Grid>
 
-                        <Grid size={{md: 4}}>
+                        <Grid size={{xs: 12, sm: 6, md: 4}}>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -272,7 +332,7 @@ export default function IndivService({params}) {
                             </Typography>
                         </Grid>
 
-                        <Grid size={{md: 4}}>
+                        <Grid size={{xs: 12, sm: 6, md: 4}}>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -289,7 +349,7 @@ export default function IndivService({params}) {
                             </Typography>
                         </Grid>
 
-                        <Grid size={{md: 4}}>
+                        <Grid size={{xs: 12, sm: 6, md: 4}}>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -317,10 +377,17 @@ export default function IndivService({params}) {
                     py: 4, 
                     mb: 8, 
                     backgroundColor: "rgb(63,94,251)",
-                    background: "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)"
+                    background: "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
                 }}
             >
-                <Container maxWidth="sm">
+                <Container maxWidth="sm"
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
                     <Typography variant="h5" fontWeight={700} sx={{mb: 3}} color="white">
                         Start to use {service.name} now!
                     </Typography>
