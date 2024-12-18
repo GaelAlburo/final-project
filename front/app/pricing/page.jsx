@@ -6,7 +6,6 @@ import {
   Button,
   Card,
   CardContent,
-  Grid,
   Typography,
   Container,
   Switch,
@@ -24,6 +23,7 @@ import {
   createTheme,
   ThemeProvider
 } from '@mui/material';
+import Grid from "@mui/material/Grid2";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
@@ -246,7 +246,7 @@ function Calculator() {
 
   return (
     <Paper sx={{ p: 4, maxWidth: 800, mx: 'auto' }}>
-      <Typography variant="h5" gutterBottom sx={{ mb: 4, textAlign: 'center' }}>
+      <Typography variant="h6" gutterBottom sx={{ mb: 4, textAlign: 'center' }}>
         Estimate your monthly cost
       </Typography>
       
@@ -341,7 +341,7 @@ function Calculator() {
           <Typography variant="h6" gutterBottom>
             Estimated Monthly Cost
           </Typography>
-          <Typography variant="h3" sx={{ color: '#000000', fontWeight: 700 }}>
+          <Typography variant="h4" sx={{ color: '#000000', fontWeight: 700 }}>
             ${calculatePrice()}
           </Typography>
         </Box>
@@ -474,7 +474,7 @@ export default function PricingPage() {
         {tabValue === 0 && (
           <Grid container spacing={4} justifyContent="center">
             {plans.map((plan) => (
-              <Grid item xs={12} md={4} key={plan.title}>
+              <Grid size={{xs: 12, md: 4}} key={plan.title}>
                 <Card
                   sx={{
                     height: '100%',
@@ -508,13 +508,13 @@ export default function PricingPage() {
                     </Box>
                   )}
                   <CardContent sx={{ p: 4, flexGrow: 1 }}>
-                    <Typography variant="h4" gutterBottom sx={{ fontWeight: 700 }}>
+                    <Typography variant="h5" gutterBottom sx={{ fontWeight: 700 }}>
                       {plan.title}
                     </Typography>
                     <Typography variant="body1" color="text.secondary" gutterBottom>
                       {plan.subtitle}
                     </Typography>
-                   <Typography variant="h3" sx={{ my: 3, fontWeight: 700 }}>
+                   <Typography variant="h4" sx={{ my: 3, fontWeight: 700 }}>
                       ${annual ? (plan.price * 0.8).toFixed(0) : plan.price}
                       <Typography component="span" variant="body1" color="text.secondary">
                         /mo
@@ -533,7 +533,7 @@ export default function PricingPage() {
                               color: plan.highlighted ? 'primary.main' : 'secondary.main',
                             }}
                           />
-                          <Typography>{feature}</Typography>
+                          <Typography variant='body1'>{feature}</Typography>
                         </Stack>
                       ))}
                     </Stack>
@@ -550,6 +550,8 @@ export default function PricingPage() {
                             ? 'linear-gradient(45deg, #FF1B6B, #45CAFF)'
                             : 'transparent',
                           opacity: plan.highlighted ? 0.9 : 1,
+                          transform: "scale(1.05)",
+                          transition: "transform 0.4s ease-in-out",
                         },
                       }}
                     >
