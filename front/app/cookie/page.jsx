@@ -3,8 +3,8 @@ import { Box, Container, Grid, Typography } from "@mui/material"
 
 export default function CookiesPage() {
     return (
-        <Container maxWidth="lg" disableGutters>
-            <Box sx={{ my: 4 }}>
+        <Container maxWidth="lg" disableGutters sx={{ mt: 12 }}>
+            <Box sx={{ my: 8, mx: 2 }}>
                 <Typography variant="h3" >Cookies Policy</Typography>
                 <Typography variant="h6" >Last Update: November 1, 2024</Typography>
                 <Typography variant="body2" sx={{ mt: 2 }}>
