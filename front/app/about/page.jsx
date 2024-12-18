@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Container,
   Typography,
-  Grid,
   Box,
   Card,
   CardContent,
@@ -10,6 +9,7 @@ import {
   Stack,
   LinearProgress
 } from '@mui/material';
+import Grid from "@mui/material/Grid2";
 import {
   ArrowForward as ArrowForwardIcon,
   Cloud as CloudIcon,
@@ -53,38 +53,37 @@ const AboutUs = () => {
         pb: { xs: 12, md: 16 },
         color: 'white'
       }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={6}>
-            <Grid item xs={12} md={8}>
-              <Typography variant="h1" sx={{ 
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
-                fontWeight: 700,
-                mb: 3
+        <Container maxWidth="lg" sx={{mt: 8}}>
+          <Typography variant="h1" sx={{ 
+            fontSize: { xs: '2.5rem', md: '3.5rem' },
+            fontWeight: 700,
+            mb: 3
+          }}>
+            Cloud Infrastructure Experts
+          </Typography>
+          <Typography variant="h5" sx={{ 
+            mb: 4,
+            opacity: 0.9,
+            maxWidth: '800px'
+          }}>
+            We specialize in creating powerful cloud solutions that transform 
+            how businesses operate in the digital space.
+          </Typography>
+            <Button variant="outlined" size="large" href="/services"
+              sx={{
+                px: 3,
+                py: 2,
+                color: "white",
+                borderColor: "white",
+                fontSize: "1rem",
+                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  transition: "transform 0.4s ease-in-out",
+                },
               }}>
-                Cloud Infrastructure Experts
-              </Typography>
-              <Typography variant="h5" sx={{ 
-                mb: 4,
-                opacity: 0.9,
-                maxWidth: '800px'
-              }}>
-                We specialize in creating powerful cloud solutions that transform 
-                how businesses operate in the digital space.
-              </Typography>
-              <Button
-                variant="contained"
-                sx={{
-                  bgcolor: 'white',
-                  color: '#E91E63',
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.9)' },
-                  px: 4,
-                  py: 1.5
-                }}
-              >
-                Start Your Cloud Journey
-              </Button>
-            </Grid>
-          </Grid>
+              Start your Cloud Journey
+            </Button>
         </Container>
       </Box>
 
@@ -92,7 +91,7 @@ const AboutUs = () => {
       <Container maxWidth="lg" sx={{ mt: -8, position: 'relative', zIndex: 2 }}>
         <Grid container spacing={3}>
           {stats.map((stat, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
+            <Grid key={index} size={{ xs: 12, sm: 6, md: 3 }}>
               <Card sx={{
                 height: '100%',
                 boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
@@ -122,7 +121,7 @@ const AboutUs = () => {
       {/* Mission & Vision Section */}
       <Container maxWidth="lg" sx={{ py: 12 }}>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Card sx={{
               height: '100%',
               background: '#f8f9fa',
@@ -130,7 +129,7 @@ const AboutUs = () => {
               boxShadow: 'none'
             }}>
               <CardContent sx={{ p: 4 }}>
-                <Typography variant="h3" sx={{ 
+                <Typography variant="h4" sx={{ 
                   mb: 3,
                   color: '#2C3E50',
                   fontWeight: 700
@@ -144,7 +143,7 @@ const AboutUs = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Card sx={{
               height: '100%',
               background: '#f8f9fa',
@@ -152,7 +151,7 @@ const AboutUs = () => {
               boxShadow: 'none'
             }}>
               <CardContent sx={{ p: 4 }}>
-                <Typography variant="h3" sx={{ 
+                <Typography variant="h4" sx={{ 
                   mb: 3,
                   color: '#2C3E50',
                   fontWeight: 700
@@ -182,7 +181,7 @@ const AboutUs = () => {
           </Typography>
           <Grid container spacing={4} justifyContent="center">
             {partners.map((partner, index) => (
-              <Grid item xs={6} sm={3} key={index}>
+              <Grid size={{ xs: 12, sm: 3 }} key={index}>
                 <Card sx={{
                   textAlign: 'center',
                   p: 3,
@@ -209,7 +208,7 @@ const AboutUs = () => {
 
       {/* Success Story Section */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h2" sx={{ 
+        <Typography variant="h3" sx={{ 
           textAlign: 'center',
           mb: 6,
           color: '#2C3E50',
@@ -236,7 +235,7 @@ const AboutUs = () => {
         }}>
           <CardContent sx={{ p: 4 }}>
             <Grid container spacing={6}>
-              <Grid item xs={12} md={5}>
+              <Grid size={{ xs: 12, md: 5 }}>
                 <Typography variant="h3" sx={{ 
                   color: '#E91E63',
                   fontWeight: 700,
@@ -251,7 +250,7 @@ const AboutUs = () => {
                   mb: 4,
                   lineHeight: 1.7
                 }}>
-                  Successfully migrated a Fortune 500 company`&#39;`s infrastructure to the cloud, 
+                  Successfully migrated a Fortune 500 company&#39;s infrastructure to the cloud, 
                   reducing operational costs by 60% and improving performance by 200%.
                 </Typography>
 
@@ -271,7 +270,7 @@ const AboutUs = () => {
                 </Button>
               </Grid>
 
-              <Grid item xs={12} md={7}>
+              <Grid size={{ xs: 12, md: 7 }}>
                 <Box sx={{ 
                   bgcolor: 'rgba(0,0,0,0.02)',
                   p: 4,
@@ -317,9 +316,9 @@ const AboutUs = () => {
       </Container>
 
       {/* Final CTA Section */}
-      <Box sx={{ bgcolor: '#f8f9fa', py: 8 }}>
+      <Box sx={{ bgcolor: '#f8f9fa', py: 8, mb: 8 }}>
         <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" sx={{ 
+          <Typography variant="h4" sx={{ 
             mb: 3,
             color: '#2C3E50',
             fontWeight: 700
@@ -332,7 +331,7 @@ const AboutUs = () => {
             maxWidth: '600px',
             mx: 'auto'
           }}>
-            Let`&#39;`s discuss how we can help optimize and secure your cloud environment.
+            Let&#39;s discuss how we can help optimize and secure your cloud environment.
           </Typography>
           <Button
             variant="contained"
