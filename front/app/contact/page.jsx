@@ -6,12 +6,12 @@ import {
   Container,
   Typography,
   Paper,
-  Grid,
   Card,
   CardContent,
   IconButton,
   Tooltip,
 } from '@mui/material';
+import Grid from "@mui/material/Grid2";
 import {
   Email,
   LocationOn,
@@ -84,8 +84,10 @@ const SupportPage = () => {
   };
 
   return (
-    <Box sx={{ bgcolor: '#fff', minHeight: '100vh' }}>
+    <Box sx={{ mt: 8 }}>
+
       <Container maxWidth="lg" sx={{ py: 8 }}>
+
         {/* Header */}
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Typography variant="h2" 
@@ -99,13 +101,20 @@ const SupportPage = () => {
             Contact Us
           </Typography>
           <Typography variant="h6" sx={{ color: 'text.secondary' }}>
-            We`&#39;`re here to help. Choose your preferred method of contact.
+            We&#39;re here to help. Choose your preferred method of contact.
           </Typography>
         </Box>
 
         {/* Contact Options */}
-        <Grid container spacing={4} sx={{ mb: 6 }}>
-          <Grid item xs={12} md={4}>
+        <Grid container spacing={4} 
+          sx={{ 
+            mb: 6,
+            display: "flex",
+            justifyContent: "center"
+          }}
+        >
+          
+          <Grid size={{xs: 12, md: 4}} sx={{maxWidth: 360}}>
             <ContactOption
               icon={<Email sx={{ fontSize: 40, color: '#FF1B6B' }} />}
               title="Email"
@@ -113,7 +122,7 @@ const SupportPage = () => {
               onClick={() => handleCopyEmail('contact@fi.unam.mx')}
             />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{xs: 12, md: 4}} sx={{maxWidth: 360}}>
             <ContactOption
               icon={<Phone sx={{ fontSize: 40, color: '#45CAFF' }} />}
               title="Phone"
@@ -121,7 +130,7 @@ const SupportPage = () => {
               onClick={() => handleCopyPhone('+52 (55) 5622-0866')}
             />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{xs: 12, md: 4}} sx={{maxWidth: 360}}>
             <ContactOption
               icon={<WhatsApp sx={{ fontSize: 40, color: '#25D366' }} />}
               title="WhatsApp"
@@ -143,7 +152,7 @@ const SupportPage = () => {
           }}
         >
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs: 12, md: 6}}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                 <LocationOn sx={{ fontSize: 40, color: '#FF1B6B' }} />
                 <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
@@ -168,7 +177,7 @@ const SupportPage = () => {
                 View on Google Maps
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs: 12, md: 6}}>
               <Box sx={{ width: '100%', height: '400px', position: 'relative' }}>
                 <Box
                   component="iframe"
