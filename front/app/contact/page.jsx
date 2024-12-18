@@ -84,7 +84,7 @@ const SupportPage = () => {
   };
 
   return (
-    <Box sx={{ mt: 8 }}>
+    <Box sx={{ mt: 4 }}>
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
 
