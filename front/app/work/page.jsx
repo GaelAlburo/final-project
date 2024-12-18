@@ -5,11 +5,11 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Paper,
   IconButton,
   Link,
 } from '@mui/material';
+import Grid from "@mui/material/Grid2";
 import {
   Code,
   Security,
@@ -65,7 +65,7 @@ const ContactSection = () => (
   }}>
     <Grid container spacing={4} alignItems="center">
       {/* Contact Information */}
-      <Grid item xs={12} md={6}>
+      <Grid size={{xs: 12, md: 6}}>
         <Typography variant="h4" sx={{ mb: 3, fontWeight: 'bold' }}>
           Get in Touch
         </Typography>
@@ -92,7 +92,7 @@ const ContactSection = () => (
       </Grid>
       
       {/* Social Media Links */}
-      <Grid item xs={12} md={6}>
+      <Grid size={{xs: 12, md: 6}}>
         <Paper sx={{ 
           p: 3, 
           borderRadius: 2,
@@ -194,7 +194,7 @@ const WorkWithUsPage = () => {
   ];
 
   return (
-    <Box sx={{ bgcolor: '#fff', minHeight: '100vh' }}>
+    <Box sx={{ mt: 4 }}>
       <Container maxWidth="lg" sx={{ py: 8 }}>
         {/* Page Header */}
         <Box sx={{ textAlign: 'center', mb: 6 }}>
@@ -219,7 +219,7 @@ const WorkWithUsPage = () => {
             Why Join Us?
           </Typography>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={4}>
+            <Grid size={{xs: 12, md: 4}}>
               <Typography variant="h6" sx={{ mb: 1, fontWeight: 'bold' }}>
                 Competitive Package
               </Typography>
@@ -227,7 +227,7 @@ const WorkWithUsPage = () => {
                 Excellent salary, equity options, and comprehensive health benefits
               </Typography>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{xs: 12, md: 4}}>
               <Typography variant="h6" sx={{ mb: 1, fontWeight: 'bold' }}>
                 Remote First
               </Typography>
@@ -235,7 +235,7 @@ const WorkWithUsPage = () => {
                 Work from anywhere with flexible hours and unlimited PTO
               </Typography>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{xs: 12, md: 4}}>
               <Typography variant="h6" sx={{ mb: 1, fontWeight: 'bold' }}>
                 Growth Opportunities
               </Typography>
@@ -252,7 +252,7 @@ const WorkWithUsPage = () => {
         </Typography>
         <Grid container spacing={4}>
           {teams.map((team, index) => (
-            <Grid item xs={12} md={6} key={index}>
+            <Grid size={{xs: 12, md: 6}} key={index}>
               <TeamCard {...team} />
             </Grid>
           ))}
