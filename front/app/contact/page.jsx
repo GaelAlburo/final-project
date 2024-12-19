@@ -84,7 +84,7 @@ const SupportPage = () => {
   };
 
   return (
-    <Box sx={{ mt: 4 }}>
+    <Box sx={{ mt: 8 }}>
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
 
@@ -92,7 +92,7 @@ const SupportPage = () => {
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Typography variant="h2" 
             sx={{ 
-              fontWeight: 'bold',
+              fontWeight: 700,
               mb: 2,
               background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
               WebkitBackgroundClip: 'text',

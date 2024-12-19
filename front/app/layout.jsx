@@ -25,12 +25,12 @@ export default function RootLayout({ children }) {
         style={{ margin: 0, padding: 0 }}
       >
         <AuthProvider>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <AppBarGlobal />
-            {children}
-          <FooterGlobal />
-        </ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <AppBarGlobal />
+              {children}
+            <FooterGlobal />
+          </ThemeProvider>
         </AuthProvider>
       </body>
     </html>

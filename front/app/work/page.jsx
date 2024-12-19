@@ -195,7 +195,7 @@ const WorkWithUsPage = () => {
   ];
 
   return (
-    <Box sx={{ mt: 4 }}>
+    <Box sx={{ mt: 8 }}>
       <Container maxWidth="lg" sx={{ py: 8 }}>
         {/* Page Header */}
         <Box sx={{ textAlign: 'center', mb: 6 }}>

@@ -360,15 +360,13 @@ export default function PricingPage() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xl" sx={{ py: 8 }}>
+      <Container maxWidth="xl" sx={{ py: 8, mt: 8 }}>
         {/* Header */}
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Typography
             variant="h2"
-            component="h1"
             sx={{
               fontWeight: 700,
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
               background: 'linear-gradient(45deg, #FF1B6B, #45CAFF)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',

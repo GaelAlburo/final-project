@@ -59,10 +59,10 @@ const FAQPage = () => {
   ];
 
   return (
-    <Box sx={{ bgcolor: '#fff', minHeight: '100vh' }}>
+    <Box sx={{ mt: 8 }}>
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Box sx={{ textAlign: 'center', mb: 6 }}>
-          <GradientTypography variant="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
+          <GradientTypography variant="h2" sx={{ fontWeight: 700, mb: 2 }}>
             Frequently Asked Questions
           </GradientTypography>
           <Typography variant="h6" sx={{ color: 'text.secondary' }}>
