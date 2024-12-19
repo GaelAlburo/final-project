@@ -99,165 +99,181 @@ export default function SignIn() {
       };
 
     return (
-        <Container
-        maxWidth="xl"
-        disableGutters
-        sx={{
-            minHeight: "80vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            py: 3,
-        }}
-        >
-      <Paper
-        elevation={7}
-        sx={{
-          padding: 6,
-          borderRadius: 2,
-          maxWidth: "650px",
-          width: "100%",
-          my: 8,
-        }}
-      >
-        <Typography variant="h2" 
-            sx={{ 
-              fontWeight: 'bold',
-              mb: 2,
-              background: '#000',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
-          Sign In
-        </Typography>
-
-            <Box
+          <Container
+            maxWidth="xl"
+            disableGutters
             sx={{
-              "& .MuiTextField-root": { mb: 3 },
+                minHeight: "80vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                py: 3,
+                mt: {
+                  xs: 0,
+                  sm: 8
+                }
             }}
-          >
-            <Box
+            >
+            <Paper
+              elevation={7}
               sx={{
-                  "& .MuiTextField-root": { mb: 3 },
+                padding: 6,
+                mx: 2,
+                borderRadius: 2,
+                maxWidth: "550px",
+                width: "100%",
+                my: 8,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
-            </Box>
-            <TextField
-              required
-              fullWidth
-              id="email"
-              label="Email"
-              name="email"
-              autoComplete="email"
-              autoFocus
-              helperText="Must follow email format: username@domain"
-              variant="outlined"
-              value={currentUser.email}
-              onChange={handleUserInfo}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": {
-                    borderColor: "grey.400",
-                  },
-                  "&:hover fieldset": {
-                    borderColor: "grey.700",
-                  },
-                  "&.Mui-focused fieldset": {
-                    borderColor: "grey.700",
-                  },
-                },
-                "& .MuiInputLabel-root": {
-                  color: "grey.600",
-                  "&.Mui-focused": {
-                    color: "grey.700",
-                  },
-                },
-              }}
-            />
-            <Box gap={20}>
-              <TextField
-                required
-                name="password"
-                label="Password"
-                type={showPassword ? "text" : "password"}
-                id="password"
-                autoComplete="current-password"
-                variant="outlined"
-                helperText="At least 8 alphanumeric values"
-                value={currentUser.password}
-                onChange={handleUserInfo}
-                sx={{
-                  width: "85%",
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "grey.400",
+              <Typography variant="h2" 
+                  sx={{ 
+                    fontWeight: 'bold',
+                    mb: 4,
+                    background: '#000',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}>
+                Sign In
+              </Typography>
+
+                <Box
+                  sx={{
+                    "& .MuiTextField-root": { mb: 3 },
+                    width: {
+                      xs: "100%",
+                      sm: "80%",	
                     },
-                    "&:hover fieldset": {
-                      borderColor: "grey.700",
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "grey.700",
-                    },
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "grey.600",
-                    "&.Mui-focused": {
-                      color: "grey.700",
-                    },
-                  },
-                }}
-              />
-              <IconButton
-                onClick={handleClickShowPassword}
-                sx={{
-                  justifyContent: "center",
-                }}
-                edge="end"
-              >
-                {showPassword ? <VisibilityOff /> : <Visibility/>}
-              </IconButton>
-            </Box>
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <TextField
+                    required
+                    id="email"
+                    label="Email"
+                    name="email"
+                    autoComplete="email"
+                    autoFocus
+                    helperText="Must follow email format: username@domain"
+                    variant="outlined"
+                    value={currentUser.email}
+                    onChange={handleUserInfo}
+                    sx={{
+                      width: "100%",
+                      
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "grey.400",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "grey.700",
+                        },
+                        "&.Mui-focused fieldset": {
+                          borderColor: "grey.700",
+                        },
+                      },
+                      "& .MuiInputLabel-root": {
+                        color: "grey.600",
+                        "&.Mui-focused": {
+                          color: "grey.700",
+                        },
+                      },
+                    }}
+                  />
+                  <Box 
+                    sx={{ 
+                      width: "100%", 
+                      display: "flex",
+                      alignItems: "center", 
+                      justifyContent: "center" 
+                    }}
+                  >
+                    <TextField
+                      required
+                      name="password"
+                      label="Password"
+                      type={showPassword ? "text" : "password"}
+                      id="password"
+                      autoComplete="current-password"
+                      variant="outlined"
+                      helperText="At least 8 alphanumeric values"
+                      value={currentUser.password}
+                      onChange={handleUserInfo}
+                      sx={{
+                        width: "100%",
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            borderColor: "grey.400",
+                          },
+                          "&:hover fieldset": {
+                            borderColor: "grey.700",
+                          },
+                          "&.Mui-focused fieldset": {
+                            borderColor: "grey.700",
+                          },
+                        },
+                        "& .MuiInputLabel-root": {
+                          color: "grey.600",
+                          "&.Mui-focused": {
+                            color: "grey.700",
+                          },
+                        },
+                      }}
+                    />
+                    <IconButton
+                      onClick={handleClickShowPassword}
+                      edge="end"
+                      sx={{mb: 5.5}}
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility/>}
+                    </IconButton>
+                  </Box>
+                  
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    sx={{
+                      mt: 2,
+                      mb: 4,
+                      py: 1.5,
+                      width: "50%",
+                      background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
+                      "&:hover": {
+                        bgcolor: "#232222",
+                      },
+                      color: "white",
+                      textTransform: "none",
+                      fontSize: "1rem",
+                    }}
+                    onClick={() => firstValidation()}
+                  >
+                    Sign In
+                  </Button>
+                  <Link
+                    href="/login"
+                    variant="body1"
+                    sx={{
+                      display: "block",
+                      textAlign: "center",
+                      color: "primary.main",
+                      textDecoration: "none",
+                      "&:hover": {
+                        textDecoration: "underline",
+                      },
+                    }}
+                  >
+                    Create An Account
+                  </Link>
+                </Box>
+            </Paper>
+          
             
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{
-                mt: 2,
-                mb: 4,
-                py: 1.5,
-                background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
-                "&:hover": {
-                  bgcolor: "#232222",
-                },
-                color: "white",
-                textTransform: "none",
-                fontSize: "1rem",
-              }}
-              onClick={() => firstValidation()}
-            >
-              Sign In
-            </Button>
-            <Link
-              href="/login"
-              variant="body1"
-              sx={{
-                display: "block",
-                textAlign: "center",
-                color: "primary.main",
-                textDecoration: "none",
-                "&:hover": {
-                  textDecoration: "underline",
-                },
-              }}
-            >
-              Create An Account
-            </Link>
-          </Box>
-      </Paper>
-    
-      
-      <Alerts open={open} setOpen={setOpen} alert={alertConfig} pos={"top"} />
-    </Container>
+            <Alerts open={open} setOpen={setOpen} alert={alertConfig} pos={"top"} />
+          </Container>
   );
 }
