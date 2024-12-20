@@ -22,7 +22,7 @@ export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
     const [showPassword2, setShowPassword2] = useState(false);
     const [open, setOpen] = useState(false);
-    const [secondaryInfo, setsecondaryInfo] = useState(false);
+    const [secondaryInfo, setsecondaryInfo] = useState(true);
     const [currentUser, setCurrentUser] = useState({
         name: "",
         email: "",
@@ -39,16 +39,17 @@ export default function Login() {
         severity: "",
         message: "",
     });
-    const [errorBool, setErrorBool] = useState(true)
-    const [helperTextPhone, setHelperTextPhone] = useState('phone number length must be 10 digits')
+    const [errorBool, setErrorBool] = useState(false)
+    const [helperTextPhone, setHelperTextPhone] = useState('Phone number length must be 10 digits')
     const usageTypes = ["Personal", "Business"]
-    const availableCountries = ["México", "EUA", "Canadá"]
+    const availableCountries = ["México", "EUA", "Canada"]
     const { setGlobalCurrentUser, isAuthenticated, setIsAuthenticated } =
     useAuth();
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleClickShowPassword2 = () => setShowPassword2((show) => !show);
     
+    // This function validates the email through the API and sets the secondaryInfo state to true
     const validateEmail = async () => {
         try {
             const res = await axios.post("http://localhost:8003/api/v1/validate-email", currentUser);
@@ -81,6 +82,7 @@ export default function Login() {
         }
     }
 
+    // This function creates the user through the API and redirects to the admin page
     const createUser = async () => {
         try {
             const res = await axios.post("http://localhost:8003/api/v1/users", currentUser);
@@ -117,7 +119,8 @@ export default function Login() {
             }
         }
     }
-
+    
+    // This function handles the changes in the input fields
     const handleUserInfo = (event) => {
         setCurrentUser({
         ...currentUser,
@@ -132,11 +135,12 @@ export default function Login() {
             :
             (
                 setErrorBool(true),
-                setHelperTextPhone('phone number length must be 10 digits')
+                setHelperTextPhone('Phone number length must be 10 digits')
             )
         }
     };
 
+    // This function validates the first fields and calls the validateEmail function
     const firstValidation = async () => {
         currentUser.name !== "" &&
         currentUser.email !== "" &&
@@ -157,6 +161,7 @@ export default function Login() {
             }), setOpen(true));
     };
 
+    // This function validates the user fields and calls the createUser function
     const isAUser = async () => {
         currentUser.email !== "" &&
         currentUser.password !== "" &&
@@ -172,7 +177,7 @@ export default function Login() {
               severity: "error",
               message: "Please fill in the required fields",
             });
-      };
+    };
 
     return (
         <Container
@@ -184,16 +189,25 @@ export default function Login() {
             alignItems: "center",
             justifyContent: "center",
             py: 3,
+            mt: {
+              xs: 0,
+              sm: 8
+            }
         }}
         >
       <Paper
         elevation={7}
         sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
           padding: 6,
           borderRadius: 2,
           maxWidth: "650px",
           width: "100%",
           my: 8,
+          mx: 2
         }}
       >
         <Typography variant="h2" 
@@ -209,10 +223,15 @@ export default function Login() {
 
         
         { secondaryInfo == false ?
-            
-            <Box
+          
+          // This is the first form that the user will see to enter the email and password
+          <Box
             sx={{
               "& .MuiTextField-root": { mb: 3 },
+              width: {
+                xs: "100%",
+                sm: "80%",	
+              },
             }}
           >
               <Box
@@ -284,7 +303,13 @@ export default function Login() {
                 },
               }}
             />
-            <Box gap={20}>
+            <Box 
+              sx={{
+                display: "flex",
+                alignItems: "center", 
+                justifyContent: "center" 
+              }}
+            >
               <TextField
                 required
                 name="password"
@@ -297,7 +322,7 @@ export default function Login() {
                 value={currentUser.password}
                 onChange={handleUserInfo}
                 sx={{
-                  width: "85%",
+                  width: "100%",
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": {
                       borderColor: "grey.400",
@@ -319,15 +344,19 @@ export default function Login() {
               />
               <IconButton
                 onClick={handleClickShowPassword}
-                sx={{
-                  justifyContent: "center",
-                }}
+                sx={{mb: 5.5}}
                 edge="end"
               >
                 {showPassword ? <VisibilityOff /> : <Visibility/>}
               </IconButton>
             </Box>
-            <Box gap={20}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center", 
+                justifyContent: "center" 
+              }}
+            >
             <TextField
                 required
                 name="confirmPassword"
@@ -340,7 +369,7 @@ export default function Login() {
                 value={currentUser.confirmPassword}
                 onChange={handleUserInfo}
                 sx={{
-                  width: "85%",
+                  width: "100%",
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": {
                       borderColor: "grey.400",
@@ -356,290 +385,300 @@ export default function Login() {
               />
               <IconButton
                 onClick={handleClickShowPassword2}
-                sx={{
-                  justifyContent: "center",
-                }}
+                sx={{mb: 5.5}}
                 edge="end"
               >
                 {showPassword ? <VisibilityOff /> : <Visibility/>}
               </IconButton>
             </Box>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
+            <Box
               sx={{
-                mt: 2,
-                mb: 4,
-                py: 1.5,
-                background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
-                "&:hover": {
-                  bgcolor: "#232222",
-                },
-                color: "white",
-                textTransform: "none",
-                fontSize: "1rem",
-              }}
-              onClick={() => firstValidation()}
-            >
-              Next
-            </Button>
-            <Link
-              href="/sign-in"
-              variant="body1"
-              sx={{
-                display: "block",
-                textAlign: "center",
-                color: "primary.main",
-                textDecoration: "none",
-                "&:hover": {
-                  textDecoration: "underline",
-                },
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
-              Have Already An Account
-            </Link>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{
+                  mt: 2,
+                  mb: 4,
+                  py: 1.5,
+                  width: "50%",
+                  background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
+                  "&:hover": {
+                    bgcolor: "#232222",
+                  },
+                  color: "white",
+                  textTransform: "none",
+                  fontSize: "1rem",
+                }}
+                onClick={() => firstValidation()}
+              >
+                Next
+              </Button>
+              <Link
+                href="/sign-in"
+                variant="body1"
+                sx={{
+                  display: "block",
+                  textAlign: "center",
+                  color: "primary.main",
+                  textDecoration: "none",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                }}
+              >
+                Already Have An Account
+              </Link>
+            </Box>
           </Box>
 
 
           :
+          // This is the second form that the user will see to enter the rest of the information
 
-
-          <Box
+        <Box
           sx={{
             "& .MuiTextField-root": { mb: 3 },
           }}
         >
-            <Box
-                sx={{
-                    "& .MuiTextField-root": { mb: 3 },
-                }}
-            >
-            <TextField
-                required
-                fullWidth
-                disabled
-                id="name"
-                label="Name"
-                name="name"
-                autoComplete="name"
-                autoFocus
-                variant="outlined"
-                value={currentUser.name}
-                onChange={handleUserInfo}
-                sx={{
-                "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                    borderColor: "grey.400",
-                    },
-                    "&:hover fieldset": {
-                    borderColor: "grey.700",
-                    },
-                    "&.Mui-focused fieldset": {
-                    borderColor: "grey.700",
-                    },
+          <TextField
+            required
+            fullWidth
+            disabled
+            id="name"
+            label="Name"
+            name="name"
+            autoComplete="name"
+            autoFocus
+            variant="outlined"
+            value={currentUser.name}
+            onChange={handleUserInfo}
+            sx={{
+            "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                borderColor: "grey.400",
                 },
-                "& .MuiInputLabel-root": {
-                    color: "grey.600",
-                    "&.Mui-focused": {
-                    color: "grey.700",
-                    },
+                "&:hover fieldset": {
+                borderColor: "grey.700",
                 },
-                }}
-            />
-            </Box>
-            <TextField
-                required
-                fullWidth
-                disabled
-                id="email"
-                label="Email"
-                name="email"
-                autoComplete="email"
-                autoFocus
-                variant="outlined"
-                value={currentUser.email}
-                onChange={handleUserInfo}
-                sx={{
-                "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                    borderColor: "grey.400",
-                    },
-                    "&:hover fieldset": {
-                    borderColor: "grey.700",
-                    },
-                    "&.Mui-focused fieldset": {
-                    borderColor: "grey.700",
-                    },
+                "&.Mui-focused fieldset": {
+                borderColor: "grey.700",
                 },
-                "& .MuiInputLabel-root": {
-                    color: "grey.600",
-                    "&.Mui-focused": {
-                    color: "grey.700",
-                    },
+            },
+            "& .MuiInputLabel-root": {
+                color: "grey.600",
+                "&.Mui-focused": {
+                color: "grey.700",
                 },
-                }}
-            />
+            },
+            }}
+          />
+          <TextField
+              required
+              fullWidth
+              disabled
+              id="email"
+              label="Email"
+              name="email"
+              autoComplete="email"
+              autoFocus
+              variant="outlined"
+              value={currentUser.email}
+              onChange={handleUserInfo}
+              sx={{
+              "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                  borderColor: "grey.400",
+                  },
+                  "&:hover fieldset": {
+                  borderColor: "grey.700",
+                  },
+                  "&.Mui-focused fieldset": {
+                  borderColor: "grey.700",
+                  },
+              },
+              "& .MuiInputLabel-root": {
+                  color: "grey.600",
+                  "&.Mui-focused": {
+                  color: "grey.700",
+                  },
+              },
+              }}
+          />
 
-            <TextField
-                required
-                fullWidth
-                type="number"
-                id="phone_number"
-                label="Phone_number"
-                name="phone_number"
-                autoComplete="phone_number"
-                helperText={helperTextPhone}
-                autoFocus
-                variant="outlined"
-                error={errorBool}
-                value={currentUser.phone_number}
-                onChange={handleUserInfo}
-                sx={{
-                "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                    borderColor: "grey.400",
-                    },
-                    "&:hover fieldset": {
-                    borderColor: "grey.700",
-                    },
-                    "&.Mui-focused fieldset": {
-                    borderColor: "grey.700",
-                    },
-                },
-                "& .MuiInputLabel-root": {
-                    color: "grey.600",
-                    "&.Mui-focused": {
-                    color: "grey.700",
-                    },
-                },
-                }}
-            />
+          <TextField
+              required
+              fullWidth
+              type="number"
+              id="phone_number"
+              label="Phone_number"
+              name="phone_number"
+              autoComplete="phone_number"
+              helperText={helperTextPhone}
+              autoFocus
+              variant="outlined"
+              error={errorBool}
+              value={currentUser.phone_number}
+              onChange={handleUserInfo}
+              sx={{
+              "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                  borderColor: "grey.400",
+                  },
+                  "&:hover fieldset": {
+                  borderColor: "grey.700",
+                  },
+                  "&.Mui-focused fieldset": {
+                  borderColor: "grey.700",
+                  },
+              },
+              "& .MuiInputLabel-root": {
+                  color: "grey.600",
+                  "&.Mui-focused": {
+                  color: "grey.700",
+                  },
+              },
+              }}
+          />
 
-            <Box mb={3} alignContent={"center"} justifyContent={'center'}>
-                <FormControl>
-                <FormLabel id="demo-row-radio-buttons-group-label">Country</FormLabel>
-                <RadioGroup
-                    row
-                    aria-labelledby="demo-row-radio-buttons-group-label"
-                    name="row-radio-buttons-group"
-                > 
-                    {availableCountries.map((index) =>
-                        <FormControlLabel key={index} value={index} onClick={() => handleUserInfo({
-                            target:{
-                                name: 'country',
-                                value: index
-                            }
-                        })} control={<Radio />} label={index} />
-                    )}
-                </RadioGroup>
-                </FormControl>
-            </Box>
+          <Box mb={3} alignContent={"center"} justifyContent={'center'}>
+              <FormControl>
+              <FormLabel id="demo-row-radio-buttons-group-label">Country</FormLabel>
+              <RadioGroup
+                  row
+                  aria-labelledby="demo-row-radio-buttons-group-label"
+                  name="row-radio-buttons-group"
+              > 
+                  {availableCountries.map((index) =>
+                      <FormControlLabel key={index} value={index} onClick={() => handleUserInfo({
+                          target:{
+                              name: 'country',
+                              value: index
+                          }
+                      })} control={<Radio />} label={index} />
+                  )}
+              </RadioGroup>
+              </FormControl>
+          </Box>
 
-            <TextField
-                fullWidth
-                id="city"
-                label="City"
-                name="city"
-                autoComplete="city"
-                autoFocus
-                variant="outlined"
-                value={currentUser.city}
-                onChange={handleUserInfo}
-                sx={{
-                "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                    borderColor: "grey.400",
-                    },
-                    "&:hover fieldset": {
-                    borderColor: "grey.700",
-                    },
-                    "&.Mui-focused fieldset": {
-                    borderColor: "grey.700",
-                    },
-                },
-                "& .MuiInputLabel-root": {
-                    color: "grey.600",
-                    "&.Mui-focused": {
-                    color: "grey.700",
-                    },
-                },
-                }}
-            />
+          <TextField
+              fullWidth
+              id="city"
+              label="City"
+              name="city"
+              autoComplete="city"
+              autoFocus
+              variant="outlined"
+              value={currentUser.city}
+              onChange={handleUserInfo}
+              sx={{
+              "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                  borderColor: "grey.400",
+                  },
+                  "&:hover fieldset": {
+                  borderColor: "grey.700",
+                  },
+                  "&.Mui-focused fieldset": {
+                  borderColor: "grey.700",
+                  },
+              },
+              "& .MuiInputLabel-root": {
+                  color: "grey.600",
+                  "&.Mui-focused": {
+                  color: "grey.700",
+                  },
+              },
+              }}
+          />
 
-            <TextField
-                fullWidth
-                id="state"
-                label="State"
-                name="state"
-                autoComplete="state"
-                autoFocus
-                variant="outlined"
-                value={currentUser.state}
-                onChange={handleUserInfo}
-                sx={{
-                "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                    borderColor: "grey.400",
-                    },
-                    "&:hover fieldset": {
-                    borderColor: "grey.700",
-                    },
-                    "&.Mui-focused fieldset": {
-                    borderColor: "grey.700",
-                    },
-                },
-                "& .MuiInputLabel-root": {
-                    color: "grey.600",
-                    "&.Mui-focused": {
-                    color: "grey.700",
-                    },
-                },
-                }}
-            />
+          <TextField
+              fullWidth
+              id="state"
+              label="State"
+              name="state"
+              autoComplete="state"
+              autoFocus
+              variant="outlined"
+              value={currentUser.state}
+              onChange={handleUserInfo}
+              sx={{
+              "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                  borderColor: "grey.400",
+                  },
+                  "&:hover fieldset": {
+                  borderColor: "grey.700",
+                  },
+                  "&.Mui-focused fieldset": {
+                  borderColor: "grey.700",
+                  },
+              },
+              "& .MuiInputLabel-root": {
+                  color: "grey.600",
+                  "&.Mui-focused": {
+                  color: "grey.700",
+                  },
+              },
+              }}
+          />
 
-            <Box>
-                <FormControl>
-                <FormLabel id="demo-row-radio-buttons-group-label">Usage</FormLabel>
-                <RadioGroup
-                    row
-                    aria-labelledby="demo-row-radio-buttons-group-label"
-                    name="row-radio-buttons-group"
-                > 
-                    {usageTypes.map((index) =>
-                        <FormControlLabel key={index} value={index} onClick={() => handleUserInfo({
-                            target:{
-                                name: 'usage',
-                                value: index
-                            }
-                        })} control={<Radio />} label={index} />
-                    )}
-                    
-                </RadioGroup>
-                </FormControl>
-            </Box>
+          <Box>
+              <FormControl>
+              <FormLabel id="demo-row-radio-buttons-group-label">Usage</FormLabel>
+              <RadioGroup
+                  row
+                  aria-labelledby="demo-row-radio-buttons-group-label"
+                  name="row-radio-buttons-group"
+              > 
+                  {usageTypes.map((index) =>
+                      <FormControlLabel key={index} value={index} onClick={() => handleUserInfo({
+                          target:{
+                              name: 'usage',
+                              value: index
+                          }
+                      })} control={<Radio />} label={index} />
+                  )}
+                  
+              </RadioGroup>
+              </FormControl>
+          </Box>
 
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             <Button
                 type="submit"
-                fullWidth
                 variant="contained"
                 href={'/admin'}
                 sx={{
-                mt: 2,
-                mb: 4,
-                py: 1.5,
-                background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
-                "&:hover": {
-                    bgcolor: "#232222",
-                },
-                color: "white",
-                textTransform: "none",
-                fontSize: "1rem",
+                  mt: 2,
+                  mb: 4,
+                  py: 1.5,
+                  width: "50%",
+                  background: 'linear-gradient(90deg, #FF1B6B 0%, #45CAFF 100%)',
+                  "&:hover": {
+                      bgcolor: "#232222",
+                  },
+                  color: "white",
+                  textTransform: "none",
+                  fontSize: "1rem",
+                  textAlign: "center"
                 }}
                 onClick={() => isAUser()}
             >
                 Create Account
             </Button>
+          </Box>
         </Box>
         }
       </Paper>
